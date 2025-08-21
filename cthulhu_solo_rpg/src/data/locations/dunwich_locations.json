@@ -1,0 +1,441 @@
+{
+  "metadata": {
+    "category": "dunwich_locations",
+    "description": "던위치 지역의 장소들 - 황량하고 저주받은 시골",
+    "setting": "1920년대 매사추세츠 서부 산악 지대",
+    "ai_hints": {
+      "usage_context": "Rural horror, cosmic threats, degenerate communities",
+      "atmosphere": "Isolated, primitive, cursed",
+      "population": "Very small, inbred, suspicious",
+      "key_themes": "Isolation, degeneracy, cosmic horror"
+    }
+  },
+  "region_overview": {
+    "name": "던위치",
+    "name_en": "Dunwich",
+    "state": "매사추세츠",
+    "population": "약 500명 (쇠퇴 중)",
+    "geography": {
+      "terrain": "산악 지대와 계곡",
+      "rivers": "미스카토닉 강 상류",
+      "forests": "울창한 원시림",
+      "landmarks": ["센티넬 힐", "베어스 덴", "비숍스 브룩"]
+    },
+    "general_atmosphere": "문명에서 잊혀진 황량한 땅, 고대의 저주와 원시적 공포가 살아있는 곳",
+    "reputation": "미신과 기이한 사건들로 악명 높은 저주받은 지역",
+    "decline": "젊은이들의 도시 이주, 근친결혼, 경제적 침체"
+  },
+  "locations": [
+    {
+      "id": "dunwich_village",
+      "name": "던위치 마을",
+      "name_en": "Dunwich Village",
+      "type": "마을 중심지",
+      "description": "한때는 번영했으나 지금은 쇠락한 작은 마을. 몇 개의 상점과 교회만 남아있다.",
+      "population": "약 150명",
+      "architecture": "18-19세기 뉴잉글랜드 양식, 대부분 낡고 수리가 필요",
+      "atmosphere": "쇠퇴하고 절망적, 외부인에 대한 의심과 경계",
+      "notable_buildings": [
+        {
+          "name": "오스본 일반상점",
+          "description": "마을의 유일한 상점, 필수품과 우편 서비스",
+          "owner": "엘머 오스본",
+          "characteristics": "외부인에게 냉담하지만 정보원 역할",
+          "services": ["생필품", "우편", "전화", "지역 소식"]
+        },
+        {
+          "name": "던위치 교회",
+          "description": "작은 침례교 교회, 참석자는 매우 적음",
+          "condition": "낡고 관리 부족",
+          "pastor": "에이브람 목사 (늙고 절망적)",
+          "congregation": "주로 노인들, 젊은이들은 참석하지 않음"
+        },
+        {
+          "name": "마을 회관",
+          "description": "공식적인 모임 장소이지만 거의 사용되지 않음",
+          "condition": "반 폐기 상태",
+          "usage": "가끔 마을 회의, 선거"
+        }
+      ],
+      "social_structure": [
+        "오래된 가문들 간의 복잡한 관계",
+        "근친결혼으로 인한 유전적 문제들",
+        "외부 세계와의 단절",
+        "미신과 원시적 신앙의 잔존"
+      ]
+    },
+    {
+      "id": "whateley_farm",
+      "name": "웨이틀리 농장",
+      "name_en": "Whateley Farm",
+      "type": "농장/저택",
+      "description": "던위치에서 가장 악명 높은 장소. 웨이틀리 가문의 본거지였던 곳.",
+      "history": "18세기부터 웨이틀리 가문이 거주, 수많은 기이한 사건들의 중심지",
+      "current_status": "대부분 폐허, 일부만 거주 가능",
+      "architecture": "콜로니얼 양식의 큰 농가, 여러 별채들",
+      "atmosphere": "저주받고 불길한 기운, 뭔가 끔찍한 일이 일어날 것 같은 분위기",
+      "areas": [
+        {
+          "name": "본관",
+          "description": "웨이틀리 가문의 주거지",
+          "condition": "부분적으로 파손, 일부 거주 가능",
+          "features": [
+            "넓은 현관과 거실",
+            "낡은 부엌과 식당",
+            "2층 침실들",
+            "지하실 (의심스러운 용도)"
+          ],
+          "hidden_elements": [
+            "벽에 새겨진 이상한 기호들",
+            "숨겨진 방들",
+            "금지된 서적들",
+            "의식용 도구들"
+          ]
+        },
+        {
+          "name": "헛간과 별채들",
+          "description": "농장 작업용 건물들",
+          "condition": "대부분 붕괴 위험",
+          "unusual_features": [
+            "비정상적으로 큰 헛간",
+            "이상한 냄새와 소리",
+            "동물들이 접근하지 않음",
+            "밤에 기이한 빛"
+          ]
+        },
+        {
+          "name": "농장 부지",
+          "description": "한때 농업이 이루어졌던 땅",
+          "current_state": "황폐화되고 버려짐",
+          "anomalies": [
+            "식물이 자라지 않는 구역들",
+            "기이한 형태의 돌들",
+            "땅 아래에서 들려오는 소리",
+            "동물들의 기피 현상"
+          ]
+        }
+      ],
+      "dangers": [
+        "구조물 붕괴 위험",
+        "초자연적 현상들",
+        "정신적 영향",
+        "숨겨진 함정들",
+        "유해한 환경"
+      ],
+      "investigation_opportunities": [
+        "가문 기록과 일기 발견",
+        "의식용 도구들과 그림들",
+        "지하실의 비밀 탐사",
+        "주변 농장에서의 증거 수집"
+      ]
+    },
+    {
+      "id": "sentinel_hill",
+      "name": "센티넬 힐",
+      "name_en": "Sentinel Hill",
+      "type": "산/고대 유적지",
+      "description": "던위치를 내려다보는 높은 언덕. 정상에는 고대 석환이 있다.",
+      "elevation": "약 400미터",
+      "geology": "화강암 노두, 특이한 광물 구성",
+      "atmosphere": "신성하면서도 불길한, 고대의 힘이 느껴지는 곳",
+      "features": [
+        {
+          "name": "고대 석환",
+          "description": "선사시대부터 존재한 거석 구조물",
+          "composition": "정체불명의 검은 돌",
+          "arrangement": "정확한 천체 배열을 따름",
+          "purpose": "종교적/의식적 용도로 추정",
+          "current_condition": "일부 손상되었지만 대부분 온전",
+          "supernatural_aspects": [
+            "특정 시간에 이상한 빛 방출",
+            "음향 이상 현상",
+            "자기장 교란",
+            "동식물의 기피"
+          ]
+        },
+        {
+          "name": "산책로와 경사면",
+          "description": "언덕을 오르는 옛길들",
+          "difficulty": "가파르고 험함",
+          "landmarks": [
+            "중간 지점의 평평한 바위",
+            "기이한 나무들",
+            "동굴 입구들",
+            "이상한 돌무덤들"
+          ]
+        }
+      ],
+      "historical_significance": [
+        "인디언 부족들의 성지",
+        "초기 정착민들의 의식 장소",
+        "웨이틀리 가문과의 연관",
+        "수많은 기이한 사건들의 무대"
+      ],
+      "seasonal_phenomena": [
+        "특정 계절에 강화되는 초자연적 활동",
+        "천체 배열과 연관된 현상들",
+        "날씨와 무관한 안개 발생",
+        "동물들의 집단 행동 이상"
+      ]
+    },
+    {
+      "id": "bears_den",
+      "name": "베어스 덴",
+      "name_en": "Bear's Den",
+      "type": "계곡/동굴",
+      "description": "센티넬 힐 북쪽의 깊은 계곡과 동굴 시스템",
+      "geography": "좁고 깊은 계곡, 여러 동굴들이 연결됨",
+      "atmosphere": "어둡고 음산한, 원시적 공포감",
+      "wildlife": "대부분의 동물들이 기피하는 지역",
+      "cave_system": [
+        {
+          "name": "주 동굴",
+          "description": "가장 큰 동굴, 깊이를 알 수 없음",
+          "features": [
+            "넓은 입구",
+            "복잡한 통로들",
+            "지하 강물",
+            "이상한 벽화들"
+          ],
+          "dangers": [
+            "미로 같은 구조",
+            "갑작스러운 수위 변화",
+            "유독 가스 가능성",
+            "구조물 불안정"
+          ]
+        },
+        {
+          "name": "작은 동굴들",
+          "description": "주 동굴 주변의 작은 공간들",
+          "uses": [
+            "야생동물 서식지",
+            "은신처로 사용 가능",
+            "저장 공간",
+            "의식 장소"
+          ]
+        }
+      ],
+      "legends": [
+        "곰들의 신성한 장소",
+        "인디언 부족의 매장지",
+        "악령들이 거주하는 곳",
+        "실종자들이 마지막으로 목격된 장소"
+      ],
+      "investigation_potential": [
+        "고대 벽화 해석",
+        "지질학적 특이점 연구",
+        "실종 사건과의 연관성",
+        "초자연적 현상 관찰"
+      ]
+    },
+    {
+      "id": "bishops_brook",
+      "name": "비숍스 브룩",
+      "name_en": "Bishop's Brook",
+      "type": "하천/습지",
+      "description": "던위치를 가로지르는 작은 하천과 주변 습지대",
+      "water_quality": "맑지만 가끔 이상한 색깔로 변함",
+      "ecosystem": "독특하고 때로는 비정상적인 동식물",
+      "atmosphere": "평화로워 보이지만 뭔가 숨겨진 위험이 느껴짐",
+      "notable_features": [
+        {
+          "name": "올드 밀",
+          "description": "버려진 물레방아 (19세기)",
+          "condition": "반 붕괴 상태",
+          "history": "과거 마을의 경제 중심지",
+          "current_use": "때때로 은신처로 사용됨",
+          "rumors": "밤에 기계가 혼자 돌아간다는 소문"
+        },
+        {
+          "name": "습지대",
+          "description": "하천 주변의 늪지대",
+          "characteristics": [
+            "안개가 자주 끼음",
+            "특이한 식물들",
+            "기이한 개구리와 곤충들",
+            "때로는 시체가 발견됨"
+          ],
+          "dangers": [
+            "수렁과 늪지",
+            "유독한 식물들",
+            "질병을 옮기는 곤충들",
+            "방향감각 상실"
+          ]
+        }
+      ],
+      "seasonal_changes": [
+        "봄: 홍수와 범람",
+        "여름: 가뭄으로 수위 하락",
+        "가을: 안개와 썩은 냄새",
+        "겨울: 완전히 얼지 않는 구역들"
+      ],
+      "folklore": [
+        "물의 정령이 산다는 전설",
+        "실종자들이 물속에 끌려들어갔다는 이야기",
+        "물을 마신 후 이상해진 사람들",
+        "특정 날짜에 나타나는 기이한 현상들"
+      ]
+    },
+    {
+      "id": "round_hill",
+      "name": "라운드 힐",
+      "name_en": "Round Hill",
+      "type": "언덕/농장지대",
+      "description": "던위치 동쪽의 둥근 언덕, 몇몇 농장이 흩어져 있음",
+      "terrain": "완만한 경사의 목초지와 밭",
+      "agriculture": "주로 축산업, 일부 곡물 재배",
+      "atmosphere": "비교적 평범해 보이지만 고립된 느낌",
+      "farms": [
+        {
+          "name": "코리 농장",
+          "family": "코리 가문",
+          "specialty": "젖소 사육",
+          "reputation": "근면하지만 내성적인 가족",
+          "peculiarities": [
+            "가축들이 자주 병에 걸림",
+            "밤에 이상한 소리가 들림",
+            "가족들이 외부인을 꺼림",
+            "기이한 농업 관습"
+          ]
+        },
+        {
+          "name": "프라이 농장",
+          "family": "프라이 가문",
+          "specialty": "곡물과 채소",
+          "status": "거의 포기 상태",
+          "problems": [
+            "작물이 잘 자라지 않음",
+            "토양의 이상한 변화",
+            "농장주의 정신적 불안정",
+            "경제적 어려움"
+          ]
+        }
+      ],
+      "community_dynamics": [
+        "농장들 간의 최소한의 교류",
+        "공동 작업은 거의 하지 않음",
+        "각자의 비밀과 문제들",
+        "외부 도움에 대한 거부감"
+      ]
+    },
+    {
+      "id": "dunwich_cemetery",
+      "name": "던위치 묘지",
+      "name_en": "Dunwich Cemetery",
+      "type": "묘지",
+      "description": "마을 외곽의 작은 묘지, 던위치 가문들의 매장지",
+      "age": "18세기부터 사용",
+      "size": "비교적 소규모",
+      "atmosphere": "음산하고 방치된, 죽음의 냄새가 진동함",
+      "sections": [
+        {
+          "name": "오래된 구역",
+          "period": "18-19세기",
+          "graves": "초기 정착민들과 유명 가문들",
+          "condition": "많은 묘비가 풍화되고 읽기 어려움",
+          "notable_graves": [
+            "던위치 건립 가문들",
+            "젊은 나이에 죽은 사람들",
+            "이상한 사인들",
+            "웨이틀리 가문 선조들"
+          ]
+        },
+        {
+          "name": "새로운 구역",
+          "period": "20세기",
+          "graves": "최근 사망자들",
+          "condition": "상대적으로 양호",
+          "trends": [
+            "매장 빈도 감소",
+            "가족 단위 매장",
+            "간단한 의식",
+            "종교적 상징 부족"
+          ]
+        }
+      ],
+      "supernatural_activity": [
+        "밤에 목격되는 이상한 빛들",
+        "무덤에서 들려오는 소리들",
+        "동물들의 기피 현상",
+        "계절과 무관한 온도 변화",
+        "방문자들의 불안감과 공포"
+      ],
+      "maintenance": "거의 관리되지 않음, 잡초가 무성함",
+      "access": "언제든 출입 가능하지만 밤에는 매우 위험"
+    }
+  ],
+  "regional_characteristics": [
+    {
+      "aspect": "교통",
+      "description": "아컴에서 버스나 자동차로 접근, 도로 상태 불량",
+      "challenges": ["겨울철 통행 어려움", "대중교통 제한적", "일부 지역 도보만 가능"]
+    },
+    {
+      "aspect": "통신",
+      "description": "전화선 일부 지역만, 우편은 오스본 상점 경유",
+      "limitations": ["전기 공급 불안정", "라디오 수신 불량", "외부와의 연결 제한적"]
+    },
+    {
+      "aspect": "의료",
+      "description": "의사나 병원 없음, 응급상황 시 아컴까지 이송",
+      "problems": ["의료 접근성 극히 제한적", "민간 요법 의존", "질병과 부상 방치"]
+    },
+    {
+      "aspect": "교육",
+      "description": "작은 학교 하나만 존재, 교사 부족",
+      "issues": ["높은 중퇴율", "교육 수준 저하", "젊은이들의 도시 이주"]
+    }
+  ],
+  "seasonal_patterns": [
+    {
+      "season": "봄",
+      "characteristics": "눈이 녹으면서 접근성 향상, 농업 활동 시작",
+      "supernatural": "동면하던 것들이 깨어나기 시작",
+      "dangers": "홍수, 진창길, 야생동물 활동 증가"
+    },
+    {
+      "season": "여름",
+      "characteristics": "가장 활동적인 시기, 외부인 방문 증가",
+      "supernatural": "초자연적 활동 최고조",
+      "advantages": "날씨 좋음, 이동 용이, 낮 시간 길어짐"
+    },
+    {
+      "season": "가을",
+      "characteristics": "수확 시즌이지만 우울한 분위기",
+      "supernatural": "죽음과 관련된 현상들 증가",
+      "mood": "절망감, 고립감, 겨울에 대한 두려움"
+    },
+    {
+      "season": "겨울",
+      "characteristics": "극도로 고립됨, 생존에만 집중",
+      "supernatural": "가장 위험한 시기, 어둠의 힘 강화",
+      "dangers": "폭설, 추위, 식료품 부족, 완전한 고립"
+    }
+  ],
+  "investigation_challenges": [
+    "주민들의 폐쇄적 태도와 불신",
+    "교통과 통신의 어려움",
+    "의료와 안전 시설 부재",
+    "미신과 원시적 신앙",
+    "경제적 어려움으로 인한 절망감",
+    "과거 기록의 부족이나 손실",
+    "자연환경의 위험성"
+  ],
+  "story_hooks": [
+    "웨이틀리 농장에서 발견된 이상한 유물",
+    "센티넬 힐에서 벌어지는 기이한 현상",
+    "실종자들과 베어스 덴의 연관성",
+    "비숍스 브룩의 수질 오염 원인 조사",
+    "던위치 묘지에서의 초자연적 목격담",
+    "농장들에서 발생하는 이상한 질병",
+    "마을 주민들의 집단 기이한 행동"
+  ],
+  "ai_usage_hints": {
+    "isolation_emphasis": "외부 세계와의 단절감과 고립감 강조",
+    "cosmic_horror_buildup": "일상적 이상함에서 우주적 공포로 점진적 확대",
+    "rural_gothic": "쇠락한 시골의 고딕적 분위기와 원시적 두려움",
+    "family_secrets": "근친결혼과 세대간 비밀로 인한 복잡한 가족사",
+    "environmental_storytelling": "풍경과 건물 자체가 이야기하는 과거와 공포",
+    "survival_elements": "물리적 생존과 정신적 생존의 이중 위협"
+  }
+}

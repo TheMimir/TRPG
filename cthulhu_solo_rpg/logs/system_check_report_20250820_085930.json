@@ -1,0 +1,237 @@
+{
+  "summary": {
+    "overall_status": "PASS",
+    "readiness": "System is ready for gameplay",
+    "total_checks": 15,
+    "status_counts": {
+      "PASS": 15,
+      "WARN": 0,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "critical_failures": 0,
+    "warnings": 0,
+    "success_rate": 100.0
+  },
+  "total_time": 1.9493141174316406,
+  "checks": [
+    {
+      "name": "Python Version",
+      "status": "PASS",
+      "message": "Python 3.13 meets requirements",
+      "details": {
+        "current": [
+          3,
+          13
+        ],
+        "required": [
+          3,
+          8
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Virtual Environment",
+      "status": "PASS",
+      "message": "Running in virtual environment",
+      "details": {
+        "venv_path": "/Users/mimir/TRPG/cthulhu_solo_rpg/venv"
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Python Path",
+      "status": "PASS",
+      "message": "Project paths are accessible",
+      "details": {
+        "paths": [
+          "/Users/mimir/TRPG/cthulhu_solo_rpg/tests/../src",
+          "/Users/mimir/TRPG/cthulhu_solo_rpg/src",
+          "/Users/mimir/TRPG/cthulhu_solo_rpg",
+          "/opt/homebrew/Cellar/python@3.13/3.13.4/Frameworks/Python.framework/Versions/3.13/lib/python313.zip",
+          "/opt/homebrew/Cellar/python@3.13/3.13.4/Frameworks/Python.framework/Versions/3.13/lib/python3.13"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "System Memory",
+      "status": "PASS",
+      "message": "128.0 GB RAM available",
+      "details": {
+        "total_gb": 128.0,
+        "available_gb": 42.7,
+        "usage_percent": 66.6
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Disk Space",
+      "status": "PASS",
+      "message": "432.0 GB free space available",
+      "details": {
+        "free_gb": 432.0,
+        "total_gb": 926.4,
+        "usage_percent": 51.3
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "CPU Usage",
+      "status": "PASS",
+      "message": "CPU usage: 6.8% (16 cores)",
+      "details": {
+        "cores": 16,
+        "usage_percent": 6.8
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Directory Structure",
+      "status": "PASS",
+      "message": "All required directories exist",
+      "details": {
+        "directories": [
+          "src",
+          "saves",
+          "logs",
+          "src/agents",
+          "src/ai",
+          "src/core",
+          "src/utils",
+          "src/data"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Required Files",
+      "status": "PASS",
+      "message": "All required files exist",
+      "details": {
+        "files": [
+          "src/core/game_engine.py",
+          "src/core/game_manager.py",
+          "src/ai/ollama_client.py",
+          "src/agents/story_agent.py",
+          "requirements.txt"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Save Directory Structure",
+      "status": "PASS",
+      "message": "Save directory structure is complete",
+      "details": {},
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Dependencies",
+      "status": "PASS",
+      "message": "All 16 required packages are installed",
+      "details": {
+        "installed": [
+          "requests",
+          "aiohttp",
+          "json-logging",
+          "ollama-python",
+          "pydantic",
+          "pyyaml",
+          "click",
+          "colorama",
+          "rich",
+          "pytest",
+          "pytest-cov",
+          "black",
+          "flake8",
+          "mypy",
+          "python-dateutil",
+          "tabulate"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Configuration",
+      "status": "PASS",
+      "message": "Configuration file is valid and complete",
+      "details": {
+        "sections": [
+          "ai",
+          "game",
+          "ui",
+          "logging",
+          "content",
+          "performance"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Ollama Service",
+      "status": "PASS",
+      "message": "Ollama service running with model 'gpt-oss:120b'",
+      "details": {
+        "url": "http://localhost:11434",
+        "model": "gpt-oss:120b",
+        "available_models": [
+          "gpt-oss:120b",
+          "qwen3:30b-a3b",
+          "llama4:scout",
+          "deepseek-r1:70b",
+          "qwen3:32b"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "AI Model Performance",
+      "status": "PASS",
+      "message": "Model 'gpt-oss:120b' responding normally (0.82s)",
+      "details": {
+        "response_time": 0.8184590339660645,
+        "test_model": "gpt-oss:120b",
+        "configured_model": "gpt-oss:120b"
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Game Data",
+      "status": "PASS",
+      "message": "All 8 data files are valid",
+      "details": {
+        "valid_files": [
+          "scenarios/beginner_scenarios.json",
+          "scenarios/classic_scenarios.json",
+          "locations/arkham_locations.json",
+          "locations/dunwich_locations.json",
+          "entities/mythos_creatures.json",
+          "entities/great_old_ones.json",
+          "items/investigation_tools.json",
+          "items/occult_books.json"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "File Permissions",
+      "status": "PASS",
+      "message": "All required permissions are available",
+      "details": {},
+      "fix_suggestion": ""
+    }
+  ],
+  "recommendations": [
+    "\u2705 System appears to be properly configured!"
+  ],
+  "system_info": {
+    "platform": "darwin",
+    "python_version": "3.13.4",
+    "working_directory": "/Users/mimir/TRPG/cthulhu_solo_rpg",
+    "project_root": "/Users/mimir/TRPG/cthulhu_solo_rpg",
+    "timestamp": 1755647970.016482,
+    "user": "mimir"
+  }
+}

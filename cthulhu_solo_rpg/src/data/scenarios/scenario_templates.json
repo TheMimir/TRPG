@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "category": "scenario_templates",
+    "description": "동적 시나리오 생성을 위한 템플릿들",
+    "usage": "AI agents can use these templates to generate new scenarios dynamically",
+    "ai_hints": {
+      "usage_context": "Dynamic content generation, procedural storytelling",
+      "customization": "high",
+      "reusability": "very high",
+      "complexity": "variable"
+    }
+  },
+  "templates": [
+    {
+      "id": "template_investigation",
+      "name": "조사 중심 템플릿",
+      "name_en": "Investigation-Centered Template",
+      "type": "investigation",
+      "difficulty_range": "1-5",
+      "structure": {
+        "opening": {
+          "hooks": [
+            "실종 사건",
+            "이상한 죽음",
+            "고고학적 발견",
+            "초자연적 현상 목격",
+            "가족사 조사",
+            "학술 연구 의뢰"
+          ],
+          "initial_contacts": [
+            "경찰관",
+            "의뢰인",
+            "목격자",
+            "전문가",
+            "친구/가족",
+            "우연한 만남"
+          ]
+        },
+        "investigation_phases": [
+          {
+            "phase": "정보 수집",
+            "objectives": [
+              "기본 상황 파악",
+              "관련자들 파악",
+              "초기 단서 수집"
+            ],
+            "skill_focus": ["설득", "추리", "도서관학"],
+            "revelation_types": ["표면적 사실", "의외의 연결", "첫 번째 이상함"]
+          },
+          {
+            "phase": "심화 조사",
+            "objectives": [
+              "숨겨진 진실 발견",
+              "패턴 분석",
+              "전문가 자문"
+            ],
+            "skill_focus": ["전문 지식", "오컬트", "관찰"],
+            "revelation_types": ["초자연적 요소", "역사적 배경", "위험의 본질"]
+          },
+          {
+            "phase": "대응 준비",
+            "objectives": [
+              "해결책 모색",
+              "필요 자원 확보",
+              "계획 수립"
+            ],
+            "skill_focus": ["오컬트", "협상", "준비"],
+            "revelation_types": ["해결 방법", "필요한 도구", "시간 제약"]
+          }
+        ],
+        "climax_types": [
+          "의식 수행",
+          "대면 대결",
+          "구출 작전",
+          "진실 폭로",
+          "선택의 순간"
+        ],
+        "resolution_factors": [
+          "성공도",
+          "희생 정도",
+          "지식 획득",
+          "관계 변화",
+          "미래 영향"
+        ]
+      },
+      "variables": {
+        "threat_types": [
+          "저주받은 물건",
+          "초자연적 존재",
+          "광신도 집단",
+          "차원적 침입",
+          "고대의 복수",
+          "정신적 감염"
+        ],
+        "locations": [
+          "도서관/대학",
+          "박물관/갤러리",
+          "오래된 건물",
+          "자연 지역",
+          "종교 시설",
+          "개인 거주지"
+        ],
+        "complications": [
+          "시간 제한",
+          "의심하는 권위자",
+          "경쟁 조사자",
+          "내부 배신자",
+          "예상치 못한 연결",
+          "도덕적 딜레마"
+        ]
+      },
+      "ai_generation_hints": {
+        "hook_generation": "현실적 상황에서 시작하여 점차 초자연적 요소 도입",
+        "npc_creation": "각각 고유한 지식과 동기, 비밀을 가진 캐릭터들",
+        "clue_distribution": "논리적 순서로 배치하되 일부는 잘못된 방향 제시",
+        "difficulty_scaling": "플레이어 행동과 발견 속도에 따라 동적 조절",
+        "atmosphere_building": "일상에서 시작하여 점진적 불안감 조성"
+      }
+    },
+    {
+      "id": "template_survival",
+      "name": "생존 공포 템플릿",
+      "name_en": "Survival Horror Template",
+      "type": "survival",
+      "difficulty_range": "3-6",
+      "structure": {
+        "opening": {
+          "isolation_methods": [
+            "교통 차단",
+            "통신 두절",
+            "자연 재해",
+            "의도적 고립",
+            "초자연적 격리"
+          ],
+          "initial_threat_signs": [
+            "이상한 소리",
+            "사라진 사람들",
+            "동물들의 기이한 행동",
+            "환경 변화",
+            "기술 오작동"
+          ]
+        },
+        "survival_phases": [
+          {
+            "phase": "위험 인식",
+            "objectives": [
+              "상황 파악",
+              "즉각적 위험 회피",
+              "안전 지대 확보"
+            ],
+            "skill_focus": ["생존", "은신", "응급처치"],
+            "threat_escalation": "낮음"
+          },
+          {
+            "phase": "자원 관리",
+            "objectives": [
+              "필수품 확보",
+              "임시 거점 구축",
+              "정보 수집"
+            ],
+            "skill_focus": ["수리", "의학", "관찰"],
+            "threat_escalation": "중간"
+          },
+          {
+            "phase": "적극적 대응",
+            "objectives": [
+              "탈출로 모색",
+              "위협 직접 대응",
+              "다른 생존자 구조"
+            ],
+            "skill_focus": ["격투", "운전", "폭파"],
+            "threat_escalation": "높음"
+          }
+        ],
+        "threat_patterns": [
+          "점진적 포위",
+          "간헐적 습격",
+          "지속적 압박",
+          "심리적 공격",
+          "환경적 위험"
+        ],
+        "escape_methods": [
+          "숨겨진 통로",
+          "차량 탈출",
+          "신호 송신",
+          "위협 제거",
+          "협상/거래"
+        ]
+      },
+      "variables": {
+        "environments": [
+          "외딴 마을",
+          "고립된 건물",
+          "황야/숲",
+          "지하 공간",
+          "섬",
+          "교통수단 내부"
+        ],
+        "threat_sources": [
+          "변이된 인간들",
+          "미토스 생물",
+          "기계적 존재",
+          "자연 재해",
+          "정신적 감염",
+          "시간/공간 왜곡"
+        ],
+        "resources": [
+          "음식/물",
+          "의료용품",
+          "무기/도구",
+          "연료/전력",
+          "통신 장비",
+          "교통 수단"
+        ],
+        "allies": [
+          "다른 생존자",
+          "구조대",
+          "지역 주민",
+          "전문가",
+          "동물",
+          "AI/기계"
+        ]
+      },
+      "ai_generation_hints": {
+        "tension_management": "긴장과 휴식의 균형, 점진적 강도 증가",
+        "resource_scarcity": "자원 부족을 통한 선택의 어려움 창조",
+        "false_hope": "일시적 안전감 후 더 큰 위협 도입",
+        "group_dynamics": "생존자 간 갈등과 협력의 균형",
+        "environmental_storytelling": "환경을 통한 배경 스토리 전달"
+      }
+    },
+    {
+      "id": "template_cosmic_horror",
+      "name": "우주적 공포 템플릿",
+      "name_en": "Cosmic Horror Template",
+      "type": "cosmic_horror",
+      "difficulty_range": "4-7",
+      "structure": {
+        "opening": {
+          "academic_hooks": [
+            "고대 문헌 발견",
+            "천체 관측 이상",
+            "고고학적 발견",
+            "수학/물리학 이론",
+            "언어학 연구"
+          ],
+          "revelation_sequence": [
+            "작은 이상함 발견",
+            "패턴 인식",
+            "더 큰 그림 파악",
+            "우주적 규모 이해",
+            "인간 무력감 깨달음"
+          ]
+        },
+        "knowledge_phases": [
+          {
+            "phase": "초기 발견",
+            "knowledge_type": "흥미로운 이상함",
+            "sanity_impact": "최소",
+            "skill_focus": ["학문적 기술"],
+            "revelation_scope": "개인적"
+          },
+          {
+            "phase": "연결 발견",
+            "knowledge_type": "패턴과 연관성",
+            "sanity_impact": "경미",
+            "skill_focus": ["분석적 사고"],
+            "revelation_scope": "지역적"
+          },
+          {
+            "phase": "진실 직면",
+            "knowledge_type": "우주적 실체",
+            "sanity_impact": "심각",
+            "skill_focus": ["정신력"],
+            "revelation_scope": "우주적"
+          }
+        ],
+        "cosmic_elements": [
+          "차원간 존재",
+          "시간의 비선형성",
+          "현실의 상대성",
+          "의식의 한계",
+          "물리 법칙 위반",
+          "존재의 무의미함"
+        ],
+        "human_responses": [
+          "부정과 합리화",
+          "강박적 연구",
+          "종교적 해석",
+          "완전한 절망",
+          "광기적 수용",
+          "초월적 깨달음"
+        ]
+      },
+      "variables": {
+        "cosmic_entities": [
+          "위대한 옛 존재",
+          "외신들",
+          "차원간 지성체",
+          "시간 초월 존재",
+          "집단 의식체",
+          "현실 조작자"
+        ],
+        "knowledge_sources": [
+          "고대 서적",
+          "수학적 증명",
+          "천체 관측",
+          "고고학적 유물",
+          "예술 작품",
+          "꿈과 환상"
+        ],
+        "manifestations": [
+          "기하학적 불가능",
+          "시공간 왜곡",
+          "집단 환각",
+          "물질 변환",
+          "의식 조작",
+          "인과관계 역전"
+        ],
+        "consequences": [
+          "정신 붕괴",
+          "현실 인식 변화",
+          "초자연적 능력",
+          "존재론적 위기",
+          "종족 변화",
+          "차원간 이동"
+        ]
+      },
+      "ai_generation_hints": {
+        "scale_progression": "개인 → 지역 → 세계 → 우주 규모로 확장",
+        "knowledge_revelation": "점진적이고 불가역적인 깨달음 과정",
+        "sanity_management": "지식 습득과 정신적 충격의 균형",
+        "incomprehensible_elements": "인간 이해 한계를 넘어서는 요소들",
+        "existential_themes": "존재의 의미와 무의미함 탐구"
+      }
+    }
+  ],
+  "generation_rules": {
+    "difficulty_scaling": {
+      "beginner": {
+        "sanity_loss_max": "1d8",
+        "complexity": "single mystery",
+        "support_level": "high",
+        "time_pressure": "low"
+      },
+      "intermediate": {
+        "sanity_loss_max": "1d12",
+        "complexity": "layered mystery",
+        "support_level": "medium",
+        "time_pressure": "medium"
+      },
+      "advanced": {
+        "sanity_loss_max": "1d20",
+        "complexity": "multiple mysteries",
+        "support_level": "low",
+        "time_pressure": "high"
+      }
+    },
+    "content_balance": {
+      "investigation_ratio": "40-60%",
+      "roleplay_ratio": "20-30%",
+      "action_ratio": "10-20%",
+      "horror_ratio": "10-30%"
+    },
+    "pacing_guidelines": {
+      "act_1": "설정과 훅 (25%)",
+      "act_2": "조사와 발전 (50%)",
+      "act_3": "클라이맥스와 해결 (25%)"
+    }
+  },
+  "ai_integration": {
+    "dynamic_adjustment": {
+      "player_skill": "플레이어 능력에 따른 난이도 조절",
+      "interest_level": "참여도에 따른 내용 확장/축소",
+      "time_available": "세션 시간에 맞춘 내용 조절",
+      "group_size": "참가자 수에 따른 역할 분배"
+    },
+    "content_generation": {
+      "npc_personalities": "상황과 테마에 맞는 NPC 특성",
+      "location_details": "분위기와 기능에 맞는 장소 묘사",
+      "clue_distribution": "논리적이면서도 흥미로운 단서 배치",
+      "event_timing": "극적 효과를 위한 이벤트 타이밍"
+    },
+    "narrative_coherence": {
+      "theme_consistency": "선택된 테마와 일관된 요소들",
+      "logical_flow": "인과관계가 명확한 스토리 전개",
+      "character_continuity": "NPC들의 일관된 행동과 동기",
+      "world_building": "설정에 맞는 세계관 유지"
+    }
+  }
+}

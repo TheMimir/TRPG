@@ -1,0 +1,124 @@
+{
+  "app": {
+    "title": "Call of Cthulhu: Solo Horror RPG",
+    "subtitle": "H.P. Lovecraft's Cosmic Horror Universe",
+    "version": "Version 1.0"
+  },
+  "menu": {
+    "main": {
+      "title": "🕯️ Main Menu 🕯️",
+      "new_game": "New Game - Begin your descent into madness",
+      "load_game": "Load Game - Continue your nightmare",
+      "character_creator": "Character Generator - Create an investigator",
+      "settings": "Settings - Configure your experience",
+      "language": "Language Settings - Change language",
+      "about": "About - Learn about the horror that awaits",
+      "exit": "Exit - Escape while you still can..."
+    },
+    "settings": {
+      "title": "⚙️ Settings ⚙️",
+      "language": "Language Settings",
+      "display": "Display Settings",
+      "audio": "Audio Settings",
+      "gameplay": "Gameplay Settings",
+      "save": "Save Settings",
+      "reset": "Reset to Defaults",
+      "back": "Back"
+    },
+    "language": {
+      "title": "🌐 Language Settings 🌐",
+      "current": "Current Language: {language}",
+      "select": "Select Language:",
+      "korean": "한국어",
+      "english": "English",
+      "apply": "Apply",
+      "cancel": "Cancel"
+    }
+  },
+  "character": {
+    "creation": {
+      "title": "🎭 Character Creation Wizard 🎭",
+      "subtitle": "Enter the Mind of an Investigator",
+      "step1": "Step 1: Basic Information",
+      "step2": "Step 2: Background & Occupation",
+      "step3": "Step 3: Attributes",
+      "step4": "Step 4: Skills",
+      "step5": "Step 5: Final Review",
+      "name": "Enter your investigator's name",
+      "age": "Enter age",
+      "gender": "Select gender",
+      "residence": "Where does your investigator live?",
+      "occupation": "Choose your investigator's occupation",
+      "background": "Describe your investigator's background (optional)"
+    },
+    "attributes": {
+      "strength": "Strength",
+      "constitution": "Constitution",
+      "size": "Size",
+      "dexterity": "Dexterity",
+      "appearance": "Appearance",
+      "intelligence": "Intelligence",
+      "power": "Power",
+      "education": "Education"
+    },
+    "occupations": {
+      "antiquarian": "Antiquarian",
+      "author": "Author",
+      "dilettante": "Dilettante",
+      "doctor": "Doctor of Medicine",
+      "journalist": "Journalist",
+      "detective": "Police Detective",
+      "investigator": "Private Investigator",
+      "professor": "Professor",
+      "soldier": "Soldier",
+      "other": "Other"
+    }
+  },
+  "game": {
+    "initialization": "🎲 Cthulhu Solo TRPG - Initializing...",
+    "config_loaded": "✅ Configuration loaded",
+    "system_check": "🔍 Running system checks...",
+    "system_ready": "🎉 System ready for gameplay!",
+    "character_creation": "Create new character?",
+    "scenario_selection": "📚 Select Scenario",
+    "game_started": "✅ Game session started successfully!",
+    "agents_ready": "🤖 AI Agents: {ready}/{total} ready",
+    "ai_service": "🧠 AI Service: {status}",
+    "ultra_think": "🔮 Ultra-think: {status}"
+  },
+  "scenarios": {
+    "haunted_house": "The Haunted House",
+    "missing_professor": "The Missing Professor",
+    "strange_sounds": "Strange Sounds in the Night",
+    "ancient_artifact": "The Ancient Artifact",
+    "edge_of_darkness": "The Edge of Darkness",
+    "dead_man_stomp": "Dead Man Stomp",
+    "escape_innsmouth": "Escape From Innsmouth",
+    "paper_chase": "Paper Chase"
+  },
+  "interface": {
+    "enter_choice": "Enter your choice",
+    "press_enter": "Press Enter to continue",
+    "yes": "Yes",
+    "no": "No",
+    "continue": "Continue",
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "load": "Load",
+    "exit": "Exit"
+  },
+  "messages": {
+    "welcome": "Welcome to Cthulhu Horror TRPG!",
+    "goodbye": "Until we meet again in the shadows...",
+    "error": "An error occurred",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information"
+  },
+  "quotes": {
+    "lovecraft1": "The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown.",
+    "lovecraft2": "The most merciful thing in the world is the inability of the human mind to correlate all its contents.",
+    "lovecraft3": "That is not dead which can eternal lie, And with strange aeons even death may die."
+  }
+}

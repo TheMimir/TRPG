@@ -1,0 +1,521 @@
+{
+  "metadata": {
+    "category": "artifacts",
+    "description": "미토스와 관련된 신비로운 유물들",
+    "power_level": "다양함",
+    "ai_hints": {
+      "usage_context": "Plot devices, rewards, cursed items, investigation clues",
+      "narrative_weight": "Each artifact should have significant story impact",
+      "risk_reward": "Powerful effects come with dangerous costs",
+      "mystery_elements": "Purpose and origin often unclear initially"
+    }
+  },
+  "artifact_categories": [
+    {
+      "category": "weapons",
+      "name": "무기류",
+      "description": "초자연적 존재들과 싸우거나 의식에 사용되는 무기들"
+    },
+    {
+      "category": "protective",
+      "name": "보호구",
+      "description": "미토스의 영향으로부터 보호해주는 물건들"
+    },
+    {
+      "category": "communication",
+      "name": "소통 도구",
+      "description": "초자연적 존재들과 소통하거나 정보를 얻는 도구들"
+    },
+    {
+      "category": "ceremonial",
+      "name": "의식용품",
+      "description": "오컬트 의식에 사용되는 도구들"
+    },
+    {
+      "category": "knowledge",
+      "name": "지식 저장체",
+      "description": "정보나 기억을 저장하는 특수한 물체들"
+    }
+  ],
+  "major_artifacts": [
+    {
+      "id": "shining_trapezohedron",
+      "name": "빛나는 사다리꼴 다면체",
+      "name_en": "Shining Trapezohedron",
+      "category": "communication",
+      "origin": "유클리드 이전 시대",
+      "current_location": "알려지지 않음 (추정: 사라짐)",
+      "physical_description": {
+        "shape": "복잡한 기하학적 다면체",
+        "material": "알 수 없는 검은 광물",
+        "size": "주먹만한 크기",
+        "distinctive_features": [
+          "내부에서 나오는 붉은 빛",
+          "표면의 기이한 각도들",
+          "만지면 따뜻함",
+          "중량감이 실제보다 무거움"
+        ]
+      },
+      "powers": [
+        {
+          "name": "냐를라토텝 소환",
+          "description": "어둠 속에서 사용하면 냐를라토텝의 화신을 부른다",
+          "activation": "완전한 어둠 속에서 응시",
+          "duration": "소환자가 의식을 잃을 때까지",
+          "danger": "극도로 위험, 소환자 대부분 사망"
+        },
+        {
+          "name": "미래 예시",
+          "description": "가능한 미래들을 보여줌",
+          "accuracy": "높지만 해석이 어려움",
+          "side_effects": "정신적 충격, 시간 감각 혼란"
+        }
+      ],
+      "history": [
+        {
+          "period": "고대",
+          "event": "유클리드 이전 마법사들이 창조",
+          "purpose": "냐를라토텝과의 소통"
+        },
+        {
+          "period": "이집트 시대",
+          "event": "파라오들의 비밀 의식에 사용",
+          "consequence": "여러 왕조의 몰락"
+        },
+        {
+          "period": "중세",
+          "event": "유럽의 연금술사들이 소유",
+          "fate": "대부분 광기로 사망"
+        },
+        {
+          "period": "현대",
+          "event": "로버트 블레이크가 마지막 소유",
+          "outcome": "블레이크 사망 후 행방불명"
+        }
+      ],
+      "warnings": [
+        "절대로 어둠 속에서 직접 보지 말 것",
+        "장시간 소유 시 점진적 광기",
+        "냐를라토텝의 지속적 관심 유발",
+        "주변인들에게도 위험 전파"
+      ],
+      "game_mechanics": {
+        "sanity_loss": {
+          "possession": "매주 1포인트",
+          "use": "1d20",
+          "nyarlathotep_encounter": "1d100"
+        },
+        "benefits": [
+          "미래에 대한 단편적 지식",
+          "숨겨진 진실 파악",
+          "냐를라토텝과의 협상 가능성"
+        ],
+        "drawbacks": [
+          "점진적 정신 붕괴",
+          "현실 인식 왜곡",
+          "냐를라토텝의 조종"
+        ]
+      }
+    },
+    {
+      "id": "elder_sign",
+      "name": "장로의 징표",
+      "name_en": "Elder Sign",
+      "category": "protective",
+      "origin": "장로족 (Elder Things)",
+      "variations": [
+        {
+          "name": "돌 조각",
+          "material": "고대 현무암",
+          "effectiveness": "높음",
+          "durability": "영구적"
+        },
+        {
+          "name": "금속 부적",
+          "material": "알 수 없는 합금",
+          "effectiveness": "중간",
+          "durability": "반영구적"
+        },
+        {
+          "name": "그려진 기호",
+          "material": "특수 잉크나 혈액",
+          "effectiveness": "낮음",
+          "durability": "일시적"
+        }
+      ],
+      "appearance": {
+        "shape": "다섯 개의 가지를 가진 별 모양",
+        "additional_elements": [
+          "중앙의 화염 모양",
+          "가지 끝의 눈 모양",
+          "주변의 보조 기호들"
+        ],
+        "variations": "지역과 제작자에 따라 세부 사항 다름"
+      },
+      "protective_powers": [
+        {
+          "against": "미토스 존재들",
+          "effectiveness": "강력함",
+          "limitations": "직접 접촉 필요"
+        },
+        {
+          "against": "정신적 공격",
+          "effectiveness": "부분적",
+          "mechanism": "정신력 보조"
+        },
+        {
+          "against": "소환 의식",
+          "effectiveness": "방해",
+          "condition": "의식 장소에 배치"
+        }
+      ],
+      "creation_requirements": [
+        "정확한 기하학적 비율",
+        "적절한 재료 (돌, 금속, 잉크)",
+        "제작자의 강한 의지력",
+        "천체 배열 고려"
+      ],
+      "known_locations": [
+        "미스카토닉 대학 비밀 컬렉션",
+        "아컴 정신병원 지하실",
+        "개인 컬렉터들",
+        "고대 유적지들"
+      ],
+      "usage_notes": [
+        "항상 몸에 지니고 있어야 효과적",
+        "신앙심이나 확신이 효과에 영향",
+        "일부 존재들은 완전 무효화 불가",
+        "시간이 지나면 효력 감소 가능성"
+      ]
+    },
+    {
+      "id": "silver_key",
+      "name": "은열쇠",
+      "name_en": "Silver Key",
+      "category": "communication",
+      "origin": "차원간 여행자들",
+      "physical_description": {
+        "material": "순은이지만 특이한 광택",
+        "design": "복잡하고 기이한 열쇠 형태",
+        "size": "손바닥 크기",
+        "weight": "예상보다 가벼움",
+        "temperature": "항상 차가움"
+      },
+      "powers": [
+        {
+          "name": "차원 여행",
+          "description": "다른 차원이나 시공간으로 이동",
+          "activation": "특정 문이나 게이트에서 사용",
+          "destinations": [
+            "과거나 미래",
+            "평행 우주",
+            "환상의 땅들",
+            "미토스 존재들의 영역"
+          ]
+        },
+        {
+          "name": "숨겨진 문 개방",
+          "description": "보이지 않는 통로들을 열어줌",
+          "examples": [
+            "벽 속의 비밀 방",
+            "차원간 균열",
+            "시간의 문",
+            "꿈의 세계 입구"
+          ]
+        }
+      ],
+      "risks": [
+        "잘못된 목적지로 이동",
+        "돌아올 수 없는 장소에 갇힘",
+        "차원간 존재들의 주목",
+        "시공간 왜곡으로 인한 부작용"
+      ],
+      "famous_users": [
+        {
+          "name": "랜돌프 카터",
+          "outcome": "꿈의 땅들과 현실 사이를 오가게 됨",
+          "fate": "궁극적으로 완전한 자유 획득"
+        }
+      ]
+    },
+    {
+      "id": "space_mead",
+      "name": "우주의 꿀술",
+      "name_en": "Space-Mead",
+      "category": "knowledge",
+      "origin": "외계 벌들",
+      "physical_description": {
+        "appearance": "금색의 점성 있는 액체",
+        "container": "수정으로 만든 특수 용기",
+        "quantity": "매우 소량 (수 방울)",
+        "properties": [
+          "우주 방사선처럼 빛남",
+          "중력 무시하여 떠다님",
+          "온도 변화 없음"
+        ]
+      },
+      "effects": [
+        {
+          "name": "우주적 지식",
+          "description": "우주의 진리와 비밀을 깨달음",
+          "duration": "영구적",
+          "cost": "인간성의 일부 상실"
+        },
+        {
+          "name": "차원 감각",
+          "description": "다른 차원들을 인식할 수 있게 됨",
+          "advantages": "숨겨진 존재들을 볼 수 있음",
+          "disadvantages": "현실과 환상의 경계 모호"
+        }
+      ],
+      "acquisition": [
+        "미의 외계 벌들로부터 직접 획득",
+        "고대 알케미스트의 실험실에서 발견",
+        "차원간 거래상들로부터 구매"
+      ]
+    }
+  ],
+  "minor_artifacts": [
+    {
+      "id": "ghoul_teeth",
+      "name": "구울의 이빨",
+      "category": "ceremonial",
+      "description": "구울에서 뽑힌 이빨들, 부패 방지와 언데드 조종에 사용",
+      "uses": [
+        "부패 방지 의식",
+        "구울과의 소통",
+        "언데드 탐지",
+        "지하 세계 안내"
+      ],
+      "acquisition": "구울을 죽이거나 협상을 통해 획득"
+    },
+    {
+      "id": "byakhee_feather",
+      "name": "바이아키 깃털",
+      "category": "communication",
+      "description": "하스터의 종족인 바이아키의 깃털",
+      "powers": [
+        "하스터와의 원거리 소통",
+        "차원간 메시지 전달",
+        "황의 징표 감지",
+        "카르코사로의 소환"
+      ],
+      "dangers": [
+        "하스터의 관심 유발",
+        "예술적 광기 증가",
+        "황색에 대한 강박"
+      ]
+    },
+    {
+      "id": "atlantean_crystal",
+      "name": "아틀란티스 수정",
+      "category": "knowledge",
+      "description": "침몰한 아틀란티스에서 나온 기억 저장 수정",
+      "contents": [
+        "아틀란티스 최후의 날",
+        "고대 마법 기술",
+        "바다 밑 문명들의 위치",
+        "딥 원과의 첫 접촉"
+      ],
+      "activation": "달빛이나 촛불 아래에서 명상"
+    },
+    {
+      "id": "migo_brain_cylinder",
+      "name": "미고의 뇌 보관통",
+      "category": "communication",
+      "description": "미고가 사용하는 뇌 보존 기술의 산물",
+      "current_state": [
+        "빈 통 (재사용 가능)",
+        "인간 뇌 보관 중",
+        "미고 뇌 보관 중",
+        "손상된 상태"
+      ],
+      "uses": [
+        "장거리 의식 없는 상태로 여행",
+        "뇌와 직접 대화",
+        "기억 추출",
+        "미고와의 협상 도구"
+      ]
+    }
+  ],
+  "cursed_items": [
+    {
+      "id": "haunted_mirror",
+      "name": "저주받은 거울",
+      "curse_type": "정신적 감염",
+      "description": "보는 이의 영혼을 서서히 잠식하는 거울",
+      "effects": [
+        "거울 속에 다른 얼굴들이 나타남",
+        "점진적 정체성 혼란",
+        "거울에 대한 강박적 집착",
+        "최종적으로 거울 속에 갇힘"
+      ],
+      "breaking_curse": [
+        "거울을 완전히 파괴",
+        "특별한 엑소시즘 의식",
+        "거울의 원래 소유자 찾기"
+      ]
+    },
+    {
+      "id": "whisper_box",
+      "name": "속삭임 상자",
+      "curse_type": "청각적 괴롭힘",
+      "description": "열면 끊임없는 속삭임이 들리는 작은 상자",
+      "manifestation": [
+        "처음에는 희미한 속삭임",
+        "점점 큰 목소리들",
+        "여러 언어의 혼재",
+        "명령과 협박"
+      ],
+      "progression": [
+        "호기심으로 시작",
+        "수면 방해",
+        "집중력 저하",
+        "정신적 지배"
+      ]
+    }
+  ],
+  "artifact_creation": [
+    {
+      "category": "ancient_crafting",
+      "description": "고대 문명들이 사용한 제작 기법",
+      "requirements": [
+        "특수 재료 (운석, 심해 광물 등)",
+        "천체 배열에 맞춘 타이밍",
+        "수년간의 제작 시간",
+        "제작자의 생명력 일부"
+      ],
+      "examples": ["장로의 징표", "미토스 조각상"]
+    },
+    {
+      "category": "modern_attempts",
+      "description": "현대인들의 유물 제작 시도",
+      "limitations": [
+        "고대 지식의 부족",
+        "불완전한 재료",
+        "기술적 한계",
+        "시간 부족"
+      ],
+      "typical_results": [
+        "일시적 효과",
+        "예상치 못한 부작용",
+        "불안정한 힘",
+        "제작자에 대한 역습"
+      ]
+    }
+  ],
+  "acquisition_methods": [
+    {
+      "method": "고고학적 발굴",
+      "success_rate": "낮음",
+      "risks": [
+        "저주나 함정",
+        "발굴 권한 문제",
+        "다른 탐사대와 경쟁",
+        "현지 정부 개입"
+      ]
+    },
+    {
+      "method": "개인 컬렉터와 거래",
+      "success_rate": "중간",
+      "considerations": [
+        "진품 여부 확인",
+        "높은 가격",
+        "거래자의 의도",
+        "법적 문제"
+      ]
+    },
+    {
+      "method": "교단이나 조직에서 입수",
+      "success_rate": "높음",
+      "requirements": [
+        "조직 내 지위",
+        "특별한 공로",
+        "위험한 임무 수행",
+        "영혼이나 정신의 대가"
+      ]
+    },
+    {
+      "method": "초자연적 존재와 거래",
+      "success_rate": "다양함",
+      "warnings": [
+        "거래 조건 명확히 하기",
+        "존재의 진짜 의도 파악",
+        "대가의 실제 가치 평가",
+        "배신 가능성 고려"
+      ]
+    }
+  ],
+  "identification_challenges": [
+    {
+      "challenge": "위조품",
+      "frequency": "매우 흔함",
+      "detection_methods": [
+        "재료 분석",
+        "제작 기법 확인",
+        "초자연적 효과 테스트",
+        "전문가 감정"
+      ]
+    },
+    {
+      "challenge": "불완전한 유물",
+      "description": "일부만 남아있거나 손상된 유물들",
+      "implications": [
+        "효과 감소",
+        "예측 불가능한 작동",
+        "위험 증가",
+        "수리 필요"
+      ]
+    },
+    {
+      "challenge": "복합 유물",
+      "description": "여러 부품이 조합되어야 완전해지는 유물",
+      "examples": [
+        "분할된 열쇠들",
+        "조각난 거울",
+        "세트로 된 보석들",
+        "여러 권으로 나뉜 서적"
+      ]
+    }
+  ],
+  "storage_considerations": [
+    {
+      "level": "기본 보관",
+      "suitable_for": "비활성 또는 약한 유물들",
+      "methods": [
+        "안전한 금고",
+        "방습 처리",
+        "온도 조절",
+        "접근 제한"
+      ]
+    },
+    {
+      "level": "특수 보관",
+      "suitable_for": "활성 또는 위험한 유물들",
+      "requirements": [
+        "마법적 차단막",
+        "특수 재료 상자",
+        "격리 시설",
+        "정기적 점검"
+      ]
+    },
+    {
+      "level": "극한 격리",
+      "suitable_for": "극도로 위험한 유물들",
+      "measures": [
+        "지하 심층 보관",
+        "다중 보안 시스템",
+        "24시간 감시",
+        "파괴 준비 장치"
+      ]
+    }
+  ],
+  "ai_usage_hints": {
+    "plot_integration": "유물이 스토리의 자연스러운 부분이 되도록",
+    "mystery_element": "유물의 진정한 힘과 목적을 점진적으로 공개",
+    "risk_management": "강력한 유물일수록 큰 위험성 부여",
+    "character_impact": "유물 사용이 캐릭터 발전에 영향을 미치도록",
+    "world_building": "유물을 통해 미토스 세계관의 깊이 확장",
+    "player_agency": "유물 사용 여부를 플레이어의 선택으로 남겨두기"
+  }
+}

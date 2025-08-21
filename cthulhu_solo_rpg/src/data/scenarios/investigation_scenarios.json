@@ -1,0 +1,306 @@
+{
+  "metadata": {
+    "category": "investigation_scenarios",
+    "description": "조사와 추리에 중점을 둔 크툴루 시나리오들",
+    "difficulty_range": "2-5",
+    "average_duration": "4-6 hours",
+    "ai_hints": {
+      "usage_context": "Detective-style gameplay, clue-gathering focus",
+      "complexity": "medium",
+      "sanity_loss": "medium",
+      "combat_frequency": "low"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "inv_001",
+      "title": "알렉산드리아의 고서",
+      "title_en": "The Alexandria Manuscript",
+      "difficulty": 3,
+      "duration": "4-5 hours",
+      "description": "뉴욕에서 발견된 고대 파피루스가 연쇄 살인 사건과 연결되어 있다.",
+      "background": {
+        "setting": "1920년대 뉴욕시",
+        "hook": "유명한 골동품상이 알렉산드리아에서 가져온 파피루스를 공개한 직후, 관련자들이 연쇄적으로 의문의 죽음을 당하고 있다.",
+        "initial_mystery": "파피루스를 본 사람들이 며칠 내로 끔찍한 죽음을 맞고 있다."
+      },
+      "key_npcs": [
+        {
+          "name": "사무엘 윈터스",
+          "name_en": "Samuel Winters",
+          "role": "골동품상",
+          "description": "성공한 골동품 수집가이자 상인. 최근 매우 불안해하고 있다.",
+          "knowledge": ["파피루스의 입수 경로", "구매자 명단", "고대 이집트 유물"],
+          "disposition": "협조적이지만 두려워함",
+          "secrets": "파피루스의 진정한 위험을 깨닫고 있지만 이미 늦었다고 생각한다."
+        },
+        {
+          "name": "레베카 스톤 형사",
+          "name_en": "Detective Rebecca Stone",
+          "role": "NYPD 형사",
+          "description": "경험 많은 살인사건 전담 형사. 과학적 접근을 선호한다.",
+          "knowledge": ["사건 현장 증거", "피해자들의 공통점", "수사 진행 상황"],
+          "disposition": "회의적이지만 열린 마음",
+          "secrets": "사건들 사이의 초자연적 연관성을 느끼기 시작했다."
+        }
+      ],
+      "locations": [
+        {
+          "name": "윈터스 골동품점",
+          "description": "맨해튼의 고급 골동품점. 세계 각지의 희귀한 유물들로 가득하다.",
+          "areas": [
+            "진열실",
+            "개인 사무실",
+            "지하 창고",
+            "감정실"
+          ],
+          "atmosphere": "고급스럽지만 최근 불안한 기운이 감돈다",
+          "hidden_elements": ["숨겨진 컬렉션", "파피루스 보관함", "고대 보호 부적들"]
+        },
+        {
+          "name": "뉴욕 공립도서관",
+          "description": "연구를 위한 장소. 고대 언어와 역사 자료가 풍부하다.",
+          "key_features": ["고문서 컬렉션", "이집트학 자료", "연구실"],
+          "atmosphere": "학문적이고 조용하지만 뭔가 숨어있는 긴장감"
+        }
+      ],
+      "investigation_chain": [
+        {
+          "stage": 1,
+          "objective": "사건 현장 조사",
+          "clues": [
+            "피해자들의 공통점",
+            "사망 시점과 원인",
+            "파피루스와의 연관성"
+          ],
+          "skill_checks": ["범죄학", "의학", "추리"],
+          "revelations": ["모든 피해자가 파피루스를 봤다", "사망 방식이 이상하다", "특정 순서로 죽고 있다"]
+        },
+        {
+          "stage": 2,
+          "objective": "파피루스 내용 해독",
+          "clues": [
+            "고대 이집트어 번역",
+            "종교적 의미",
+            "저주의 성격"
+          ],
+          "skill_checks": ["이집트학", "오컬트", "고대 언어"],
+          "revelations": ["사자의 서와 관련", "특별한 저주가 걸려있다", "해제 방법이 있다"]
+        },
+        {
+          "stage": 3,
+          "objective": "저주 해제 방법 연구",
+          "clues": [
+            "고대 해제 의식",
+            "필요한 재료들",
+            "시간의 중요성"
+          ],
+          "skill_checks": ["오컬트", "도서관학", "화학"],
+          "revelations": ["특별한 의식이 필요하다", "재료 수집이 어렵다", "시간이 부족하다"]
+        }
+      ],
+      "climax_events": [
+        {
+          "trigger": "다음 피해자 예측",
+          "event": "패턴을 분석해 다음 희생자를 예측하고 보호하려 시도한다.",
+          "mechanics": {
+            "time_pressure": true,
+            "skill_checks": ["추리", "설득", "의학"],
+            "protection_attempt": true,
+            "supernatural_interference": true
+          }
+        },
+        {
+          "trigger": "저주 해제 의식",
+          "event": "파피루스의 저주를 해제하기 위한 복잡한 의식을 수행한다.",
+          "mechanics": {
+            "ritual_complexity": "high",
+            "skill_checks": ["오컬트", "고대 언어", "집중력"],
+            "interference_events": ["환상", "물리적 현상", "정신 공격"],
+            "teamwork_required": true
+          }
+        }
+      ],
+      "possible_endings": [
+        {
+          "condition": "저주 해제 성공",
+          "outcome": "파피루스의 저주가 해제되고 더 이상의 피해자는 발생하지 않는다.",
+          "consequences": ["생명 구원", "고대 지식 습득", "전문가 평판"],
+          "sanity_recovery": "1d6",
+          "knowledge_gained": "이집트 저주와 해제법"
+        },
+        {
+          "condition": "부분적 성공",
+          "outcome": "저주는 약화되지만 완전히 사라지지는 않는다.",
+          "consequences": ["일부 보호", "지속적인 위험", "불완전한 해결"],
+          "sanity_recovery": "1d3",
+          "ongoing_effects": "주기적 위험 체크"
+        },
+        {
+          "condition": "실패",
+          "outcome": "저주가 계속되고 더 많은 피해자가 발생한다.",
+          "consequences": ["더 많은 죽음", "죄책감", "저주 확산"],
+          "sanity_loss": "1d8",
+          "campaign_impact": "지속적인 위협으로 발전"
+        }
+      ],
+      "rewards": {
+        "experience": "12-18점",
+        "potential_allies": ["레베카 형사", "도서관 연구진", "윈터스(생존시)"],
+        "knowledge_gained": ["고대 이집트 저주", "사자의 서", "보호 의식"],
+        "items": ["보호 부적", "이집트학 자료", "저주 해제 도구"]
+      },
+      "ai_hints": {
+        "pacing": "차근차근한 조사, 점증하는 긴박감, 집중적인 클라이맥스",
+        "atmosphere_focus": "도시적 현대성과 고대 저주의 대비",
+        "key_emotions": ["호기심", "긴장", "책임감", "성취감"],
+        "difficulty_scaling": "해독 속도와 의식 준비도에 따라 조절"
+      }
+    },
+    {
+      "id": "inv_002",
+      "title": "사라진 화가의 비밀",
+      "title_en": "The Missing Artist's Secret",
+      "difficulty": 4,
+      "duration": "5-6 hours",
+      "description": "유명한 화가가 실종되고, 그의 마지막 작품들에서 이상한 현상이 일어나고 있다.",
+      "background": {
+        "setting": "1920년대 파리 몽마르트르",
+        "hook": "전위 화가 피에르 듀부아가 갑자기 실종되었다. 그의 아틀리에에 남겨진 마지막 작품들을 본 사람들이 이상한 환각을 경험하고 있다.",
+        "initial_mystery": "화가의 갑작스러운 실종과 그림들의 기이한 영향력"
+      },
+      "key_npcs": [
+        {
+          "name": "피에르 듀부아",
+          "name_en": "Pierre Dubois",
+          "role": "실종된 화가",
+          "description": "재능 있는 전위 화가. 최근 작품 성향이 급격히 변했다고 알려져 있다.",
+          "knowledge": ["초현실적 영감의 원천", "비밀 기법", "숨겨진 작품들"],
+          "disposition": "실종 상태",
+          "secrets": "실제로는 다른 차원의 존재와 접촉하여 그 영향을 받았다."
+        },
+        {
+          "name": "마들렌 로랑",
+          "name_en": "Madeleine Laurent",
+          "role": "화가의 모델이자 연인",
+          "description": "아름다운 젊은 여성. 피에르의 변화를 가장 가까이서 지켜봤다.",
+          "knowledge": ["피에르의 최근 변화", "비밀 작업실", "이상한 방문자들"],
+          "disposition": "걱정스러워하며 협조적",
+          "secrets": "피에르가 밤마다 이상한 존재들과 대화하는 것을 들었다."
+        }
+      ],
+      "locations": [
+        {
+          "name": "듀부아의 아틀리에",
+          "description": "몽마르트르 언덕의 화가 작업실. 완성된 작품들과 재료들로 가득하다.",
+          "areas": [
+            "메인 작업실",
+            "비밀 작업공간",
+            "보관실",
+            "개인 거주 공간"
+          ],
+          "atmosphere": "예술적 영감과 함께 불안한 기운이 공존",
+          "hidden_elements": ["숨겨진 그림들", "이상한 안료", "초자연적 도구들"]
+        },
+        {
+          "name": "라팽 아질 카페",
+          "description": "예술가들이 모이는 카페. 정보와 소문이 오가는 곳.",
+          "key_features": ["예술가 모임", "가십과 정보", "전시 공간"],
+          "atmosphere": "보헤미안적이고 자유분방하지만 최근 우려가 증가"
+        }
+      ],
+      "investigation_chain": [
+        {
+          "stage": 1,
+          "objective": "실종 상황 조사",
+          "clues": [
+            "마지막 목격 정보",
+            "작업실 상태",
+            "최근 행동 변화"
+          ],
+          "skill_checks": ["추리", "심리학", "예술"],
+          "revelations": ["실종 직전 이상한 행동", "작업 스타일의 급변", "신비로운 방문자들"]
+        },
+        {
+          "stage": 2,
+          "objective": "작품들의 이상 현상 분석",
+          "clues": [
+            "그림을 본 사람들의 증언",
+            "작품의 기법과 재료",
+            "숨겨진 메시지들"
+          ],
+          "skill_checks": ["예술", "화학", "오컬트"],
+          "revelations": ["초자연적 안료 사용", "그림 속 숨은 기호들", "차원간 영향"]
+        },
+        {
+          "stage": 3,
+          "objective": "진실과 구출 방법 모색",
+          "clues": [
+            "다른 차원과의 접촉",
+            "피에르의 현재 상태",
+            "구출 가능성"
+          ],
+          "skill_checks": ["오컬트", "차원학", "의지력"],
+          "revelations": ["피에르가 다른 차원에 갇혀있다", "그림이 통로 역할", "구출 의식 필요"]
+        }
+      ],
+      "climax_events": [
+        {
+          "trigger": "그림 속 진입",
+          "event": "마지막 작품을 통해 피에르가 갇힌 차원으로 들어간다.",
+          "mechanics": {
+            "dimension_travel": true,
+            "sanity_loss": "1d8",
+            "altered_physics": true,
+            "navigation_difficulty": "high"
+          }
+        },
+        {
+          "trigger": "차원 존재와의 대면",
+          "event": "피에르를 붙잡고 있는 초차원적 존재와 마주친다.",
+          "mechanics": {
+            "cosmic_entity": true,
+            "negotiation_possible": true,
+            "sanity_loss": "1d12",
+            "skill_checks": ["협상", "오컬트", "의지력"]
+          }
+        }
+      ],
+      "possible_endings": [
+        {
+          "condition": "피에르 구출 성공",
+          "outcome": "피에르를 차원에서 구출하고 통로를 봉인한다.",
+          "consequences": ["생명 구원", "예술계 감사", "초차원 지식"],
+          "sanity_recovery": "1d8",
+          "artist_fate": "구출되지만 변화된 상태"
+        },
+        {
+          "condition": "거래 성사",
+          "outcome": "존재와 거래하여 피에르를 돌려받는다.",
+          "consequences": ["피에르 귀환", "대가 지불", "지속적인 연결"],
+          "sanity_recovery": "1d4",
+          "ongoing_effects": "주기적 의무 이행"
+        },
+        {
+          "condition": "실패",
+          "outcome": "피에르를 구하지 못하고 통로가 열린 채로 남는다.",
+          "consequences": ["구출 실패", "지속적인 위험", "죄책감"],
+          "sanity_loss": "1d10",
+          "campaign_impact": "차원 침입 위험 증가"
+        }
+      ],
+      "rewards": {
+        "experience": "15-20점",
+        "potential_allies": ["마들렌", "예술가 커뮤니티", "구출된 피에르"],
+        "knowledge_gained": ["차원간 예술", "초자연적 창작", "존재들과의 접촉"],
+        "items": ["초자연적 그림", "차원 안료", "보호 부적"]
+      },
+      "ai_hints": {
+        "pacing": "미스터리 중심의 조사, 예술적 공포, 차원적 클라이맥스",
+        "atmosphere_focus": "파리의 보헤미안 분위기와 초현실적 공포",
+        "key_emotions": ["호기심", "예술적 경외", "공포", "구원 의지"],
+        "difficulty_scaling": "차원 탐험 깊이에 따라 위험도 조절"
+      }
+    }
+  ]
+}

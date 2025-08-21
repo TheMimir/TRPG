@@ -1,0 +1,107 @@
+{
+  "save_type": "character",
+  "save_timestamp": "2025-08-20T07:28:10.595636",
+  "character_data": {
+    "name": "Dr. Henry Armitage",
+    "age": 65,
+    "occupation": "University Librarian",
+    "residence": "Arkham, Massachusetts",
+    "birthplace": "Boston, Massachusetts",
+    "strength": 50,
+    "constitution": 60,
+    "power": 80,
+    "dexterity": 45,
+    "appearance": 55,
+    "size": 60,
+    "intelligence": 90,
+    "education": 95,
+    "hit_points_current": 12,
+    "hit_points_maximum": 12,
+    "sanity_current": 65,
+    "sanity_maximum": 80,
+    "sanity_starting": 80,
+    "magic_points_current": 16,
+    "magic_points_maximum": 16,
+    "skills": {
+      "library_use": {
+        "base_value": 25,
+        "current_value": 85,
+        "occupation_points": 60,
+        "personal_points": 0
+      },
+      "occult": {
+        "base_value": 5,
+        "current_value": 70,
+        "occupation_points": 45,
+        "personal_points": 20
+      },
+      "psychology": {
+        "base_value": 10,
+        "current_value": 60,
+        "occupation_points": 30,
+        "personal_points": 20
+      },
+      "spot_hidden": {
+        "base_value": 25,
+        "current_value": 55,
+        "occupation_points": 20,
+        "personal_points": 10
+      }
+    },
+    "mythos_knowledge": 15,
+    "mythos_tomes_read": [
+      "Necronomicon (partial)",
+      "Cultes des Goules"
+    ],
+    "spells_known": [
+      "Contact Deity (Yog-Sothoth)",
+      "Elder Sign"
+    ],
+    "phobias": [
+      "Agoraphobia (mild)"
+    ],
+    "manias": [],
+    "possessions": [
+      "Personal library",
+      "Antique desk",
+      "Reading glasses"
+    ],
+    "weapons": [
+      {
+        "name": ".32 Revolver",
+        "damage": "1d8",
+        "range": "15",
+        "attacks": "1"
+      }
+    ],
+    "cash_and_assets": {
+      "spending_level": 4,
+      "cash": 250.5,
+      "assets": 15000.0
+    },
+    "clues_discovered": [
+      "Strange symbols in old texts",
+      "References to Dunwich Horror"
+    ],
+    "locations_visited": [
+      "Miskatonic University Library",
+      "Dunwich Village"
+    ],
+    "contacts_met": [
+      "Wilbur Whateley",
+      "Old Zechariah Whateley"
+    ],
+    "experience_points": 25,
+    "skill_improvements": {
+      "occult": 5,
+      "psychology": 10
+    }
+  },
+  "character_summary": {
+    "name": "Dr. Henry Armitage",
+    "occupation": "University Librarian",
+    "current_sanity": 65,
+    "mythos_knowledge": 15,
+    "experience_points": 25
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "ai": {
+    "ollama_url": "http://localhost:11434",
+    "model": "gpt-oss-120b",
+    "temperature": 0.7,
+    "ultra_think_depth": 3,
+    "max_tokens": 2048,
+    "timeout": 90
+  },
+  "game": {
+    "auto_save": true,
+    "auto_save_interval": 300,
+    "difficulty": "normal",
+    "sanity_multiplier": 1.0,
+    "enable_horror_descriptions": true,
+    "turn_time_limit": 0
+  },
+  "ui": {
+    "interface": "cli",
+    "colors_enabled": true,
+    "font_size": 12,
+    "max_history_lines": 1000,
+    "show_dice_animations": false
+  },
+  "logging": {
+    "level": "INFO",
+    "log_ai_interactions": true,
+    "log_game_events": true,
+    "log_file_rotation": true,
+    "max_log_file_size": "10MB",
+    "backup_count": 5
+  },
+  "content": {
+    "content_directory": "data/content",
+    "custom_scenarios_path": "data/custom",
+    "enable_user_content": true
+  },
+  "performance": {
+    "cache_ai_responses": false,
+    "max_memory_usage": "1GB",
+    "background_processing": true
+  }
+}

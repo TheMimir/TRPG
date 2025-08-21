@@ -1,0 +1,600 @@
+{
+  "metadata": {
+    "category": "weapons",
+    "description": "1920년대 조사자들이 사용할 수 있는 무기들",
+    "era": "1920년대",
+    "ai_hints": {
+      "usage_context": "Self-defense, combat encounters, intimidation",
+      "availability": "Period-appropriate weapons only",
+      "effectiveness": "Limited against cosmic horrors",
+      "legal_considerations": "Weapon ownership laws of the 1920s"
+    }
+  },
+  "weapon_categories": [
+    {
+      "category": "firearms",
+      "name": "총기류",
+      "subcategories": ["권총", "소총", "산탄총", "기관총"]
+    },
+    {
+      "category": "melee",
+      "name": "근접 무기",
+      "subcategories": ["칼", "둔기", "즉석 무기", "스포츠 장비"]
+    },
+    {
+      "category": "improvised",
+      "name": "즉석 무기",
+      "subcategories": ["도구", "가구", "화학물질", "화재"]
+    },
+    {
+      "category": "specialized",
+      "name": "특수 무기",
+      "subcategories": ["의식용", "대미토스용", "폭발물", "독"]
+    }
+  ],
+  "firearms": [
+    {
+      "id": "colt_45",
+      "name": "콜트 .45 자동권총",
+      "name_en": "Colt .45 Automatic Pistol (M1911)",
+      "type": "권총",
+      "caliber": ".45 ACP",
+      "era": "1911-현재",
+      "availability": "일반적 (군인, 경찰, 민간인)",
+      "price": "$15-25",
+      "specifications": {
+        "barrel_length": "5인치",
+        "overall_length": "8.5인치",
+        "weight": "2.4파운드",
+        "capacity": "7+1발",
+        "action": "단발식 자동"
+      },
+      "performance": {
+        "effective_range": "50야드",
+        "stopping_power": "매우 높음",
+        "reliability": "우수",
+        "accuracy": "좋음"
+      },
+      "advantages": [
+        "강력한 저지력",
+        "신뢰성 높음",
+        "부품 구하기 쉬움",
+        "군용 표준"
+      ],
+      "disadvantages": [
+        "크고 무거움",
+        "반동 큼",
+        "장전 용량 적음",
+        "비싸고 관리 필요"
+      ],
+      "legal_status": "대부분 지역에서 합법",
+      "concealment": "어려움 (크고 무거워서)"
+    },
+    {
+      "id": "smith_wesson_38",
+      "name": "스미스 & 웨슨 .38 리볼버",
+      "name_en": "Smith & Wesson .38 Special",
+      "type": "리볼버",
+      "caliber": ".38 Special",
+      "availability": "매우 일반적",
+      "price": "$12-20",
+      "specifications": {
+        "barrel_length": "4-6인치",
+        "capacity": "6발",
+        "action": "복동식"
+      },
+      "advantages": [
+        "신뢰성 매우 높음",
+        "조작 간단",
+        "유지보수 쉬움",
+        "적당한 크기"
+      ],
+      "disadvantages": [
+        "재장전 느림",
+        "화력 제한적",
+        "관통력 부족"
+      ],
+      "users": ["경찰", "탐정", "민간인"],
+      "concealment": "보통"
+    },
+    {
+      "id": "thompson_smg",
+      "name": "톰슨 기관단총",
+      "name_en": "Thompson Submachine Gun",
+      "type": "기관단총",
+      "caliber": ".45 ACP",
+      "era": "1920년대 초",
+      "availability": "제한적 (비쌈, 특수 목적)",
+      "price": "$200-400",
+      "specifications": {
+        "barrel_length": "10.5인치",
+        "overall_length": "33.5인치",
+        "weight": "10.8파운드",
+        "capacity": "20, 30, 50, 100발 탄창",
+        "rate_of_fire": "600-700발/분"
+      },
+      "advantages": [
+        "높은 화력",
+        "근거리 압도적 위력",
+        ".45 ACP 탄환 사용",
+        "위협적 외관"
+      ],
+      "disadvantages": [
+        "매우 비쌈",
+        "크고 무거움",
+        "탄약 소모 많음",
+        "정확도 낮음"
+      ],
+      "legal_status": "대부분 지역에서 제한적",
+      "typical_users": ["갱단", "경찰 특수부대", "군인"]
+    },
+    {
+      "id": "winchester_rifle",
+      "name": "윈체스터 소총",
+      "name_en": "Winchester Model 1894",
+      "type": "레버액션 소총",
+      "caliber": ".30-30 Winchester",
+      "availability": "일반적 (사냥용)",
+      "price": "$20-35",
+      "specifications": {
+        "barrel_length": "20-26인치",
+        "capacity": "6+1발",
+        "action": "레버액션"
+      },
+      "advantages": [
+        "강력한 화력",
+        "긴 사정거리",
+        "사냥용으로 합법",
+        "신뢰성"
+      ],
+      "disadvantages": [
+        "크고 눈에 띔",
+        "연발 속도 느림",
+        "휴대 불편",
+        "도시에서 부적절"
+      ],
+      "primary_use": "사냥, 농장 방어"
+    },
+    {
+      "id": "shotgun",
+      "name": "산탄총",
+      "name_en": "12-Gauge Shotgun",
+      "type": "산탄총",
+      "gauge": "12게이지",
+      "availability": "일반적",
+      "price": "$15-30",
+      "ammunition_types": [
+        {
+          "type": "산탄",
+          "description": "근거리 대인용",
+          "effective_range": "40야드",
+          "damage_pattern": "광범위"
+        },
+        {
+          "type": "슬러그",
+          "description": "단일 큰 탄환",
+          "effective_range": "100야드",
+          "penetration": "높음"
+        }
+      ],
+      "advantages": [
+        "근거리 압도적 위력",
+        "명중률 높음",
+        "위협 효과 큼",
+        "다양한 탄종"
+      ],
+      "disadvantages": [
+        "사정거리 짧음",
+        "재장전 느림",
+        "탄약 부피 큼",
+        "반동 매우 큼"
+      ]
+    }
+  ],
+  "melee_weapons": [
+    {
+      "id": "knife",
+      "name": "나이프",
+      "name_en": "Combat Knife",
+      "type": "단도",
+      "blade_length": "4-6인치",
+      "availability": "매우 일반적",
+      "price": "$1-5",
+      "advantages": [
+        "항상 휴대 가능",
+        "조용함",
+        "다용도",
+        "저렴함"
+      ],
+      "disadvantages": [
+        "짧은 사정거리",
+        "위험한 근접전 필요",
+        "제한적 위력",
+        "기술 필요"
+      ],
+      "variants": [
+        "포켓 나이프 (접이식)",
+        "사냥용 나이프",
+        "전투용 단도",
+        "부엌칼"
+      ]
+    },
+    {
+      "id": "baseball_bat",
+      "name": "야구 방망이",
+      "name_en": "Baseball Bat",
+      "type": "둔기",
+      "material": "나무 (보통 애쉬나 메이플)",
+      "length": "34인치",
+      "weight": "2-3파운드",
+      "availability": "매우 일반적",
+      "price": "$2-5",
+      "advantages": [
+        "강력한 타격력",
+        "합법적 소유",
+        "스포츠 용품으로 위장",
+        "기술 불필요"
+      ],
+      "disadvantages": [
+        "크고 눈에 띔",
+        "휴대 불편",
+        "실내에서 제한적",
+        "일회성 무기"
+      ]
+    },
+    {
+      "id": "walking_stick",
+      "name": "지팡이",
+      "name_en": "Walking Stick/Cane",
+      "type": "둔기",
+      "material": "나무, 때로는 금속 장식",
+      "availability": "일반적",
+      "price": "$3-15",
+      "advantages": [
+        "완전히 합법적",
+        "신사적 액세서리",
+        "은밀한 무기",
+        "일상적 휴대 가능"
+      ],
+      "special_variants": [
+        {
+          "name": "소드 케인",
+          "description": "내부에 칼이 숨겨진 지팡이",
+          "legality": "일부 지역에서 불법"
+        },
+        {
+          "name": "헤비 케인",
+          "description": "머리 부분이 납으로 가중된 지팡이",
+          "effectiveness": "높은 타격력"
+        }
+      ]
+    },
+    {
+      "id": "sword",
+      "name": "검",
+      "name_en": "Sword",
+      "type": "도검",
+      "availability": "제한적 (골동품, 장식용)",
+      "price": "$25-200",
+      "variants": [
+        {
+          "name": "사브르",
+          "description": "기병대 검, 휘어진 형태",
+          "origin": "군용 장비"
+        },
+        {
+          "name": "레이피어",
+          "description": "가는 찌르기용 검",
+          "skill_required": "펜싱 경험"
+        },
+        {
+          "name": "컷라스",
+          "description": "해적이나 선원이 쓰던 짧은 검",
+          "advantages": "좁은 공간에서 유용"
+        }
+      ],
+      "considerations": [
+        "대부분 골동품이나 장식용",
+        "실용성보다 상징성",
+        "높은 기술 요구",
+        "법적 문제 가능성"
+      ]
+    }
+  ],
+  "improvised_weapons": [
+    {
+      "category": "tools",
+      "items": [
+        {
+          "name": "망치",
+          "damage": "높음",
+          "availability": "매우 일반적",
+          "concealment": "어려움"
+        },
+        {
+          "name": "도끼",
+          "damage": "매우 높음",
+          "availability": "일반적 (농장, 목재소)",
+          "disadvantages": "크고 무거움"
+        },
+        {
+          "name": "스패너",
+          "damage": "보통",
+          "availability": "일반적",
+          "advantages": "작고 휴대 용이"
+        },
+        {
+          "name": "아이스픽",
+          "damage": "보통 (찌르기)",
+          "availability": "일반적 (얼음 배달)",
+          "special": "정확한 부위 타격 시 치명적"
+        }
+      ]
+    },
+    {
+      "category": "furniture",
+      "items": [
+        {
+          "name": "의자",
+          "usage": "던지기 또는 근접 무기",
+          "effectiveness": "일회성",
+          "availability": "실내 어디든"
+        },
+        {
+          "name": "테이블 다리",
+          "usage": "둔기로 사용",
+          "requirement": "분해 필요",
+          "effectiveness": "높음"
+        },
+        {
+          "name": "램프",
+          "usage": "던지기, 화재 유발",
+          "additional_effect": "조명 파괴",
+          "danger": "화재 위험"
+        }
+      ]
+    },
+    {
+      "category": "chemicals",
+      "items": [
+        {
+          "name": "산업용 산",
+          "effect": "화학 화상",
+          "availability": "공장, 실험실",
+          "danger": "사용자에게도 위험"
+        },
+        {
+          "name": "라이",
+          "effect": "강알칼리 화상",
+          "source": "청소용품",
+          "usage": "투척 무기"
+        },
+        {
+          "name": "염소 가스",
+          "effect": "호흡기 손상",
+          "source": "표백제와 산 혼합",
+          "warning": "극도로 위험"
+        }
+      ]
+    }
+  ],
+  "specialized_weapons": [
+    {
+      "id": "blessed_weapons",
+      "name": "축복받은 무기",
+      "category": "대미토스용",
+      "description": "종교적 의식을 거친 무기들",
+      "effectiveness": "일부 초자연적 존재에게 효과적",
+      "creation_process": [
+        "적절한 종교 권위자",
+        "정식 축복 의식",
+        "순수한 의도",
+        "신앙심"
+      ],
+      "limitations": [
+        "모든 존재에게 효과적이지 않음",
+        "사용자의 신앙에 따라 효력 변화",
+        "시간이 지나면 효력 약화",
+        "특정 조건에서만 작동"
+      ]
+    },
+    {
+      "id": "silver_weapons",
+      "name": "은 무기",
+      "category": "대미토스용",
+      "description": "순은으로 만들거나 은도금된 무기",
+      "effectiveness": "특정 초자연적 존재에게 효과적",
+      "types": [
+        "은탄환",
+        "은칼",
+        "은십자가",
+        "은사슬"
+      ],
+      "cost": "일반 무기보다 5-10배 비쌈",
+      "limitations": [
+        "은은 부드러운 금속",
+        "내구성 낮음",
+        "제작 어려움",
+        "높은 비용"
+      ]
+    },
+    {
+      "id": "explosives",
+      "name": "폭발물",
+      "category": "특수",
+      "availability": "매우 제한적",
+      "types": [
+        {
+          "name": "다이너마이트",
+          "source": "건설 현장, 광산",
+          "power": "매우 높음",
+          "danger": "극도로 위험"
+        },
+        {
+          "name": "수제 폭탄",
+          "source": "화학 지식 필요",
+          "reliability": "불안정",
+          "legal_status": "불법"
+        },
+        {
+          "name": "소이탄",
+          "source": "군용 장비",
+          "effect": "화재 유발",
+          "duration": "지속적 피해"
+        }
+      ],
+      "considerations": [
+        "제작과 운반 극도로 위험",
+        "법적 문제 심각",
+        "전문 지식 필요",
+        "무차별적 파괴"
+      ]
+    }
+  ],
+  "combat_considerations": [
+    {
+      "factor": "환경",
+      "indoor": {
+        "preferred_weapons": ["권총", "나이프", "둔기"],
+        "limitations": "소총/산탄총 부적절",
+        "advantages": "근거리 전투",
+        "hazards": "가구, 벽, 천장"
+      },
+      "outdoor": {
+        "preferred_weapons": ["소총", "산탄총", "권총"],
+        "advantages": "기동성, 사정거리",
+        "considerations": "목격자, 소음"
+      }
+    },
+    {
+      "factor": "적의 유형",
+      "human_opponents": {
+        "effective_weapons": "모든 종류",
+        "tactics": "제압 또는 협상",
+        "legal_implications": "심각"
+      },
+      "mythos_creatures": {
+        "effectiveness": "제한적",
+        "considerations": [
+          "물리적 공격 저항성",
+          "비정상적 해부학",
+          "재생 능력",
+          "정신적 공격"
+        ],
+        "alternatives": [
+          "도망",
+          "은신",
+          "마법적 대응",
+          "환경 이용"
+        ]
+      }
+    }
+  ],
+  "legal_framework": [
+    {
+      "region": "미국 (1920년대)",
+      "firearms": {
+        "ownership": "대부분 주에서 합법",
+        "concealed_carry": "일부 주에서 허가 필요",
+        "restrictions": "기관총 점차 규제 강화"
+      },
+      "melee_weapons": {
+        "knives": "대부분 합법",
+        "swords": "장식용은 합법",
+        "concealed_weapons": "지역에 따라 불법"
+      }
+    },
+    {
+      "consideration": "시대적 맥락",
+      "notes": [
+        "1920년대는 상대적으로 규제 느슨",
+        "금주법 시대로 불법 무기 거래 활성화",
+        "전쟁 후 잉여 무기 많음",
+        "경찰력 상대적으로 약함"
+      ]
+    }
+  ],
+  "acquisition_methods": [
+    {
+      "method": "합법적 구매",
+      "sources": ["총포상", "스포츠용품점", "군용품점"],
+      "requirements": ["연령 제한", "일부 지역 허가", "신분 확인"],
+      "advantages": ["안전함", "품질 보증", "부품 지원"]
+    },
+    {
+      "method": "사적 거래",
+      "sources": ["개인 판매자", "골동품상", "친구/지인"],
+      "considerations": ["가격 협상 가능", "품질 불확실", "법적 복잡성"],
+      "risks": ["사기", "불법 무기", "추적 불가"]
+    },
+    {
+      "method": "불법 취득",
+      "sources": ["암시장", "범죄 조직", "도난"],
+      "risks": ["법적 처벌", "범죄 조직과 연루", "품질 불명"],
+      "note": "권장하지 않으며 심각한 결과 초래"
+    }
+  ],
+  "maintenance_and_care": [
+    {
+      "weapon_type": "총기",
+      "requirements": [
+        "정기적 청소와 기름칠",
+        "적절한 보관 (습기 방지)",
+        "탄약 관리",
+        "부품 점검"
+      ],
+      "frequency": "사용 후 즉시, 월 1회 정기점검",
+      "consequences_of_neglect": [
+        "작동 불량",
+        "안전사고",
+        "정확도 저하",
+        "완전 고장"
+      ]
+    },
+    {
+      "weapon_type": "도검류",
+      "requirements": [
+        "날 연마",
+        "녹 제거",
+        "손잡이 점검",
+        "적절한 보관"
+      ],
+      "tools_needed": ["숫돌", "기름", "연마포"],
+      "skills": "기본적인 도검 관리 지식"
+    }
+  ],
+  "effectiveness_against_mythos": [
+    {
+      "creature_type": "인간형 교단원",
+      "weapon_effectiveness": "일반 무기 효과적",
+      "recommendations": ["총기", "근접무기"],
+      "considerations": "일반적인 전투 규칙 적용"
+    },
+    {
+      "creature_type": "딥 원",
+      "weapon_effectiveness": "물리적 무기 부분적 효과",
+      "special_vulnerabilities": ["불", "전기"],
+      "recommendations": "화염방사기, 전기 충격"
+    },
+    {
+      "creature_type": "미고",
+      "weapon_effectiveness": "총기 효과적 (외골격)",
+      "weaknesses": ["날개", "관절 부위"],
+      "tactics": "이동성 제한, 비행 능력 무력화"
+    },
+    {
+      "creature_type": "쇼고스",
+      "weapon_effectiveness": "일반 무기 거의 무효",
+      "alternatives": ["화재", "극한 추위", "도망"],
+      "note": "직접 전투 권장하지 않음"
+    }
+  ],
+  "ai_usage_hints": {
+    "period_authenticity": "1920년대에 존재하지 않는 무기는 사용 금지",
+    "escalation_control": "무기 사용이 상황을 더 악화시킬 수 있음",
+    "consequence_emphasis": "무기 사용의 법적, 사회적 결과 고려",
+    "mythos_ineffectiveness": "대부분의 미토스 존재들에게 무기는 제한적",
+    "character_background": "캐릭터의 배경에 맞는 무기 숙련도 설정",
+    "moral_implications": "폭력 사용의 윤리적 딜레마 탐구"
+  }
+}

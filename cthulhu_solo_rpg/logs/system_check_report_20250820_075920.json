@@ -1,0 +1,230 @@
+{
+  "summary": {
+    "overall_status": "FAIL",
+    "readiness": "System is not ready for gameplay",
+    "total_checks": 15,
+    "status_counts": {
+      "PASS": 11,
+      "WARN": 3,
+      "FAIL": 1,
+      "SKIP": 0
+    },
+    "critical_failures": 1,
+    "warnings": 3,
+    "success_rate": 73.3
+  },
+  "total_time": 13.932551860809326,
+  "checks": [
+    {
+      "name": "Python Version",
+      "status": "PASS",
+      "message": "Python 3.13 meets requirements",
+      "details": {
+        "current": [
+          3,
+          13
+        ],
+        "required": [
+          3,
+          8
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Virtual Environment",
+      "status": "PASS",
+      "message": "Running in virtual environment",
+      "details": {
+        "venv_path": "/Users/mimir/TRPG/cthulhu_solo_rpg/venv"
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Python Path",
+      "status": "PASS",
+      "message": "Project paths are accessible",
+      "details": {
+        "paths": [
+          "/Users/mimir/TRPG/cthulhu_solo_rpg/tests/../src",
+          "/Users/mimir/TRPG/cthulhu_solo_rpg/src",
+          "/Users/mimir/TRPG/cthulhu_solo_rpg",
+          "/opt/homebrew/Cellar/python@3.13/3.13.4/Frameworks/Python.framework/Versions/3.13/lib/python313.zip",
+          "/opt/homebrew/Cellar/python@3.13/3.13.4/Frameworks/Python.framework/Versions/3.13/lib/python3.13"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "System Memory",
+      "status": "PASS",
+      "message": "128.0 GB RAM available",
+      "details": {
+        "total_gb": 128.0,
+        "available_gb": 92.5,
+        "usage_percent": 27.7
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Disk Space",
+      "status": "PASS",
+      "message": "431.9 GB free space available",
+      "details": {
+        "free_gb": 431.9,
+        "total_gb": 926.4,
+        "usage_percent": 51.3
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "CPU Usage",
+      "status": "PASS",
+      "message": "CPU usage: 8.0% (16 cores)",
+      "details": {
+        "cores": 16,
+        "usage_percent": 8.0
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Directory Structure",
+      "status": "PASS",
+      "message": "All required directories exist",
+      "details": {
+        "directories": [
+          "src",
+          "saves",
+          "logs",
+          "src/agents",
+          "src/ai",
+          "src/core",
+          "src/utils",
+          "src/data"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Required Files",
+      "status": "PASS",
+      "message": "All required files exist",
+      "details": {
+        "files": [
+          "src/core/game_engine.py",
+          "src/core/game_manager.py",
+          "src/ai/ollama_client.py",
+          "src/agents/story_agent.py",
+          "requirements.txt"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Save Directory Structure",
+      "status": "PASS",
+      "message": "Save directory structure is complete",
+      "details": {},
+      "fix_suggestion": ""
+    },
+    {
+      "name": "Dependencies",
+      "status": "FAIL",
+      "message": "Missing packages: pyyaml, python-dateutil",
+      "details": {
+        "missing": [
+          "pyyaml",
+          "python-dateutil"
+        ],
+        "installed": [
+          "requests",
+          "aiohttp",
+          "json-logging",
+          "ollama-python",
+          "pydantic",
+          "click",
+          "colorama",
+          "rich",
+          "pytest",
+          "pytest-cov",
+          "black",
+          "flake8",
+          "mypy",
+          "tabulate"
+        ]
+      },
+      "fix_suggestion": "Run: pip install -r requirements.txt"
+    },
+    {
+      "name": "Configuration",
+      "status": "WARN",
+      "message": "Config file missing, but example found",
+      "details": {},
+      "fix_suggestion": "Copy config.example.json to config.json and customize"
+    },
+    {
+      "name": "Ollama Service",
+      "status": "WARN",
+      "message": "Model 'gpt-oss-120b' not found",
+      "details": {
+        "url": "http://localhost:11434",
+        "requested_model": "gpt-oss-120b",
+        "available_models": [
+          "gpt-oss:120b",
+          "qwen3:30b-a3b",
+          "llama4:scout",
+          "deepseek-r1:70b",
+          "qwen3:32b"
+        ]
+      },
+      "fix_suggestion": "Run: ollama pull gpt-oss-120b"
+    },
+    {
+      "name": "AI Model Performance",
+      "status": "WARN",
+      "message": "Model response timeout (>10s)",
+      "details": {},
+      "fix_suggestion": "Model may be slow or overloaded"
+    },
+    {
+      "name": "Game Data",
+      "status": "PASS",
+      "message": "All 8 data files are valid",
+      "details": {
+        "valid_files": [
+          "scenarios/beginner_scenarios.json",
+          "scenarios/classic_scenarios.json",
+          "locations/arkham_locations.json",
+          "locations/dunwich_locations.json",
+          "entities/mythos_creatures.json",
+          "entities/great_old_ones.json",
+          "items/investigation_tools.json",
+          "items/occult_books.json"
+        ]
+      },
+      "fix_suggestion": ""
+    },
+    {
+      "name": "File Permissions",
+      "status": "PASS",
+      "message": "All required permissions are available",
+      "details": {},
+      "fix_suggestion": ""
+    }
+  ],
+  "recommendations": [
+    "\ud83d\udd34 CRITICAL: Run: pip install -r requirements.txt",
+    "\ud83d\udfe1 WARNING: Copy config.example.json to config.json and customize",
+    "\ud83d\udfe1 WARNING: Run: ollama pull gpt-oss-120b",
+    "\ud83d\udfe1 WARNING: Model may be slow or overloaded",
+    "\ud83d\udd27 Address critical issues before attempting to start the game"
+  ],
+  "system_info": {
+    "platform": "darwin",
+    "python_version": "3.13.4",
+    "working_directory": "/Users/mimir/TRPG/cthulhu_solo_rpg",
+    "project_root": "/Users/mimir/TRPG/cthulhu_solo_rpg",
+    "timestamp": 1755644360.043894,
+    "user": "mimir"
+  }
+}

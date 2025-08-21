@@ -1,0 +1,423 @@
+{
+  "metadata": {
+    "category": "arkham_locations",
+    "description": "아컴 시티의 주요 장소들",
+    "setting": "1920년대 뉴잉글랜드",
+    "ai_hints": {
+      "usage_context": "Urban investigations, academic mysteries, modern Cthulhu scenarios",
+      "atmosphere": "Academic town with dark secrets",
+      "population": "Small city, highly educated",
+      "key_themes": "Knowledge vs. ignorance, civilization vs. cosmic horror"
+    }
+  },
+  "city_overview": {
+    "name": "아컴",
+    "name_en": "Arkham",
+    "state": "매사추세츠",
+    "population": "약 25,000명 (1920년대)",
+    "founded": "1692년",
+    "geography": {
+      "river": "미스카토닉 강",
+      "hills": "아컴 언덕들",
+      "forests": "주변 삼림 지대",
+      "notable_features": ["고딕 건축물", "가스등 거리", "돌담 울타리"]
+    },
+    "general_atmosphere": "학문적이고 고풍스럽지만 어딘가 불안한 기운이 감도는 대학 도시",
+    "reputation": "명문 대학과 정신병원으로 유명하나, 기이한 사건들이 자주 발생한다는 소문"
+  },
+  "locations": [
+    {
+      "id": "miskatonic_university",
+      "name": "미스카토닉 대학",
+      "name_en": "Miskatonic University",
+      "type": "교육기관",
+      "address": "대학가 메인 스트리트",
+      "description": "뉴잉글랜드에서 가장 오래되고 명성 높은 대학 중 하나. 특히 고고학과 언어학 분야에서 세계적으로 유명하다.",
+      "architecture": "고딕 양식의 붉은 벽돌 건물들, 담쟁이로 덮인 벽",
+      "atmosphere": "학문적 엄숙함과 함께 고대 지식의 무게감",
+      "areas": [
+        {
+          "name": "오른 도서관",
+          "description": "대학의 중심 도서관, 희귀본 컬렉션으로 유명",
+          "special_features": [
+            "특별 컬렉션 (제한 열람)",
+            "고대 언어 문서들",
+            "네크로노미콘 (극비 보관)",
+            "지하 서고"
+          ],
+          "staff": ["헨리 아미티지 박사 (관장)", "다양한 사서들", "보안 요원"],
+          "access_restrictions": "일반 학생 출입 가능, 특별 컬렉션은 교수진만"
+        },
+        {
+          "name": "고고학과",
+          "description": "세계적 수준의 고고학 연구 시설",
+          "special_features": [
+            "유물 전시실",
+            "복원 작업실",
+            "발굴 장비 보관소",
+            "교수 연구실들"
+          ],
+          "notable_faculty": ["윌마스 박사", "모르간 교수"],
+          "current_projects": "남극 탐사, 중동 발굴, 고대 문명 연구"
+        },
+        {
+          "name": "의학부",
+          "description": "정신의학 분야에서 특히 유명",
+          "special_features": [
+            "해부학 실습실",
+            "정신의학 연구실",
+            "의료 도서관",
+            "실험실들"
+          ],
+          "research_focus": "정신 질환, 신경학, 이상 심리학"
+        }
+      ],
+      "notable_npcs": [
+        {
+          "name": "헨리 아미티지 박사",
+          "role": "도서관장",
+          "expertise": "고대 언어, 오컬트 문헌",
+          "disposition": "신중하고 지식이 풍부, 위험한 지식에 대해 경계"
+        }
+      ],
+      "secrets": [
+        "특별 컬렉션에 위험한 서적들 보관",
+        "과거 학생들의 실종과 광기 사건들",
+        "교수진 중 일부가 미토스 연구",
+        "지하에 비밀 실험실 존재"
+      ],
+      "hooks": [
+        "위험한 서적을 찾으러 온 연구자",
+        "실종된 교수나 학생 수색",
+        "고고학과의 이상한 발견",
+        "도서관에서 벌어지는 기이한 사건"
+      ]
+    },
+    {
+      "id": "arkham_sanitarium",
+      "name": "아컴 정신병원",
+      "name_en": "Arkham Sanitarium",
+      "type": "의료시설",
+      "address": "메도우 힐 로드",
+      "description": "뉴잉글랜드에서 가장 큰 정신병원. 기이한 광기에 빠진 환자들이 많이 입원해 있다.",
+      "architecture": "빅토리안 고딕 양식의 거대한 건물, 높은 철창과 울타리",
+      "atmosphere": "억압적이고 절망적, 끊임없는 신음소리와 웃음소리",
+      "areas": [
+        {
+          "name": "일반 병동",
+          "description": "비교적 가벼운 정신 질환 환자들",
+          "security_level": "보통",
+          "patient_types": ["우울증", "신경쇠약", "히스테리"]
+        },
+        {
+          "name": "격리 병동",
+          "description": "위험하거나 극도로 불안정한 환자들",
+          "security_level": "높음",
+          "patient_types": ["폭력적 환자", "극심한 광기", "미토스 접촉자들"],
+          "special_features": ["독방", "구속복", "24시간 감시"]
+        },
+        {
+          "name": "지하 시설",
+          "description": "오래된 치료실과 창고",
+          "current_use": "거의 사용되지 않음",
+          "rumors": ["과거 잔혹한 실험", "환자들의 비명 소리", "이상한 발견물들"]
+        }
+      ],
+      "staff": [
+        {
+          "name": "윌슨 원장",
+          "role": "병원장",
+          "approach": "진보적 치료법 선호",
+          "secrets": "일부 환자들의 진술에 관심"
+        },
+        {
+          "name": "간병사들",
+          "characteristics": "오랜 근무로 무감각해짐",
+          "knowledge": "환자들의 기이한 이야기들"
+        }
+      ],
+      "notable_patients": [
+        {
+          "type": "미토스 목격자",
+          "condition": "극심한 광기와 환각",
+          "stories": "불가능한 존재들과 장소들에 대한 묘사",
+          "value": "조사자들에게 중요한 정보원"
+        },
+        {
+          "type": "실패한 조사자",
+          "condition": "지식으로 인한 정신 붕괴",
+          "knowledge": "위험한 진실들",
+          "warning": "같은 길을 가지 말라는 경고"
+        }
+      ],
+      "investigation_opportunities": [
+        "환자 면회를 통한 정보 수집",
+        "의료진과의 인터뷰",
+        "과거 기록 조사",
+        "야간 침입을 통한 직접 조사"
+      ]
+    },
+    {
+      "id": "arkham_historical_society",
+      "name": "아컴 역사협회",
+      "name_en": "Arkham Historical Society",
+      "type": "문화시설",
+      "address": "올드 콘코드 로드",
+      "description": "아컴과 주변 지역의 역사 자료를 보존하는 기관. 지역의 어두운 과거에 대한 기록들도 보관하고 있다.",
+      "architecture": "19세기 콜로니얼 양식의 우아한 건물",
+      "atmosphere": "고풍스럽고 조용하지만, 오래된 비밀들의 무게감",
+      "collections": [
+        {
+          "category": "지역사 문서",
+          "contents": [
+            "아컴 건립사",
+            "주요 가문들의 기록",
+            "과거 사건 기록",
+            "신문 아카이브"
+          ]
+        },
+        {
+          "category": "민속학 자료",
+          "contents": [
+            "지역 전설과 미신",
+            "인디언 부족 이야기",
+            "마녀재판 기록",
+            "기이한 사건들의 증언"
+          ]
+        },
+        {
+          "category": "가족사 연구",
+          "contents": [
+            "족보와 혈통 기록",
+            "유언장과 상속 문서",
+            "개인 일기와 편지",
+            "가족 사진들"
+          ]
+        }
+      ],
+      "staff": [
+        {
+          "name": "앨리스 크로포드 여사",
+          "role": "사서",
+          "characteristics": "박식하고 도움이 되지만 소심함",
+          "knowledge": "지역의 숨겨진 역사에 대해 많이 알고 있음"
+        }
+      ],
+      "hidden_materials": [
+        "검열된 사건 기록들",
+        "의도적으로 숨겨진 문서들",
+        "개인 기증자들의 비밀 컬렉션",
+        "공개되지 않은 사진과 증거들"
+      ]
+    },
+    {
+      "id": "downtown_arkham",
+      "name": "아컴 시내",
+      "name_en": "Downtown Arkham",
+      "type": "상업지구",
+      "description": "아컴의 중심가로 상점들과 사무실들이 몰려있다.",
+      "atmosphere": "낮에는 번화하지만 밤이 되면 으스스해지는 전형적인 소도시",
+      "notable_establishments": [
+        {
+          "name": "벨뷰 호텔",
+          "type": "숙박시설",
+          "description": "아컴에서 가장 좋은 호텔",
+          "clientele": "방문 학자들, 사업가들, 탐사대원들",
+          "rumors": "투숙객들 중 기이한 일을 당하는 경우가 종종 있다"
+        },
+        {
+          "name": "제럴드 서점",
+          "type": "서점",
+          "description": "희귀본과 고서를 다루는 서점",
+          "specialty": "오컬트 서적, 고대 언어 문헌",
+          "owner": "제럴드 할아버지 (신비로운 과거)",
+          "hidden_stock": "일반인에게는 보여주지 않는 위험한 책들"
+        },
+        {
+          "name": "아컴 은행",
+          "type": "금융기관",
+          "description": "지역의 주요 은행",
+          "services": "일반 은행 업무, 안전금고",
+          "secrets": "고객 중 수상한 인물들, 비밀 거래들"
+        }
+      ],
+      "recurring_npcs": [
+        {
+          "name": "존슨 경찰서장",
+          "role": "법 집행관",
+          "attitude": "회의적이지만 협조적",
+          "knowledge": "지역의 범죄와 이상 사건들"
+        },
+        {
+          "name": "메리 톰슨",
+          "role": "가십 정보원",
+          "characteristics": "호기심 많고 수다스러움",
+          "value": "지역 소문과 정보의 중심"
+        }
+      ]
+    },
+    {
+      "id": "french_hill",
+      "name": "프렌치 힐",
+      "name_en": "French Hill",
+      "type": "주거지역",
+      "description": "아컴의 부유한 주거지역으로 대학 교수들과 전문직들이 거주한다.",
+      "architecture": "빅토리안과 콜로니얼 양식의 고급 주택들",
+      "atmosphere": "고급스럽고 조용하지만, 오래된 가문들의 비밀들이 숨어있음",
+      "notable_residences": [
+        {
+          "name": "더비 맨션",
+          "description": "아컴의 명문가 더비 가문의 저택",
+          "history": "18세기부터 내려온 유서 깊은 가문",
+          "current_status": "현재 거주자 있음",
+          "secrets": "가문 대대로 전해내려오는 비밀스러운 지식"
+        },
+        {
+          "name": "위드 하우스",
+          "description": "은퇴한 교수의 저택",
+          "features": "광대한 개인 도서관, 연구실",
+          "rumors": "밤늦게 이상한 빛과 소리"
+        }
+      ],
+      "social_dynamics": [
+        "폐쇄적인 상류층 사회",
+        "가문간 숨겨진 경쟁",
+        "교수들과 전문가들의 비공식 모임",
+        "외부인에 대한 의심"
+      ]
+    },
+    {
+      "id": "rivertown",
+      "name": "리버타운",
+      "name_en": "Rivertown",
+      "type": "노동자 거주지",
+      "description": "미스카토닉 강변의 노동자들과 이민자들이 사는 지역",
+      "atmosphere": "서민적이고 활기차지만 때로는 거칠고 위험함",
+      "characteristics": [
+        "다양한 민족들이 거주",
+        "공장 노동자들의 터전",
+        "상대적으로 가난한 지역",
+        "대학가와는 다른 문화"
+      ],
+      "notable_locations": [
+        {
+          "name": "독스 바",
+          "description": "노동자들이 모이는 술집",
+          "information_source": "지역 소문과 뒷이야기의 중심",
+          "clientele": "공장 노동자, 강변 작업자, 지역 주민들"
+        },
+        {
+          "name": "성 스타니슬라우스 교회",
+          "description": "폴란드 이민자들의 가톨릭 교회",
+          "community_role": "이민자 공동체의 중심",
+          "priest": "이민자들의 고민을 들어주는 신부"
+        }
+      ],
+      "social_issues": [
+        "경제적 어려움",
+        "언어와 문화적 장벽",
+        "상류층과의 계급 갈등",
+        "때때로 발생하는 기이한 사건들"
+      ]
+    },
+    {
+      "id": "hangmans_hill",
+      "name": "교수형 언덕",
+      "name_en": "Hangman's Hill",
+      "type": "역사적 장소",
+      "description": "과거 마녀재판 시대에 처형이 행해졌던 언덕. 현재는 묘지가 있다.",
+      "history": "1692년 마녀재판 당시 20여 명이 처형된 장소",
+      "atmosphere": "음산하고 불길한 기운, 특히 밤에는 매우 위험함",
+      "features": [
+        {
+          "name": "크리스츠 처치 묘지",
+          "description": "아컴에서 가장 오래된 묘지",
+          "notable_graves": [
+            "마녀재판 희생자들",
+            "아컴 건립 가문들",
+            "기이한 죽음을 맞은 사람들"
+          ],
+          "supernatural_activity": "자주 목격되는 유령들, 이상한 소리들"
+        }
+      ],
+      "warnings": [
+        "밤에는 접근 금지",
+        "혼자서는 절대 가지 말 것",
+        "이상한 현상들이 자주 발생",
+        "일부 구역은 경찰도 꺼려함"
+      ],
+      "investigation_value": [
+        "과거 사건들의 기록",
+        "초자연적 현상 연구",
+        "역사적 미스터리 해결",
+        "오컬트 활동의 흔적들"
+      ]
+    }
+  ],
+  "city_connections": [
+    {
+      "destination": "던위치",
+      "method": "버스 또는 자동차",
+      "travel_time": "2-3시간",
+      "description": "서쪽 산악 지대의 작은 마을"
+    },
+    {
+      "destination": "킹스포트",
+      "method": "기차 또는 자동차",
+      "travel_time": "1시간",
+      "description": "해안의 고풍스러운 항구 도시"
+    },
+    {
+      "destination": "보스턴",
+      "method": "기차",
+      "travel_time": "3-4시간",
+      "description": "매사추세츠의 대도시"
+    }
+  ],
+  "seasonal_variations": [
+    {
+      "season": "봄",
+      "atmosphere": "새로운 시작과 희망, 하지만 어둠 속에서 무언가 깨어남",
+      "events": "대학 새 학기, 고고학과 발굴 시작"
+    },
+    {
+      "season": "여름",
+      "atmosphere": "활기차지만 무더운 열기 속에 숨은 불안",
+      "events": "관광객 증가, 야외 활동 활성화"
+    },
+    {
+      "season": "가을",
+      "atmosphere": "아름답지만 쇠퇴의 징조, 죽음의 계절",
+      "events": "대학 복학, 수확절 행사들"
+    },
+    {
+      "season": "겨울",
+      "atmosphere": "춥고 어둡고 절망적, 실내에 갇힌 공포",
+      "events": "폭설로 인한 고립, 실내 활동 증가"
+    }
+  ],
+  "investigation_resources": [
+    "미스카토닉 대학 도서관",
+    "아컴 역사협회 아카이브",
+    "정신병원 환자 기록",
+    "경찰서 사건 파일",
+    "지역 신문 아카이브",
+    "교회 기록들",
+    "개인 컬렉터들"
+  ],
+  "dangers": [
+    "미토스 관련 지식으로 인한 광기",
+    "교단의 활동과 감시",
+    "초자연적 현상들",
+    "사회적 배척과 의심",
+    "학술적 경쟁과 질투",
+    "과거 비밀들의 보복"
+  ],
+  "ai_usage_hints": {
+    "investigation_hub": "대부분의 시나리오가 시작되거나 정보를 얻는 중심지",
+    "academic_resources": "연구와 지식 습득을 위한 최적의 장소",
+    "social_dynamics": "다양한 사회계층과 갈등, 협력 기회",
+    "escalation_potential": "작은 사건에서 시작하여 큰 재앙으로 발전 가능",
+    "recurring_setting": "여러 시나리오에서 반복 사용 가능한 친숙한 배경"
+  }
+}

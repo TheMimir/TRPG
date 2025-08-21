@@ -1,0 +1,539 @@
+{
+  "metadata": {
+    "category": "mythos_creatures",
+    "description": "크툴루 미토스의 다양한 생물들과 하위 존재들",
+    "power_level": "하위~중위",
+    "ai_hints": {
+      "usage_context": "Regular encounters, minions, environmental threats",
+      "encounter_frequency": "common to rare",
+      "combat_viability": "varies by creature",
+      "narrative_roles": "servants, guardians, independent threats"
+    }
+  },
+  "creatures": [
+    {
+      "id": "deep_ones",
+      "name": "딥 원",
+      "name_en": "Deep Ones",
+      "category": "수중 휴머노이드",
+      "threat_level": 3,
+      "physical_description": {
+        "basic": "인간과 물고기의 혼합체, 양서류적 특징",
+        "size": "인간보다 약간 큰 편 (1.8-2.2m)",
+        "distinctive_features": [
+          "물고기 비늘로 덮인 피부",
+          "큰 볼록한 눈",
+          "개구리 같은 입과 이빨",
+          "물갈퀴가 있는 손발",
+          "아가미와 폐 모두 보유"
+        ],
+        "variations": [
+          "신생 딥 원 (더 인간적)",
+          "성숙한 딥 원 (더 물고기적)",
+          "딥 원-인간 혼혈",
+          "딥 원 족장 (더 크고 강력)"
+        ]
+      },
+      "abilities": [
+        {
+          "name": "양서류 적응",
+          "description": "물과 육지 모두에서 활동 가능",
+          "mechanics": "수중에서 움직임 보너스, 무제한 잠수"
+        },
+        {
+          "name": "재생 능력",
+          "description": "시간이 지나면서 상처 치유",
+          "mechanics": "시간당 HP 회복, 절단된 사지도 재생"
+        },
+        {
+          "name": "집단 사냥",
+          "description": "무리를 이루어 사냥하고 전투",
+          "mechanics": "집단 전술 보너스, 조직적 행동"
+        }
+      ],
+      "behavior_patterns": [
+        "밤에 주로 활동",
+        "해안 지역 습격",
+        "인간과의 교배 시도",
+        "황금과 보물에 대한 욕구",
+        "다곤과 크툴루 숭배"
+      ],
+      "habitat": [
+        "태평양 해저 도시들",
+        "해안 동굴과 바위틈",
+        "강어귀와 하구",
+        "인스머스 같은 해안 마을"
+      ],
+      "encounter_scenarios": [
+        {
+          "situation": "야간 해변 산책",
+          "description": "밤에 해변을 걷다가 딥 원들과 조우",
+          "tactics": "은신하여 접근 후 급습",
+          "escape_routes": "바다로 도피"
+        },
+        {
+          "situation": "해안 마을 침입",
+          "description": "마을을 습격하여 번식 파트너나 제물 확보",
+          "tactics": "집단으로 마을 포위, 체계적 침입",
+          "goals": ["인간 납치", "보물 강탈", "번식 기회"]
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "건조함",
+          "description": "물을 오래 떠나있으면 약해짐",
+          "exploitation": "물에서 멀리 유인하거나 탈수 유발"
+        },
+        {
+          "type": "밝은 빛",
+          "description": "강한 빛에 일시적으로 눈멀음",
+          "exploitation": "탐조등이나 플래시로 행동 방해"
+        }
+      ],
+      "loot_and_traces": [
+        "바다에서 온 황금",
+        "이상한 형태의 장신구",
+        "물고기 비늘",
+        "해초와 바다 냄새",
+        "에스더릴 교단 상징물"
+      ],
+      "ai_usage_hints": {
+        "encounter_design": "수중/해안 환경에서 활용, 환경적 우위 강조",
+        "narrative_themes": "혈통과 유전, 문명과 원시성의 대립",
+        "scaling_methods": "개체수와 성숙도로 난이도 조절",
+        "atmospheric_elements": "바다 냄새, 젖은 발자국, 물 소리"
+      }
+    },
+    {
+      "id": "mi_go",
+      "name": "미고",
+      "name_en": "Mi-Go",
+      "category": "외계 곤충형",
+      "threat_level": 4,
+      "physical_description": {
+        "basic": "거대한 갑각류와 곤충의 혼합체, 분홍빛 살색",
+        "size": "인간 정도 크기 (1.5-2m)",
+        "distinctive_features": [
+          "여러 개의 관절 있는 다리",
+          "집게발 같은 팔",
+          "곤충 같은 겹눈",
+          "막으로 된 날개",
+          "분홍색 또는 회색 외골격"
+        ],
+        "variations": [
+          "일반 미고 일꾼",
+          "미고 과학자 (더 많은 장비)",
+          "미고 지휘관 (더 크고 지능적)",
+          "개조된 미고 (기계 부착물)"
+        ]
+      },
+      "abilities": [
+        {
+          "name": "뇌 수술",
+          "description": "살아있는 뇌를 적출하여 보존 가능",
+          "mechanics": "특수 장비로 의식 유지하며 뇌 보존"
+        },
+        {
+          "name": "비행 능력",
+          "description": "날개로 제한적 비행 가능",
+          "mechanics": "단거리 비행, 소음 발생"
+        },
+        {
+          "name": "고급 기술",
+          "description": "인간을 초월하는 과학 기술",
+          "mechanics": "레이저 무기, 첨단 의료 도구"
+        }
+      ],
+      "behavior_patterns": [
+        "인간 연구와 실험",
+        "희귀 광물 채굴",
+        "뇌 수집과 보존",
+        "은밀한 관찰과 감시",
+        "집단적 과학 활동"
+      ],
+      "habitat": [
+        "버몬트의 산악 지대",
+        "외딴 광산과 동굴",
+        "임시 연구 기지들",
+        "지하 실험실"
+      ],
+      "encounter_scenarios": [
+        {
+          "situation": "산악 등반 중 조우",
+          "description": "등반 중 미고의 채굴 작업이나 실험 발견",
+          "tactics": "원거리 무기 사용, 비행으로 우위 점하기",
+          "goals": ["침입자 제거", "시체 또는 생포", "비밀 유지"]
+        },
+        {
+          "situation": "납치 사건",
+          "description": "뇌 연구를 위한 인간 납치",
+          "tactics": "마취 가스, 은밀한 접근",
+          "aftermath": ["뇌만 남은 희생자", "기억 조작", "실험 흔적"]
+        }
+      ],
+      "technology": [
+        {
+          "name": "뇌 보존 장치",
+          "description": "원통형 기계에 뇌를 넣어 의식 유지",
+          "usage": "장거리 운송, 정보 추출"
+        },
+        {
+          "name": "레이저 무기",
+          "description": "열 광선을 발사하는 장비",
+          "usage": "원거리 공격, 채굴 작업"
+        },
+        {
+          "name": "비행 장비",
+          "description": "자연 날개를 보완하는 기계",
+          "usage": "장거리 이동, 정찰"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "추위",
+          "description": "극도로 추운 환경에서 활동 저하",
+          "exploitation": "겨울철 또는 냉동 공격"
+        },
+        {
+          "type": "소음",
+          "description": "비행 시 특유의 윙윙거림",
+          "exploitation": "소리로 접근 감지 가능"
+        }
+      ],
+      "loot_and_traces": [
+        "고도로 발달된 도구들",
+        "희귀 금속과 광물",
+        "뇌 보존 장치",
+        "외계 기술 조각들",
+        "기이한 수술 흔적"
+      ],
+      "ai_usage_hints": {
+        "sci_fi_horror": "과학적 공포와 신체 훼손 테마",
+        "mystery_elements": "실종 사건과 이상한 발견물",
+        "technology_focus": "첨단 기술과 인간의 한계",
+        "isolation_themes": "외딴 산악 지역의 고립감"
+      }
+    },
+    {
+      "id": "shoggoth",
+      "name": "쇼고스",
+      "name_en": "Shoggoth",
+      "category": "원형질 생물",
+      "threat_level": 6,
+      "physical_description": {
+        "basic": "거대한 검은 원형질 덩어리, 끊임없이 형태 변화",
+        "size": "매우 가변적 (3m에서 30m까지)",
+        "distinctive_features": [
+          "끊임없이 변화하는 형태",
+          "표면에 나타나는 눈들",
+          "일시적으로 나타나는 기관들",
+          "검은색 또는 어두운 녹색",
+          "강력한 산성 분비물"
+        ],
+        "variations": [
+          "젊은 쇼고스 (작고 불안정)",
+          "성숙한 쇼고스 (크고 지능적)",
+          "통제된 쇼고스 (고대인의 명령 수행)",
+          "자유 쇼고스 (반란을 일으킨 개체)"
+        ]
+      },
+      "abilities": [
+        {
+          "name": "형태 변환",
+          "description": "어떤 형태로든 자유자재로 변환",
+          "mechanics": "환경에 완벽하게 적응, 모방 능력"
+        },
+        {
+          "name": "재생 능력",
+          "description": "물리적 공격으로 완전 파괴 거의 불가능",
+          "mechanics": "분할되어도 재결합, 극도의 내구성"
+        },
+        {
+          "name": "학습 능력",
+          "description": "경험을 통해 지능과 기술 향상",
+          "mechanics": "시간이 지날수록 더 교묘하고 위험해짐"
+        }
+      ],
+      "behavior_patterns": [
+        "명령에 따른 작업 수행",
+        "통제에서 벗어나려는 시도",
+        "유기물 흡수와 성장",
+        "모방을 통한 생존",
+        "파괴적 본능의 발현"
+      ],
+      "habitat": [
+        "남극의 고대인 도시",
+        "지하 깊은 터널과 동굴",
+        "버려진 실험실",
+        "오래된 지하실과 하수도"
+      ],
+      "encounter_scenarios": [
+        {
+          "situation": "고대 유적 탐사",
+          "description": "고대인의 도시에서 여전히 활동하는 쇼고스 발견",
+          "tactics": "환경을 이용한 매복, 형태 변화로 혼란 조성",
+          "warning_signs": ["이상한 점액질", "벽의 기이한 무늬", "유기체 냄새"]
+        },
+        {
+          "situation": "실험실 사고",
+          "description": "현대 실험실에서 부활하거나 창조된 쇼고스",
+          "tactics": "시설 파괴, 연구진 흡수, 지식 흡수",
+          "escalation": ["작은 샘플에서 시작", "빠른 성장", "통제 불능"]
+        }
+      ],
+      "combat_characteristics": [
+        {
+          "strength": "물리적 공격 무효화",
+          "description": "일반적인 무기로는 피해 거의 없음"
+        },
+        {
+          "strength": "환경 지배",
+          "description": "공간을 가득 채워 도피로 차단"
+        },
+        {
+          "weakness": "화재와 전기",
+          "description": "고온과 전기 공격에 일시적 약화"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "극한 온도",
+          "description": "극도로 뜨겁거나 차가운 환경에서 활동 저하",
+          "exploitation": "화염방사기나 액체 질소"
+        },
+        {
+          "type": "고대인의 명령",
+          "description": "고대인의 기술로 통제 가능",
+          "exploitation": "고대인의 도구나 명령어 사용"
+        }
+      ],
+      "loot_and_traces": [
+        "소화되지 않은 장비들",
+        "고대인의 기술 조각들",
+        "유기체 점액질",
+        "변형된 벽과 구조물",
+        "희생자들의 유품"
+      ],
+      "ai_usage_hints": {
+        "body_horror": "형태 변화와 흡수를 통한 신체적 공포",
+        "unstoppable_force": "도망치는 것이 최선인 압도적 위협",
+        "ancient_mystery": "고대 문명과 실험의 유산",
+        "escalation_potential": "작은 위협에서 시작해 거대한 재앙으로"
+      }
+    },
+    {
+      "id": "nightgaunts",
+      "name": "나이트건트",
+      "name_en": "Nightgaunts",
+      "category": "비행 괴물",
+      "threat_level": 3,
+      "physical_description": {
+        "basic": "인간형이지만 완전히 검은 몸, 거대한 박쥐 날개",
+        "size": "인간과 비슷 (1.7-2m, 날개 폭 4-5m)",
+        "distinctive_features": [
+          "얼굴 없는 매끈한 머리",
+          "거대한 가죽 날개",
+          "갈고리 모양 꼬리",
+          "끈적끈적한 검은 피부",
+          "완전한 침묵 속 비행"
+        ],
+        "variations": [
+          "일반 나이트건트",
+          "거대 나이트건트 (두 배 크기)",
+          "나이트건트 리더 (더 지능적)",
+          "변형 나이트건트 (특수 능력)"
+        ]
+      },
+      "abilities": [
+        {
+          "name": "무음 비행",
+          "description": "완전히 소음 없이 비행",
+          "mechanics": "기습 공격 보너스, 탐지 어려움"
+        },
+        {
+          "name": "납치 전술",
+          "description": "사람을 붙잡고 날아서 운반",
+          "mechanics": "그래플링 특화, 높은 곳에서 떨어뜨리기"
+        },
+        {
+          "name": "꼬리 공격",
+          "description": "갈고리 꼬리로 할퀴기와 찌르기",
+          "mechanics": "독성 없지만 깊은 상처"
+        }
+      ],
+      "behavior_patterns": [
+        "무리를 이루어 행동",
+        "어둠 속에서 사냥",
+        "적을 높은 곳으로 운반",
+        "냐를라토텝의 명령 수행",
+        "특정 지역의 경비"
+      ],
+      "habitat": [
+        "어두운 동굴과 지하",
+        "높은 산봉우리",
+        "버려진 건물 옥상",
+        "차원간 경계 지역"
+      ],
+      "encounter_scenarios": [
+        {
+          "situation": "야간 야외 활동",
+          "description": "밤에 야외에서 나이트건트들의 습격",
+          "tactics": "하늘에서 급강하 공격, 한 명씩 납치",
+          "objectives": ["특정 장소로 운반", "높은 곳에서 떨어뜨리기"]
+        },
+        {
+          "situation": "지하 탐험",
+          "description": "동굴이나 지하에서 나이트건트 서식지 침입",
+          "tactics": "천장에서 기습, 출구 봉쇄",
+          "environment": ["좁은 공간에서 비행 제한", "어둠으로 인한 시야 불량"]
+        }
+      ],
+      "pack_tactics": [
+        {
+          "strategy": "분산 공격",
+          "description": "여러 방향에서 동시 공격"
+        },
+        {
+          "strategy": "납치 협동",
+          "description": "한 마리가 방해하는 동안 다른 마리가 납치"
+        },
+        {
+          "strategy": "높이 우위",
+          "description": "항상 위에서 아래로 공격"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "밝은 빛",
+          "description": "강한 빛에 일시적으로 혼란",
+          "exploitation": "플래시나 조명으로 방어"
+        },
+        {
+          "type": "좁은 공간",
+          "description": "날개가 클 때문에 좁은 곳에서 불리",
+          "exploitation": "실내나 터널로 유인"
+        }
+      ],
+      "loot_and_traces": [
+        "검은 가죽 조각",
+        "갈고리 모양 발톱",
+        "끈적한 분비물",
+        "높은 곳의 스크래치 마크",
+        "실종자들의 소지품"
+      ],
+      "ai_usage_hints": {
+        "mobility_focus": "3차원 전투와 기동성 강조",
+        "psychological_terror": "납치와 높이에 대한 공포",
+        "environmental_usage": "지형과 높이 활용한 전술",
+        "servant_role": "더 큰 악의 심부름꾼이나 경비원"
+      }
+    },
+    {
+      "id": "star_spawn",
+      "name": "스타 스폰",
+      "name_en": "Star Spawn",
+      "category": "크툴루의 후손",
+      "threat_level": 5,
+      "physical_description": {
+        "basic": "크툴루를 닮은 소형 버전, 하지만 여전히 거대",
+        "size": "대형 (3-8m)",
+        "distinctive_features": [
+          "크툴루와 유사한 촉수 얼굴",
+          "작지만 기능하는 날개",
+          "비늘로 덮인 녹색 피부",
+          "강력한 발톱과 이빨",
+          "위압적인 존재감"
+        ],
+        "variations": [
+          "어린 스타 스폰 (인간 크기)",
+          "성숙한 스타 스폰 (거대한 크기)",
+          "스타 스폰 워리어 (전투 특화)",
+          "스타 스폰 프리스트 (의식 수행)"
+        ]
+      },
+      "abilities": [
+        {
+          "name": "정신 공격",
+          "description": "크툴루와 같은 정신적 영향력",
+          "mechanics": "정신력 공격, 광기 유발"
+        },
+        {
+          "name": "재생 능력",
+          "description": "상당한 치유 능력",
+          "mechanics": "시간당 체력 회복, 상처 치유"
+        },
+        {
+          "name": "수중 우위",
+          "description": "물 속에서 완전한 능력 발휘",
+          "mechanics": "수중 이동 보너스, 호흡 불필요"
+        }
+      ],
+      "behavior_patterns": [
+        "크툴루의 명령 수행",
+        "라이에흐 수호",
+        "인간 문명 감시",
+        "딥 원들과 협력",
+        "바다에서의 활동"
+      ],
+      "habitat": [
+        "태평양 라이에흐",
+        "깊은 바다 해저",
+        "수중 도시들",
+        "해안의 수중 동굴"
+      ],
+      "encounter_scenarios": [
+        {
+          "situation": "라이에흐 탐사",
+          "description": "가라앉은 도시를 탐사하다 스타 스폰과 조우",
+          "tactics": "수중 우위 활용, 정신 공격으로 무력화",
+          "environment": ["수압과 산소 부족", "어둠과 혼란", "미로 같은 도시"]
+        },
+        {
+          "situation": "크툴루 부활 의식",
+          "description": "크툴루 부활을 위한 의식에서 등장",
+          "role": "의식 수행자 또는 수호자",
+          "escalation": ["의식 방해 시 적대적", "완성 시 더 강력해짐"]
+        }
+      ],
+      "religious_aspects": [
+        {
+          "role": "대제사장",
+          "description": "크툴루 숭배 의식 주관"
+        },
+        {
+          "role": "수호자",
+          "description": "성지와 유물 보호"
+        },
+        {
+          "role": "메신저",
+          "description": "크툴루의 의지 전달"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "육상 환경",
+          "description": "물을 떠나면 능력 저하",
+          "exploitation": "건조한 지역으로 유인"
+        },
+        {
+          "type": "고대 봉인",
+          "description": "크툴루를 봉인한 것과 같은 힘에 약함",
+          "exploitation": "고대 보호 의식이나 부적"
+        }
+      ],
+      "loot_and_traces": [
+        "크툴루교 성물",
+        "라이에흐의 금속",
+        "고대 문자가 새겨진 석판",
+        "바다의 보물들",
+        "정신 공격의 잔재"
+      ],
+      "ai_usage_hints": {
+        "cosmic_connection": "크툴루와의 직접적 연결 강조",
+        "aquatic_encounters": "수중이나 해안 환경에서 활용",
+        "religious_horror": "종교적 광신과 우상 숭배",
+        "escalating_threat": "크툴루 부활의 전조로 사용"
+      }
+    }
+  ]
+}

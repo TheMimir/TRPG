@@ -1,0 +1,441 @@
+{
+  "metadata": {
+    "category": "beginner_scenarios",
+    "description": "초보자를 위한 단편 크툴루 시나리오",
+    "difficulty_range": "1-3",
+    "average_duration": "2-4 hours",
+    "ai_hints": {
+      "usage_context": "First-time players, tutorial scenarios",
+      "complexity": "low",
+      "sanity_loss": "moderate",
+      "combat_frequency": "low"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "bg_001",
+      "title": "도서관의 금지된 책",
+      "title_en": "The Forbidden Book in the Library",
+      "difficulty": 2,
+      "duration": "2-3 hours",
+      "description": "미스카토닉 대학 도서관에서 발견된 고대 서적이 학생들을 미치게 만들고 있다.",
+      "background": {
+        "setting": "1920년대 미스카토닉 대학 도서관",
+        "hook": "최근 며칠간 도서관을 이용한 학생들이 연이어 정신병원에 입원하고 있다. 모든 학생들은 같은 증상을 보인다: 고열, 환각, 그리고 알 수 없는 언어로 중얼거리기.",
+        "initial_mystery": "학생들이 모두 같은 책을 읽었다는 공통점이 발견된다."
+      },
+      "key_npcs": [
+        {
+          "name": "헨리 아미티지 박사",
+          "name_en": "Dr. Henry Armitage",
+          "role": "도서관장",
+          "description": "온화하지만 걱정이 많은 늙은 학자. 오컬트에 대한 깊은 지식을 갖고 있다.",
+          "knowledge": ["네크로노미콘의 존재", "과거 유사한 사건들", "보호 의식"],
+          "disposition": "협조적",
+          "secrets": "실제로는 미토스의 위험을 알고 있으며, 비밀리에 대응책을 연구하고 있다."
+        },
+        {
+          "name": "에밀리 윌슨",
+          "name_en": "Emily Wilson",
+          "role": "사서",
+          "description": "젊고 성실한 사서. 최근 이상한 일들 때문에 불안해하고 있다.",
+          "knowledge": ["최근 대출 기록", "학생들의 행동 변화", "책의 위치"],
+          "disposition": "신경질적",
+          "secrets": "자신도 그 책을 슬쩍 읽어봤고, 악몽에 시달리고 있다."
+        }
+      ],
+      "locations": [
+        {
+          "name": "미스카토닉 대학 도서관",
+          "description": "고딕 양식의 웅장한 건물. 수많은 고서들이 보관되어 있다.",
+          "areas": [
+            "일반 열람실",
+            "특별 컬렉션 구역",
+            "지하 서고",
+            "아미티지 박사의 사무실"
+          ],
+          "atmosphere": "낮에는 학구적이고 평화로우나, 밤이 되면 으스스하고 음산하다.",
+          "hidden_elements": ["비밀 통로", "봉인된 서고", "보호 마법진"]
+        },
+        {
+          "name": "아컴 종합병원 정신과 병동",
+          "description": "피해 학생들이 입원해 있는 곳. 차가우고 임상적인 분위기.",
+          "key_features": ["격리 병실", "의료진 사무실", "환자 기록실"],
+          "atmosphere": "소독약 냄새와 함께 절망감이 감돈다."
+        }
+      ],
+      "investigation_chain": [
+        {
+          "stage": 1,
+          "objective": "사건의 개요 파악",
+          "clues": [
+            "피해 학생들의 공통점 발견",
+            "도서관 대출 기록 조사",
+            "목격자 증언 수집"
+          ],
+          "skill_checks": ["도서관학", "심리학", "설득"],
+          "revelations": ["모든 학생들이 같은 책을 읽었다", "책의 제목은 '알 아지프'"]
+        },
+        {
+          "stage": 2,
+          "objective": "금지된 책 조사",
+          "clues": [
+            "책의 역사와 유래",
+            "아미티지 박사의 경고",
+            "과거 유사 사건들"
+          ],
+          "skill_checks": ["오컬트", "역사학", "아랍어"],
+          "revelations": ["네크로노미콘의 아랍어 원본", "책 자체가 저주받았다", "읽는 것만으로도 위험하다"]
+        },
+        {
+          "stage": 3,
+          "objective": "해결책 모색",
+          "clues": [
+            "보호 의식의 존재",
+            "책을 봉인하는 방법",
+            "피해자들을 치료하는 방법"
+          ],
+          "skill_checks": ["오컬트", "의학", "정신분석"],
+          "revelations": ["특별한 의식으로 저주를 풀 수 있다", "시간이 오래 걸릴수록 치료가 어려워진다"]
+        }
+      ],
+      "climax_events": [
+        {
+          "trigger": "책을 직접 조사할 때",
+          "event": "책을 펼치는 순간, 플레이어의 마음에 끔찍한 이미지들이 쏟아진다.",
+          "mechanics": {
+            "sanity_loss": "1d8",
+            "skill_check": "의지력 극한",
+            "success": "정신을 차리고 책을 덮는다",
+            "failure": "일시적으로 미쳐버린다"
+          }
+        },
+        {
+          "trigger": "의식을 수행할 때",
+          "event": "아미티지 박사와 함께 보호 의식을 수행하며 책의 저주를 봉인한다.",
+          "mechanics": {
+            "skill_check": "오컬트",
+            "teamwork": true,
+            "duration": "30분",
+            "interruptions": ["환영", "정신 공격", "물리적 현상"]
+          }
+        }
+      ],
+      "possible_endings": [
+        {
+          "condition": "성공적으로 책을 봉인",
+          "outcome": "학생들이 회복하기 시작하고, 책은 특별 보관소에 봉인된다.",
+          "consequences": ["평판 상승", "아미티지 박사와의 관계 개선", "미토스 지식 소량 습득"],
+          "sanity_recovery": "1d6"
+        },
+        {
+          "condition": "부분적 성공",
+          "outcome": "책은 봉인되지만 일부 학생들은 완전히 회복하지 못한다.",
+          "consequences": ["혼합된 평판", "죄책감", "불완전한 해결"],
+          "sanity_recovery": "1d3"
+        },
+        {
+          "condition": "실패",
+          "outcome": "책의 저주가 퍼져나가고 더 많은 피해자가 발생한다.",
+          "consequences": ["평판 하락", "지속적인 위협", "죄책감과 트라우마"],
+          "sanity_loss": "1d6"
+        }
+      ],
+      "rewards": {
+        "experience": "8-12점",
+        "potential_allies": ["아미티지 박사", "사서 에밀리"],
+        "knowledge_gained": ["네크로노미콘의 위험성", "미토스의 존재", "보호 의식 기초"],
+        "items": ["보호 부적", "오컬트 서적 접근권"]
+      },
+      "ai_hints": {
+        "pacing": "느린 빌드업, 조사 중심, 갑작스러운 공포 요소",
+        "atmosphere_focus": "학문적 호기심에서 시작하여 점점 불안과 공포로",
+        "key_emotions": ["호기심", "불안", "경외", "결단력"],
+        "difficulty_scaling": "책을 읽는 정도에 따라 위험도 조절 가능"
+      }
+    },
+    {
+      "id": "bg_002",
+      "title": "사라진 고고학자",
+      "title_en": "The Missing Archaeologist",
+      "difficulty": 2,
+      "duration": "3-4 hours",
+      "description": "이집트에서 돌아온 고고학자가 실종되었고, 그의 아파트에서는 이상한 일들이 벌어지고 있다.",
+      "background": {
+        "setting": "1920년대 아컴 시티",
+        "hook": "유명한 고고학자 제임스 윈필드가 이집트 발굴에서 돌아온 후 실종되었다. 그의 아파트에서는 밤마다 이상한 소리가 들린다고 이웃들이 신고한다.",
+        "initial_mystery": "아파트 관리인이 며칠째 윈필드를 보지 못했다고 한다."
+      },
+      "key_npcs": [
+        {
+          "name": "제임스 윈필드",
+          "name_en": "James Winfield",
+          "role": "실종된 고고학자",
+          "description": "중년의 학자. 최근 이집트 발굴에서 놀라운 발견을 했다고 알려져 있다.",
+          "knowledge": ["고대 이집트 유물", "파피루스 해독", "비밀 발굴 장소"],
+          "disposition": "실종 상태",
+          "secrets": "실제로는 저주받은 유물 때문에 변화하고 있다."
+        },
+        {
+          "name": "마사 톰슨 부인",
+          "name_en": "Mrs. Martha Thompson",
+          "role": "아파트 관리인",
+          "description": "50대 중반의 엄격한 관리인. 건물의 모든 것을 꿰뚫고 있다.",
+          "knowledge": ["거주자들의 생활 패턴", "최근 이상한 사건들", "건물 구조"],
+          "disposition": "의심 많음",
+          "secrets": "밤에 윈필드 방에서 나오는 소리를 들었지만 무서워서 확인하지 못했다."
+        }
+      ],
+      "locations": [
+        {
+          "name": "윈필드의 아파트",
+          "description": "3층에 위치한 중산층 아파트. 이집트 유물들로 가득하다.",
+          "areas": [
+            "거실 (유물 전시)",
+            "서재 (연구 자료)",
+            "침실 (개인 공간)",
+            "지하실 (비밀 작업실)"
+          ],
+          "atmosphere": "고대의 신비로운 분위기와 현대적 편의가 혼재",
+          "hidden_elements": ["숨겨진 파피루스", "의식용 도구", "변화의 징후들"]
+        },
+        {
+          "name": "미스카토닉 대학 고고학과",
+          "description": "윈필드가 근무하던 곳. 동료들과 연구 자료가 있다.",
+          "key_features": ["윈필드의 사무실", "발굴 보고서", "동료 교수들"],
+          "atmosphere": "학문적이지만 최근 불안한 기운이 감돈다."
+        }
+      ],
+      "investigation_chain": [
+        {
+          "stage": 1,
+          "objective": "실종 상황 파악",
+          "clues": [
+            "마지막 목격 시점",
+            "이상한 소리의 정체",
+            "이집트에서 가져온 유물들"
+          ],
+          "skill_checks": ["추리", "듣기", "고고학"],
+          "revelations": ["윈필드가 특별한 유물을 발견했다", "최근 행동이 이상했다"]
+        },
+        {
+          "stage": 2,
+          "objective": "유물과 저주 조사",
+          "clues": [
+            "파피루스의 내용",
+            "고대 이집트 의식",
+            "변화의 징후들"
+          ],
+          "skill_checks": ["이집트학", "오컬트", "의학"],
+          "revelations": ["유물이 저주받았다", "윈필드가 변화하고 있다", "의식이 진행 중이다"]
+        },
+        {
+          "stage": 3,
+          "objective": "윈필드 구출",
+          "clues": [
+            "숨겨진 작업실 발견",
+            "저주를 푸는 방법",
+            "시간의 촉박함"
+          ],
+          "skill_checks": ["오컬트", "의학", "격투"],
+          "revelations": ["윈필드가 완전히 변화하기 전에 구해야 한다", "특별한 의식이 필요하다"]
+        }
+      ],
+      "climax_events": [
+        {
+          "trigger": "지하실 발견",
+          "event": "지하실에서 변화하고 있는 윈필드를 발견한다. 그는 더 이상 완전히 인간이 아니다.",
+          "mechanics": {
+            "sanity_loss": "1d10",
+            "skill_check": "의지력",
+            "combat_possible": true,
+            "escape_option": true
+          }
+        },
+        {
+          "trigger": "구출 시도",
+          "event": "저주를 풀기 위한 의식을 시도하거나 직접 대결해야 한다.",
+          "mechanics": {
+            "options": ["의식 수행", "물리적 제압", "설득 시도"],
+            "time_pressure": true,
+            "multiple_skill_checks": true
+          }
+        }
+      ],
+      "possible_endings": [
+        {
+          "condition": "윈필드 구출 성공",
+          "outcome": "저주가 풀리고 윈필드가 인간으로 돌아온다. 유물은 안전하게 봉인된다.",
+          "consequences": ["생명 구출", "전문가 동맹", "유물 지식 습득"],
+          "sanity_recovery": "1d6"
+        },
+        {
+          "condition": "부분적 성공",
+          "outcome": "윈필드는 구하지만 완전히 회복되지는 않는다.",
+          "consequences": ["불완전한 구출", "지속적인 우려", "혼합된 감정"],
+          "sanity_recovery": "1d3"
+        },
+        {
+          "condition": "실패",
+          "outcome": "윈필드가 완전히 괴물이 되거나 사망한다.",
+          "consequences": ["죄책감", "위험 증가", "트라우마"],
+          "sanity_loss": "1d8"
+        }
+      ],
+      "rewards": {
+        "experience": "10-15점",
+        "potential_allies": ["구출된 윈필드", "고고학과 동료들"],
+        "knowledge_gained": ["고대 이집트 저주", "변화 의식", "유물의 위험성"],
+        "items": ["고대 유물(봉인됨)", "이집트학 자료", "보호 부적"]
+      },
+      "ai_hints": {
+        "pacing": "점진적 긴장 상승, 조사에서 구출 작전으로",
+        "atmosphere_focus": "고대 신비에서 시작하여 공포와 긴급함으로",
+        "key_emotions": ["호기심", "우려", "공포", "동정심"],
+        "difficulty_scaling": "발견 시점과 대응 방법에 따라 조절"
+      }
+    },
+    {
+      "id": "bg_003",
+      "title": "해변의 이상한 꿈",
+      "title_en": "Strange Dreams by the Shore",
+      "difficulty": 1,
+      "duration": "2-3 hours",
+      "description": "바닷가 마을 킹스포트에서 주민들이 모두 같은 꿈을 꾸기 시작했다.",
+      "background": {
+        "setting": "1920년대 킹스포트 해변 마을",
+        "hook": "킹스포트의 주민들이 며칠째 같은 꿈을 꾸고 있다. 꿈 속에서는 바다 아래에서 무언가가 부르고 있다고 한다.",
+        "initial_mystery": "꿈이 너무 생생하고 모든 사람이 같은 내용을 꾼다는 것이 이상하다."
+      },
+      "key_npcs": [
+        {
+          "name": "올드 피터",
+          "name_en": "Old Peter",
+          "role": "은퇴한 어부",
+          "description": "평생 바다와 함께 살아온 노인. 바다의 변화를 민감하게 감지한다.",
+          "knowledge": ["바다의 이상 현상", "옛날 전설들", "어업 정보"],
+          "disposition": "걱정스러움",
+          "secrets": "실제로는 먼 바다에서 이상한 것을 본 적이 있다."
+        },
+        {
+          "name": "메리 화이트 의사",
+          "name_en": "Dr. Mary White",
+          "role": "마을 의사",
+          "description": "젊고 유능한 의사. 주민들의 건강 상태를 우려하고 있다.",
+          "knowledge": ["주민들의 건강 상태", "수면 장애", "의학적 관점"],
+          "disposition": "과학적 접근",
+          "secrets": "자신도 같은 꿈을 꾸기 시작했다."
+        }
+      ],
+      "locations": [
+        {
+          "name": "킹스포트 해변",
+          "description": "고요하고 아름다운 해변이지만 최근 이상한 기운이 감돈다.",
+          "areas": [
+            "등대",
+            "어부들의 부두",
+            "해변가 산책로",
+            "바위 동굴"
+          ],
+          "atmosphere": "평화로워 보이지만 뭔가 숨어있는 불안감",
+          "hidden_elements": ["이상한 해초", "기묘한 조개껍질", "바위에 새겨진 기호들"]
+        },
+        {
+          "name": "마을 중심가",
+          "description": "작은 어촌 마을의 중심. 상점과 여관이 있다.",
+          "key_features": ["여관", "잡화점", "의료소", "마을 회관"],
+          "atmosphere": "평소보다 조용하고 주민들이 피곤해 보인다."
+        }
+      ],
+      "investigation_chain": [
+        {
+          "stage": 1,
+          "objective": "꿈의 내용 파악",
+          "clues": [
+            "주민들의 증언",
+            "꿈의 공통점",
+            "시작 시점"
+          ],
+          "skill_checks": ["심리학", "설득", "의학"],
+          "revelations": ["모든 꿈이 동일하다", "바다에서 무엇인가 부른다", "며칠 전부터 시작되었다"]
+        },
+        {
+          "stage": 2,
+          "objective": "바다의 이상 현상 조사",
+          "clues": [
+            "바다의 변화",
+            "해변의 이상한 흔적들",
+            "옛 전설과의 연관성"
+          ],
+          "skill_checks": ["자연사", "민속학", "항해술"],
+          "revelations": ["바다가 평소와 다르다", "고대 전설과 유사하다", "주기적인 현상일 가능성"]
+        },
+        {
+          "stage": 3,
+          "objective": "해결책 모색",
+          "clues": [
+            "전설 속 대응 방법",
+            "현대적 해결책",
+            "집단 행동의 필요성"
+          ],
+          "skill_checks": ["민속학", "설득", "오컬트"],
+          "revelations": ["특별한 의식이 필요하다", "마을 전체가 참여해야 한다", "시간이 중요하다"]
+        }
+      ],
+      "climax_events": [
+        {
+          "trigger": "한밤중 해변 조사",
+          "event": "밤에 해변을 조사하던 중, 바다에서 이상한 형태가 나타난다.",
+          "mechanics": {
+            "sanity_loss": "1d6",
+            "skill_check": "의지력",
+            "revelation": "바다 아래 무엇인가 있다",
+            "escape_required": true
+          }
+        },
+        {
+          "trigger": "마을 의식 수행",
+          "event": "마을 사람들과 함께 옛 방식대로 바다를 달래는 의식을 수행한다.",
+          "mechanics": {
+            "community_event": true,
+            "skill_check": "설득 + 민속학",
+            "group_effort": true,
+            "peaceful_resolution": true
+          }
+        }
+      ],
+      "possible_endings": [
+        {
+          "condition": "의식 성공",
+          "outcome": "마을 사람들의 꿈이 멈추고 바다가 다시 평온해진다.",
+          "consequences": ["마을의 평화 회복", "공동체 결속", "전통 지식 보존"],
+          "sanity_recovery": "1d4"
+        },
+        {
+          "condition": "부분적 성공",
+          "outcome": "꿈은 줄어들지만 완전히 사라지지는 않는다.",
+          "consequences": ["불완전한 해결", "지속적인 불안", "경계심 증가"],
+          "sanity_recovery": "1d2"
+        },
+        {
+          "condition": "실패",
+          "outcome": "꿈이 더 심해지고 일부 주민들이 바다로 걸어간다.",
+          "consequences": ["상황 악화", "더 큰 위협", "죄책감"],
+          "sanity_loss": "1d4"
+        }
+      ],
+      "rewards": {
+        "experience": "6-10점",
+        "potential_allies": ["마을 주민들", "올드 피터", "메리 의사"],
+        "knowledge_gained": ["바다의 신비", "집단 꿈의 위험성", "전통 의식의 힘"],
+        "items": ["바다의 부적", "민속 지식서", "마을 사람들의 신뢰"]
+      },
+      "ai_hints": {
+        "pacing": "차분한 시작, 점진적 불안감 증가, 공동체적 해결",
+        "atmosphere_focus": "목가적 평화에서 초자연적 불안으로",
+        "key_emotions": ["평온", "궁금증", "불안", "연대감"],
+        "difficulty_scaling": "커뮤니티 참여도에 따라 조절"
+      }
+    }
+  ]
+}

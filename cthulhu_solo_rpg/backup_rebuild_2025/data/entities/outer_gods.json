@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "category": "outer_gods",
+    "description": "외신들 - 위대한 옛 존재들보다도 더 강력하고 초월적인 존재들",
+    "power_level": "최상위",
+    "ai_hints": {
+      "usage_context": "Ultimate cosmic forces, rarely directly encountered",
+      "encounter_frequency": "extremely rare",
+      "direct_contact": "usually reality-breaking",
+      "influence_range": "multiversal"
+    }
+  },
+  "entities": [
+    {
+      "id": "azathoth",
+      "name": "아자토스",
+      "name_en": "Azathoth",
+      "title": "맹목적 바보 신",
+      "title_en": "The Blind Idiot God",
+      "status": "우주 중심에서 영원히 잠들어 있음",
+      "location": "모든 시공간의 중심",
+      "physical_description": {
+        "basic": "정확한 형태 불명, 끊임없이 변화하는 혼돈덩어리",
+        "size": "무한대",
+        "distinctive_features": [
+          "무수한 촉수와 눈",
+          "끊임없는 변화와 소멸",
+          "원시적 혼돈",
+          "핵심부의 절대 어둠",
+          "시공간을 왜곡하는 존재감"
+        ],
+        "emanations": "현실 자체의 불안정성, 존재론적 공포, 광기"
+      },
+      "powers": [
+        {
+          "name": "현실 창조와 파괴",
+          "description": "모든 현실이 그의 꿈이며, 깨어나면 모든 것이 소멸",
+          "range": "무한",
+          "effect": "전 우주의 존재/비존재"
+        },
+        {
+          "name": "혼돈의 근원",
+          "description": "모든 무작위성과 혼돈의 궁극적 원인",
+          "range": "다차원적",
+          "effect": "예측 불가능한 현상들"
+        },
+        {
+          "name": "절대적 무의식",
+          "description": "의식이 없기에 그 어떤 것도 그를 이해하거나 소통할 수 없음",
+          "range": "존재론적",
+          "effect": "완전한 소외감, 의미의 부재"
+        }
+      ],
+      "cult_information": {
+        "primary_cult": "아자토스 교단",
+        "worship_methods": [
+          "무의미한 춤과 연주",
+          "혼돈의 의식",
+          "플루트와 드럼 연주",
+          "광기 속에서의 명상",
+          "현실 부정 의식"
+        ],
+        "sacred_sites": [
+          "차원의 경계",
+          "현실이 불안정한 장소",
+          "광기의 성소들",
+          "음악과 소음이 끊이지 않는 곳"
+        ],
+        "prophecies": "아자토스가 깨어나는 날 모든 현실이 꿈이었음이 드러난다"
+      },
+      "manifestation_signs": [
+        "현실의 근본적 불안정",
+        "물리 법칙 위반 현상",
+        "집단적 정체성 혼란",
+        "무의미한 소음과 음악",
+        "존재 자체에 대한 의문"
+      ],
+      "encounter_effects": {
+        "direct_contact": {
+          "sanity_loss": "완전한 정신 붕괴",
+          "additional_effects": "현실 인식의 완전한 파괴"
+        },
+        "indirect_influence": {
+          "sanity_loss": "1d100",
+          "additional_effects": "존재론적 공포, 의미에 대한 절망"
+        },
+        "dream_contact": {
+          "sanity_loss": "1d20",
+          "additional_effects": "혼돈에 대한 매혹, 무의미함의 깨달음"
+        }
+      },
+      "weaknesses": [
+        {
+          "type": "영원한 잠",
+          "description": "잠든 상태를 유지하는 한 직접적 위협 없음",
+          "exploitation": "절대로 깨우려 하지 말 것"
+        },
+        {
+          "type": "무의식성",
+          "description": "의식이 없어 직접적 의도나 계획이 없음",
+          "exploitation": "예측 불가능하지만 악의는 없음"
+        }
+      ],
+      "associated_creatures": [
+        "서빙 고",
+        "플루트 불는 악마들",
+        "춤추는 신들",
+        "혼돈의 하수인들"
+      ],
+      "knowledge_sources": [
+        "네크로노미콘 (부분적)",
+        "혼돈 수학서들",
+        "광인들의 기록",
+        "우주론 연구서"
+      ],
+      "ai_usage_hints": {
+        "usage_philosophy": "직접 등장보다는 우주적 배경으로서의 존재감",
+        "horror_source": "의미와 목적의 완전한 부재에서 오는 공포",
+        "reality_themes": "현실의 불확실성, 존재의 무의미함",
+        "narrative_function": "궁극적 허무주의와 우주적 공포의 상징"
+      }
+    },
+    {
+      "id": "nyarlathotep",
+      "name": "냐를라토텝",
+      "name_en": "Nyarlathotep",
+      "title": "기어다니는 혼돈",
+      "title_en": "The Crawling Chaos",
+      "status": "다양한 형태로 적극 활동 중",
+      "location": "모든 곳 (다중 현현)",
+      "physical_description": {
+        "basic": "수많은 형태를 가짐, 가장 흔한 것은 키 큰 검은 피부의 남성",
+        "size": "가변적 (인간 크기부터 거대한 크기까지)",
+        "distinctive_features": [
+          "변화무쌍한 외모",
+          "매혹적이면서 위험한 카리스마",
+          "완벽한 인간 언어 구사",
+          "현대적 지식과 기술 이해",
+          "각 형태마다 다른 특징"
+        ],
+        "emanations": "매혹과 공포의 혼재, 지적 우월감, 예측 불가능성"
+      },
+      "avatar_forms": [
+        {
+          "name": "검은 파라오",
+          "description": "고대 이집트의 파라오 모습",
+          "specialization": "고대 지식과 마법",
+          "common_locations": ["이집트", "고고학 유적지"]
+        },
+        {
+          "name": "어둠의 남자",
+          "description": "현대적 정장을 입은 신사",
+          "specialization": "현대 사회 침투와 조작",
+          "common_locations": ["도시", "학술 기관", "정부 기관"]
+        },
+        {
+          "name": "하울링 헌터",
+          "description": "거대한 어둠의 형태",
+          "specialization": "사냥과 파괴",
+          "common_locations": ["황야", "버려진 장소"]
+        }
+      ],
+      "powers": [
+        {
+          "name": "형태 변환",
+          "description": "무수한 형태로 변환 가능",
+          "range": "자신",
+          "effect": "완벽한 변장, 능력 변화"
+        },
+        {
+          "name": "지식의 전달자",
+          "description": "위험한 지식을 인간에게 전달",
+          "range": "대화 가능한 거리",
+          "effect": "금지된 지식, 기술 발전, 파멸적 발견"
+        },
+        {
+          "name": "현실 조작",
+          "description": "물리 법칙을 일시적으로 변경",
+          "range": "지역적",
+          "effect": "불가능한 현상, 기적과 재앙"
+        }
+      ],
+      "cult_information": {
+        "primary_cult": "천 개의 가면 형제단",
+        "worship_methods": [
+          "지식 추구와 실험",
+          "기술과 과학의 남용",
+          "사회 구조 파괴",
+          "혼돈과 무질서 유발",
+          "다양한 형태로의 모방"
+        ],
+        "sacred_sites": [
+          "실험실과 연구소",
+          "대학과 도서관",
+          "기술 회사들",
+          "정치적 권력의 중심지"
+        ],
+        "prophecies": "모든 지식이 통합될 때 진정한 혼돈이 시작된다"
+      },
+      "manifestation_signs": [
+        "급격한 기술 발전",
+        "사회 구조의 불안정",
+        "예상치 못한 과학적 발견",
+        "권력자들의 이상 행동",
+        "집단 히스테리 현상"
+      ],
+      "encounter_effects": {
+        "direct_conversation": {
+          "sanity_loss": "1d10",
+          "additional_effects": "금지된 지식 습득, 강박적 연구 욕구"
+        },
+        "knowledge_gift": {
+          "sanity_loss": "1d20",
+          "additional_effects": "위험한 발견, 도덕적 타락"
+        },
+        "true_form_glimpse": {
+          "sanity_loss": "1d100",
+          "additional_effects": "현실 인식 붕괴, 영구적 변화"
+        }
+      },
+      "weaknesses": [
+        {
+          "type": "관심의 변화",
+          "description": "쉽게 흥미를 잃고 다른 것으로 관심을 옮김",
+          "exploitation": "더 흥미로운 대상으로 주의 분산"
+        },
+        {
+          "type": "직접 대결 회피",
+          "description": "보통 직접적인 물리적 대결은 피함",
+          "exploitation": "강제로 직접 대결 상황 조성"
+        }
+      ],
+      "associated_creatures": [
+        "헌팅 호러",
+        "샨타크",
+        "나이트건트",
+        "여러 변형된 인간들"
+      ],
+      "knowledge_sources": [
+        "아자토스 단편들",
+        "현대 과학 논문들",
+        "비밀 정부 문서들",
+        "광인과 천재들의 기록"
+      ],
+      "ai_usage_hints": {
+        "versatile_antagonist": "다양한 시나리오에서 다른 형태로 등장 가능",
+        "intelligence_focus": "순수 공포보다는 지적 도전과 유혹",
+        "modern_integration": "현대 사회와 기술에 자연스럽게 융합",
+        "manipulator_role": "배후 조종자로서 간접적 영향력 행사"
+      }
+    },
+    {
+      "id": "yog_sothoth",
+      "name": "요그 소토스",
+      "name_en": "Yog-Sothoth",
+      "title": "문지기",
+      "title_en": "The Key and the Gate",
+      "status": "시공간의 경계에서 활동",
+      "location": "모든 차원의 경계",
+      "physical_description": {
+        "basic": "무수한 구체들이 집합된 형태, 각 구체는 다른 시공간을 담고 있음",
+        "size": "개념적 무한대",
+        "distinctive_features": [
+          "끊임없이 변화하는 구체들",
+          "각기 다른 색깔과 크기",
+          "시공간을 관통하는 존재감",
+          "기하학적으로 불가능한 배열",
+          "모든 시간을 동시에 경험"
+        ],
+        "emanations": "시간의 왜곡, 공간의 불안정, 인과관계 혼란"
+      },
+      "powers": [
+        {
+          "name": "시공간 통제",
+          "description": "모든 시간과 공간에 동시 존재",
+          "range": "무한",
+          "effect": "시간 여행, 차원 이동, 평행우주 접근"
+        },
+        {
+          "name": "차원문 개방",
+          "description": "어떤 차원이든 연결 가능",
+          "range": "다차원적",
+          "effect": "존재들의 소환, 다른 세계로의 이동"
+        },
+        {
+          "name": "전지적 인식",
+          "description": "모든 시간대의 모든 사건을 동시에 인식",
+          "range": "전 우주사",
+          "effect": "완전한 예언, 숨겨진 진실의 폭로"
+        }
+      ],
+      "cult_information": {
+        "primary_cult": "시간의 수호자들",
+        "worship_methods": [
+          "차원간 의식",
+          "시간 조작 실험",
+          "고대 기하학 도형 그리기",
+          "다차원적 명상",
+          "경계선에서의 의식"
+        ],
+        "sacred_sites": [
+          "거석 유적들",
+          "차원이 교차하는 지점들",
+          "천체 관측소들",
+          "고대 도서관들"
+        ],
+        "prophecies": "모든 시간이 하나로 합쳐질 때 요그 소토스의 시대가 온다"
+      },
+      "manifestation_signs": [
+        "시간 이상 현상",
+        "공간 왜곡 현상",
+        "예언적 꿈과 환상",
+        "차원간 존재들의 출현",
+        "불가능한 기하학적 형태들"
+      ],
+      "encounter_effects": {
+        "direct_sight": {
+          "sanity_loss": "1d100",
+          "additional_effects": "시간 감각 상실, 다차원적 인식"
+        },
+        "temporal_contact": {
+          "sanity_loss": "1d20",
+          "additional_effects": "과거/미래 기억 혼재, 예언 능력"
+        },
+        "summoning_presence": {
+          "sanity_loss": "1d10",
+          "additional_effects": "차원간 지식, 공간 인식 변화"
+        }
+      },
+      "weaknesses": [
+        {
+          "type": "차원 경계 의존",
+          "description": "완전히 한 차원에 현현하기 어려움",
+          "exploitation": "차원 경계를 봉인하거나 안정화"
+        },
+        {
+          "type": "복잡한 소환 조건",
+          "description": "특정 시공간 조건에서만 접촉 가능",
+          "exploitation": "소환 조건 방해나 부정확한 의식"
+        }
+      ],
+      "associated_creatures": [
+        "틴달로스 하운드",
+        "차원간 여행자들",
+        "시간에서 길을 잃은 자들",
+        "던위치 공포의 후손들"
+      ],
+      "knowledge_sources": [
+        "네크로노미콘의 요그 소토스 장",
+        "시간 여행 연구서들",
+        "다차원 수학 논문들",
+        "고대 천문학 기록들"
+      ],
+      "ai_usage_hints": {
+        "temporal_mysteries": "시간 패러독스와 인과관계 역전 활용",
+        "knowledge_source": "과거와 미래의 정보를 제공하는 오라클 역할",
+        "dimensional_gateway": "다른 시나리오나 세계로의 연결점",
+        "cosmic_perspective": "인간의 시간 개념을 초월하는 존재감"
+      }
+    }
+  ]
+}

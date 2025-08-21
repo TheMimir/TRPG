@@ -1,0 +1,656 @@
+{
+  "metadata": {
+    "category": "haunted_locations",
+    "description": "일반적인 공포 장소들 - 다양한 시나리오에서 활용 가능",
+    "setting": "1920년대 뉴잉글랜드 및 기타 지역",
+    "ai_hints": {
+      "usage_context": "Atmospheric horror, investigative backdrops, supernatural encounters",
+      "versatility": "Adaptable to various scenarios and time periods",
+      "scalability": "From single room encounters to large complex investigations",
+      "mood_range": "Subtle unease to overwhelming terror"
+    }
+  },
+  "location_types": [
+    {
+      "category": "residential",
+      "name": "주거시설",
+      "subcategories": ["저택", "아파트", "농장", "오두막"]
+    },
+    {
+      "category": "institutional",
+      "name": "기관시설",
+      "subcategories": ["병원", "학교", "교회", "감옥"]
+    },
+    {
+      "category": "commercial",
+      "name": "상업시설",
+      "subcategories": ["호텔", "극장", "상점", "공장"]
+    },
+    {
+      "category": "natural",
+      "name": "자연지역",
+      "subcategories": ["숲", "호수", "동굴", "산"]
+    }
+  ],
+  "locations": [
+    {
+      "id": "corbitt_house",
+      "name": "코빗 저택",
+      "name_en": "The Corbitt House",
+      "type": "저택",
+      "location": "아컴 외곽",
+      "built": "1834년",
+      "architecture": "그리스 리바이벌 양식",
+      "current_status": "비어있음 (가끔 임대)",
+      "description": "한때 번영했던 가문의 저택이지만 현재는 음산한 기운이 감도는 빈 집",
+      "history": {
+        "original_owner": "월터 코빗 (무역상)",
+        "family_tragedy": "1912년 가족 전체가 의문의 죽음",
+        "subsequent_owners": [
+          "1913-1918: 빈 집",
+          "1918-1920: 존슨 가족 (6개월 거주 후 이사)",
+          "1920-현재: 간헐적 임대"
+        ]
+      },
+      "exterior": {
+        "condition": "겉보기에는 양호하나 세부적으로 낡음",
+        "grounds": "넓은 정원, 높은 철문, 오래된 나무들",
+        "distinctive_features": [
+          "정면의 거대한 기둥들",
+          "2층 발코니",
+          "다락방 창문들",
+          "뒤뜰의 작은 묘지"
+        ],
+        "atmosphere": "낮에도 그림자가 짙고 밤에는 완전히 위협적"
+      },
+      "interior": {
+        "layout": "2층 구조 + 지하실 + 다락방",
+        "total_rooms": 15,
+        "condition": "가구는 일부 남아있으나 먼지투성이",
+        "floors": [
+          {
+            "floor": "지하실",
+            "rooms": [
+              {
+                "name": "저장고",
+                "description": "와인과 식료품 저장",
+                "anomalies": "벽의 이상한 얼룩, 설명할 수 없는 냄새"
+              },
+              {
+                "name": "보일러실",
+                "description": "오래된 난방 시설",
+                "dangers": "불안정한 보일러, 가스 누출 위험"
+              },
+              {
+                "name": "숨겨진 방",
+                "description": "비밀 입구 뒤의 작은 공간",
+                "contents": "이상한 기호들, 의식용 도구들",
+                "discovery": "벽 두드려보기나 자세한 조사로 발견"
+              }
+            ]
+          },
+          {
+            "floor": "1층",
+            "rooms": [
+              {
+                "name": "현관",
+                "description": "대리석 바닥, 크리스탈 샹들리에",
+                "atmosphere": "웅장하지만 을씨년스러운"
+              },
+              {
+                "name": "거실",
+                "description": "벽난로, 오래된 가구들",
+                "phenomena": "불씨가 저절로 켜지는 벽난로"
+              },
+              {
+                "name": "식당",
+                "description": "긴 테이블, 은식기",
+                "anomalies": "자리 수가 항상 바뀜"
+              },
+              {
+                "name": "부엌",
+                "description": "1910년대 시설",
+                "dangers": "가스레인지 누출, 날카로운 도구들"
+              },
+              {
+                "name": "서재",
+                "description": "책장, 책상, 의자",
+                "contents": "일부 이상한 서적들 남아있음"
+              }
+            ]
+          },
+          {
+            "floor": "2층",
+            "rooms": [
+              {
+                "name": "주인 침실",
+                "description": "큰 침대, 화장대, 옷장",
+                "phenomena": "침대 시트가 저절로 움직임"
+              },
+              {
+                "name": "손님 침실들",
+                "count": 3,
+                "condition": "다양한 상태, 일부는 문이 잠김"
+              },
+              {
+                "name": "욕실",
+                "description": "오래된 욕조와 세면대",
+                "anomalies": "물이 붉은색으로 나옴"
+              }
+            ]
+          },
+          {
+            "floor": "다락방",
+            "description": "경사진 천장, 낡은 상자들과 가구들",
+            "contents": [
+              "가족 초상화들",
+              "오래된 옷들",
+              "의문의 일기들",
+              "이상한 유물들"
+            ],
+            "atmosphere": "매우 더럽고 답답한, 뭔가 숨어있는 느낌"
+          }
+        ]
+      },
+      "supernatural_phenomena": [
+        {
+          "type": "시각적",
+          "manifestations": [
+            "창문에 나타나는 인영",
+            "계단을 오르내리는 그림자",
+            "거울에 비치는 낯선 얼굴들",
+            "벽에 나타나는 피 같은 얼룩"
+          ]
+        },
+        {
+          "type": "청각적",
+          "manifestations": [
+            "밤중에 들리는 발소리",
+            "벽 속에서 나는 긁는 소리",
+            "속삭이는 목소리들",
+            "울음소리와 신음소리"
+          ]
+        },
+        {
+          "type": "물리적",
+          "manifestations": [
+            "문이 저절로 열리고 닫힘",
+            "차가운 바람",
+            "물건들의 위치 변화",
+            "전기 장비 오작동"
+          ]
+        }
+      ],
+      "investigation_clues": [
+        {
+          "location": "서재 책들",
+          "clue": "코빗 가문의 오컬트 관심사",
+          "skill_required": "도서관학 또는 오컬트"
+        },
+        {
+          "location": "다락방 일기",
+          "clue": "가족의 마지막 날들에 대한 기록",
+          "skill_required": "영어 독해"
+        },
+        {
+          "location": "지하실 숨겨진 방",
+          "clue": "실제 죽음의 원인",
+          "skill_required": "건축학 또는 발견"
+        }
+      ],
+      "dangers": [
+        "구조적 불안정 (계단, 바닥)",
+        "유해한 가스나 곰팡이",
+        "날카로운 물건들",
+        "정신적 영향 (공포, 광기)",
+        "초자연적 공격"
+      ],
+      "story_hooks": [
+        "새로운 세입자를 위한 사전 조사",
+        "실종된 이전 거주자 수색",
+        "보험 조사관으로서의 방문",
+        "부동산 가치 평가",
+        "유령 사냥꾼으로서의 조사"
+      ]
+    },
+    {
+      "id": "blackwater_asylum",
+      "name": "블랙워터 정신병원",
+      "name_en": "Blackwater Asylum",
+      "type": "폐기된 정신병원",
+      "location": "매사추세츠 시골",
+      "built": "1867년",
+      "closed": "1919년",
+      "architecture": "빅토리안 고딕 양식",
+      "description": "한때 정신병 환자들을 수용했던 거대한 병원, 현재는 폐허",
+      "history": {
+        "founding": "남북전쟁 후 정신병 환자 급증에 대응",
+        "peak_period": "1880-1910년 (환자 수 최고 800명)",
+        "decline": "1910년대 스캔들과 예산 부족",
+        "closure_reason": "환자 학대 폭로, 의문의 사망 사건들"
+      },
+      "exterior": {
+        "size": "거대한 U자형 건물",
+        "condition": "부분적 붕괴, 담쟁이로 뒤덮임",
+        "grounds": "20에이커의 부지, 높은 석담으로 둘러싸임",
+        "outbuildings": [
+          "관리사무소 (폐허)",
+          "세탁소 (지붕 붕괴)",
+          "교회당 (상태 양호)",
+          "묘지 (무명 환자들)"
+        ]
+      },
+      "interior_layout": {
+        "wings": [
+          {
+            "name": "서쪽 동 (남성 환자)",
+            "floors": 3,
+            "condition": "가장 파손 심함",
+            "features": ["개인실들", "공동 화장실", "오락실"]
+          },
+          {
+            "name": "동쪽 동 (여성 환자)",
+            "floors": 3,
+            "condition": "비교적 양호",
+            "features": ["개인실들", "재봉실", "교실"]
+          },
+          {
+            "name": "중앙 동 (관리 구역)",
+            "floors": 4,
+            "condition": "혼재",
+            "features": [
+              "접수실",
+              "의사 사무실들",
+              "기록 보관소",
+              "수술실",
+              "격리실들"
+            ]
+          }
+        ],
+        "basement": {
+          "areas": [
+            "시체 안치실",
+            "보일러실",
+            "저장고들",
+            "비밀 실험실 (발견 어려움)"
+          ],
+          "atmosphere": "매우 어둡고 위험한"
+        }
+      },
+      "notable_rooms": [
+        {
+          "name": "원장실",
+          "location": "중앙동 4층",
+          "contents": [
+            "오래된 책상과 의자",
+            "환자 기록 파일들 (일부)",
+            "의학 서적들",
+            "이상한 실험 기록들"
+          ]
+        },
+        {
+          "name": "수술실",
+          "location": "중앙동 2층",
+          "equipment": "오래된 의료 기구들",
+          "atmosphere": "매우 불길한, 학대의 흔적들"
+        },
+        {
+          "name": "격리실들",
+          "location": "각 동의 지하",
+          "condition": "대부분 잠겨있음",
+          "contents": "구속복, 이상한 낙서들"
+        }
+      ],
+      "supernatural_activity": [
+        {
+          "area": "복도들",
+          "phenomena": [
+            "환자복 입은 그림자들",
+            "휠체어 굴러가는 소리",
+            "울음소리와 웃음소리",
+            "의료진의 대화 소리"
+          ]
+        },
+        {
+          "area": "격리실",
+          "phenomena": [
+            "문이 저절로 잠김",
+            "벽을 긁는 소리",
+            "구속복이 저절로 움직임",
+            "환자들의 마지막 순간 재현"
+          ]
+        },
+        {
+          "area": "수술실",
+          "phenomena": [
+            "의료 기구들이 저절로 움직임",
+            "수술 장면의 환상",
+            "피의 냄새",
+            "의사의 음성"
+          ]
+        }
+      ],
+      "hidden_secrets": [
+        {
+          "secret": "불법 실험",
+          "location": "지하 비밀 실험실",
+          "details": "환자들을 대상으로 한 잔혹한 의학 실험"
+        },
+        {
+          "secret": "대량 학살",
+          "location": "묘지",
+          "details": "공식 기록보다 훨씬 많은 환자들이 사망"
+        },
+        {
+          "secret": "오컬트 연구",
+          "location": "원장실 비밀 서류",
+          "details": "정신병과 초자연적 현상의 연관성 연구"
+        }
+      ]
+    },
+    {
+      "id": "riverside_theater",
+      "name": "리버사이드 극장",
+      "name_en": "Riverside Theater",
+      "type": "극장",
+      "location": "보스턴 시내",
+      "built": "1889년",
+      "current_status": "운영 중 (간헐적)",
+      "architecture": "빅토리안 오페라 하우스 양식",
+      "description": "한때 화려했던 극장이지만 현재는 기이한 사건들로 유명",
+      "history": {
+        "golden_age": "1890-1910년 (최고의 공연들)",
+        "decline": "1915년 화재 사고 후 관객 감소",
+        "current_era": "B급 공연과 임대 공연만"
+      },
+      "capacity": "1,200석",
+      "layout": {
+        "main_floor": {
+          "orchestra_seats": "800석",
+          "box_seats": "12개 박스 (각 6석)"
+        },
+        "balcony": "400석",
+        "stage": {
+          "type": "프로시니엄 스테이지",
+          "backstage": "분장실, 소품 창고, 연습실"
+        }
+      },
+      "infamous_incidents": [
+        {
+          "year": "1915년",
+          "event": "화재 사고",
+          "details": "공연 중 무대 뒤 화재로 17명 사망",
+          "aftermath": "6개월 휴업, 대대적 수리"
+        },
+        {
+          "year": "1923년",
+          "event": "배우 실종",
+          "details": "주연 배우가 공연 중 무대에서 사라짐",
+          "status": "미해결"
+        }
+      ],
+      "supernatural_phenomena": [
+        {
+          "area": "무대",
+          "manifestations": [
+            "무대 위에 나타나는 투명한 인형들",
+            "조명이 저절로 켜지고 꺼짐",
+            "배경막이 저절로 움직임",
+            "아무도 없는데 박수 소리"
+          ]
+        },
+        {
+          "area": "관객석",
+          "manifestations": [
+            "빈 좌석에 앉아있는 관객들",
+            "1915년 화재 당시 비명소리",
+            "좌석이 저절로 접히고 펴짐",
+            "시대착오적 복장의 관객들"
+          ]
+        },
+        {
+          "area": "분장실",
+          "manifestations": [
+            "거울에 나타나는 다른 얼굴들",
+            "의상이 저절로 움직임",
+            "분장도구가 저절로 사용됨",
+            "과거 배우들의 목소리"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whippoorwill_forest",
+      "name": "휘푸어윌 숲",
+      "name_en": "Whippoorwill Forest",
+      "type": "숲",
+      "location": "던위치 북쪽",
+      "size": "약 500에이커",
+      "description": "고대부터 내려오는 짙은 숲, 인디언들도 피했던 성역",
+      "terrain": "언덕진 지형, 울창한 침엽수림",
+      "atmosphere": "낮에도 어둡고 밤에는 절대 접근 금지",
+      "wildlife": {
+        "normal": ["사슴", "곰", "늑대", "올빼미"],
+        "unusual": [
+          "백색 사슴 (목격담)",
+          "거대한 늑대들",
+          "이상한 울음소리를 내는 새들",
+          "빛나는 눈을 가진 존재들"
+        ]
+      },
+      "notable_areas": [
+        {
+          "name": "원형 광장",
+          "description": "숲 중심의 나무가 없는 완전한 원형 공간",
+          "diameter": "약 30미터",
+          "features": [
+            "중앙의 검은 돌",
+            "주변의 이상한 기호들",
+            "어떤 식물도 자라지 않음",
+            "동물들이 절대 접근하지 않음"
+          ]
+        },
+        {
+          "name": "울음바위",
+          "description": "높은 절벽의 바위, 밤에 이상한 소리",
+          "legends": "인디언 전설에 따르면 악령들이 모이는 곳"
+        }
+      ]
+    }
+  ],
+  "location_generation_templates": [
+    {
+      "type": "abandoned_building",
+      "elements": [
+        {
+          "component": "exterior",
+          "options": [
+            "broken windows",
+            "overgrown vegetation",
+            "damaged roof",
+            "graffiti or vandalism",
+            "blocked entrances"
+          ]
+        },
+        {
+          "component": "interior_atmosphere",
+          "options": [
+            "musty smell",
+            "creaking floors",
+            "peeling wallpaper",
+            "water damage",
+            "animal droppings"
+          ]
+        },
+        {
+          "component": "supernatural_signs",
+          "options": [
+            "cold spots",
+            "unexplained sounds",
+            "moving shadows",
+            "electrical anomalies",
+            "strange odors"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "isolated_location",
+      "elements": [
+        {
+          "component": "access_difficulty",
+          "options": [
+            "overgrown path",
+            "dangerous terrain",
+            "no vehicle access",
+            "seasonal accessibility",
+            "deliberately hidden"
+          ]
+        },
+        {
+          "component": "natural_hazards",
+          "options": [
+            "unstable ground",
+            "toxic plants",
+            "dangerous wildlife",
+            "weather exposure",
+            "getting lost"
+          ]
+        }
+      ]
+    }
+  ],
+  "atmospheric_elements": {
+    "visual": [
+      "flickering lights",
+      "moving shadows",
+      "unexplained reflections",
+      "apparitions",
+      "objects moving",
+      "doors opening/closing",
+      "writing appearing"
+    ],
+    "auditory": [
+      "footsteps",
+      "voices/whispers",
+      "mechanical sounds",
+      "animal noises",
+      "music/singing",
+      "screams/crying",
+      "silence (unnatural)"
+    ],
+    "tactile": [
+      "cold spots",
+      "hot spots",
+      "unusual textures",
+      "invisible touch",
+      "electrical sensations",
+      "vibrations",
+      "pressure changes"
+    ],
+    "olfactory": [
+      "decay/rot",
+      "flowers/perfume",
+      "smoke/fire",
+      "chemicals",
+      "wet earth",
+      "metallic odors",
+      "absence of smell"
+    ]
+  },
+  "escalation_patterns": [
+    {
+      "pattern": "subtle_to_obvious",
+      "stages": [
+        "minor oddities",
+        "noticeable anomalies",
+        "undeniable phenomena",
+        "direct interaction",
+        "overwhelming manifestation"
+      ]
+    },
+    {
+      "pattern": "intermittent_to_constant",
+      "stages": [
+        "occasional events",
+        "regular patterns",
+        "frequent occurrences",
+        "persistent activity",
+        "continuous manifestation"
+      ]
+    },
+    {
+      "pattern": "passive_to_aggressive",
+      "stages": [
+        "environmental changes",
+        "attention-seeking behavior",
+        "mild interference",
+        "hostile actions",
+        "direct attacks"
+      ]
+    }
+  ],
+  "safety_considerations": [
+    {
+      "category": "structural",
+      "hazards": [
+        "collapsed floors/ceilings",
+        "unstable walls",
+        "broken stairs",
+        "sharp debris",
+        "exposed wiring"
+      ]
+    },
+    {
+      "category": "environmental",
+      "hazards": [
+        "asbestos/lead paint",
+        "mold/fungus",
+        "toxic chemicals",
+        "gas leaks",
+        "contaminated water"
+      ]
+    },
+    {
+      "category": "supernatural",
+      "hazards": [
+        "possession risk",
+        "sanity loss",
+        "physical attacks",
+        "temporal displacement",
+        "reality distortion"
+      ]
+    }
+  ],
+  "investigation_tools": [
+    {
+      "category": "traditional",
+      "tools": [
+        "flashlights/lanterns",
+        "cameras",
+        "recording equipment",
+        "measuring tools",
+        "first aid supplies"
+      ]
+    },
+    {
+      "category": "supernatural",
+      "tools": [
+        "blessed items",
+        "protective symbols",
+        "occult references",
+        "ritual components",
+        "detection spells"
+      ]
+    }
+  ],
+  "ai_usage_hints": {
+    "atmosphere_building": "Start subtle and build intensity gradually",
+    "player_agency": "Allow multiple approaches to investigation and resolution",
+    "sensory_details": "Use all senses to create immersive experience",
+    "pacing_control": "Match supernatural activity to investigation progress",
+    "safety_valve": "Always provide escape options for overwhelming situations",
+    "customization": "Adapt locations to fit specific scenario needs",
+    "recurring_use": "Locations can evolve and change between visits"
+  }
+}

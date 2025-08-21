@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "category": "occult_books",
+    "description": "미토스와 오컬트 관련 서적들",
+    "danger_level": "극도로 위험한 지식",
+    "ai_hints": {
+      "usage_context": "Knowledge sources, plot devices, sanity risks",
+      "narrative_weight": "Reading these books should be significant events",
+      "balance": "Powerful knowledge comes with terrible costs",
+      "availability": "Most books are extremely rare and hidden"
+    }
+  },
+  "classification_system": {
+    "danger_levels": [
+      {
+        "level": 1,
+        "name": "안전함",
+        "description": "일반적인 민속학이나 종교 서적",
+        "sanity_risk": "없음"
+      },
+      {
+        "level": 2,
+        "name": "경고 필요",
+        "description": "진짜 오컬트 지식이 포함된 서적",
+        "sanity_risk": "1d4"
+      },
+      {
+        "level": 3,
+        "name": "위험함",
+        "description": "초자연적 실체와 접촉 방법이 담긴 서적",
+        "sanity_risk": "1d8"
+      },
+      {
+        "level": 4,
+        "name": "극도로 위험",
+        "description": "미토스 존재들에 대한 직접적 지식",
+        "sanity_risk": "1d10+"
+      },
+      {
+        "level": 5,
+        "name": "금지됨",
+        "description": "읽는 것 자체가 인간성을 위협하는 서적",
+        "sanity_risk": "1d20+"
+      }
+    ]
+  },
+  "major_tomes": [
+    {
+      "id": "necronomicon_arabic",
+      "name": "네크로노미콘 (아랍어 원본)",
+      "name_en": "Necronomicon (Arabic Original)",
+      "original_title": "Al Azif",
+      "author": "압둘 알하즈레드 (미친 아랍인)",
+      "written": "730년경",
+      "danger_level": 5,
+      "rarity": "극도로 희귀 (전 세계 5부 미만)",
+      "languages": ["아랍어"],
+      "pages": "약 800페이지",
+      "description": "미토스에 관한 가장 완전하고 위험한 서적. 읽는 것만으로도 광기에 이를 수 있다.",
+      "physical_description": {
+        "binding": "인간 가죽으로 제본",
+        "cover": "이상한 금속으로 만든 잠금장치",
+        "pages": "양피지, 일부는 알 수 없는 재질",
+        "condition": "보존 상태 다양, 대부분 손상됨"
+      },
+      "contents": {
+        "major_sections": [
+          "외신들의 역사",
+          "위대한 옛 존재들의 기록",
+          "소환과 결박 의식",
+          "차원간 여행법",
+          "인간 이전 문명들"
+        ],
+        "specific_knowledge": [
+          "크툴루와 라이에흐",
+          "아자토스와 우주의 중심",
+          "요그 소토스와 시간의 열쇠",
+          "냐를라토텝의 천 개 얼굴",
+          "딥 원과 다곤의 계약"
+        ]
+      },
+      "reading_effects": {
+        "language_requirement": "아랍어 읽기 능력",
+        "time_required": "6-12개월 (완전 독파)",
+        "sanity_loss": {
+          "initial": "1d10",
+          "per_week": "1d4",
+          "completion": "추가 2d10"
+        },
+        "knowledge_gained": [
+          "미토스 실체들에 대한 포괄적 지식",
+          "고대 의식과 주문들",
+          "차원과 시공간에 대한 이해",
+          "인류사의 진짜 역사"
+        ],
+        "side_effects": [
+          "악몽과 환각",
+          "외국어로 중얼거림",
+          "기이한 기호 그리기",
+          "미토스 존재들과의 접촉 증가"
+        ]
+      },
+      "known_copies": [
+        {
+          "location": "미스카토닉 대학 도서관",
+          "condition": "양호",
+          "accessibility": "관장 직접 허가 필요",
+          "guardian": "헨리 아미티지 박사"
+        },
+        {
+          "location": "대영박물관 비공개 수장고",
+          "condition": "불량",
+          "accessibility": "학술적 명분 필요"
+        },
+        {
+          "location": "바티칸 비밀 문서고",
+          "condition": "알려지지 않음",
+          "accessibility": "거의 불가능"
+        }
+      ]
+    },
+    {
+      "id": "necronomicon_latin",
+      "name": "네크로노미콘 (라틴어 번역본)",
+      "name_en": "Necronomicon (Latin Translation)",
+      "translator": "올라우스 보르미우스",
+      "translated": "1228년",
+      "danger_level": 4,
+      "rarity": "매우 희귀 (전 세계 20부 내외)",
+      "languages": ["라틴어"],
+      "pages": "약 600페이지",
+      "description": "아랍어 원본을 라틴어로 번역한 판본. 일부 내용이 누락되었으나 여전히 극도로 위험하다.",
+      "translation_notes": [
+        "일부 개념들이 라틴어로 완전 번역 불가",
+        "번역자의 주석과 해석 포함",
+        "원본보다 체계적으로 정리됨",
+        "기독교적 관점의 필터링"
+      ],
+      "contents_difference": [
+        "아랍어 원본보다 20% 정도 축약",
+        "일부 의식 설명 생략",
+        "번역자의 경고 문구 추가",
+        "기독교 신학과의 대조점 언급"
+      ]
+    },
+    {
+      "id": "cultes_des_goules",
+      "name": "컬테스 데 구울",
+      "name_en": "Cultes des Goules",
+      "author": "프랑수아 오노리우스 도클레트 로마 백작",
+      "written": "1703년",
+      "danger_level": 3,
+      "rarity": "희귀 (약 50부 현존)",
+      "languages": ["프랑스어"],
+      "pages": "약 400페이지",
+      "description": "구울과 시체를 다루는 의식에 관한 서적. 네크로노미콘만큼 포괄적이지는 않으나 특정 분야에서는 더 상세하다.",
+      "specialty": "시체술과 언데드 관련",
+      "contents": {
+        "main_topics": [
+          "구울의 생태와 습성",
+          "시체 보존술",
+          "언데드 소환 의식",
+          "묘지와 지하 세계",
+          "죽음의 신들"
+        ],
+        "practical_knowledge": [
+          "구울과의 의사소통법",
+          "시체 애니메이션 기술",
+          "지하 터널 네트워크 지도",
+          "부패 방지 연금술"
+        ]
+      },
+      "reading_effects": {
+        "time_required": "2-4개월",
+        "sanity_loss": {
+          "completion": "1d8",
+          "practical_use": "추가 1d6"
+        },
+        "knowledge_gained": [
+          "구울 관련 전문 지식",
+          "부패와 죽음에 대한 깊은 이해",
+          "지하 세계의 비밀들"
+        ]
+      }
+    },
+    {
+      "id": "book_of_eibon",
+      "name": "아이본의 서",
+      "name_en": "Book of Eibon",
+      "author": "마법사 아이본",
+      "written": "히페르보레아 시대",
+      "danger_level": 4,
+      "rarity": "극도로 희귀",
+      "languages": ["히페르보레아어 (고대)", "영어 번역본"],
+      "pages": "약 500페이지",
+      "description": "잃어버린 히페르보레아 문명의 마법사가 쓴 서적. 빙하기 이전 지구의 비밀들을 담고 있다.",
+      "unique_features": [
+        "인류 이전 지구의 역사",
+        "사투른 (토성) 신 소환법",
+        "차원 이동술",
+        "변신 마법"
+      ],
+      "contents": {
+        "historical_sections": [
+          "히페르보레아의 몰락",
+          "사투른으로의 탈출",
+          "아발론 대륙의 침몰",
+          "빙하기의 도래"
+        ],
+        "magical_sections": [
+          "차원간 여행 의식",
+          "형태 변환 주문",
+          "시간 조작 기술",
+          "원소 소환술"
+        ]
+      }
+    },
+    {
+      "id": "unaussprechlichen_kulten",
+      "name": "운아우스프레힐리헨 쿨텐",
+      "name_en": "Unaussprechlichen Kulten",
+      "title_translation": "무명의 교단들",
+      "author": "프리드리히 폰 융츠",
+      "written": "1839년",
+      "danger_level": 3,
+      "rarity": "희귀",
+      "languages": ["독일어", "영어 번역본"],
+      "pages": "약 350페이지",
+      "description": "전 세계의 비밀 종교 교단들에 대한 연구서. 특히 원시 종교와 인간 제물에 관해 상세히 다룬다.",
+      "focus_areas": [
+        "아프리카의 비밀 교단들",
+        "아메리카 인디언의 금기된 의식들",
+        "유럽의 마녀 집회",
+        "아시아의 죽음 숭배자들"
+      ],
+      "contents": {
+        "geographical_sections": [
+          "아프리카 교단들",
+          "아메리카 원주민 의식",
+          "유럽의 이교도들",
+          "아시아의 비밀 종파들"
+        ],
+        "thematic_sections": [
+          "인간 제물의 역사",
+          "피의 의식들",
+          "동물과 인간의 변환",
+          "집단 광기 현상"
+        ]
+      }
+    }
+  ],
+  "lesser_tomes": [
+    {
+      "id": "mysteries_of_the_worm",
+      "name": "벌레의 신비",
+      "name_en": "Mysteries of the Worm",
+      "author": "루드비히 프린",
+      "danger_level": 2,
+      "description": "독일의 오컬티스트가 쓴 지렁이와 부패에 관한 책",
+      "specialty": "지하 생물과 부패 과정"
+    },
+    {
+      "id": "regnum_congo",
+      "name": "레그눔 콩고",
+      "name_en": "Regnum Congo",
+      "author": "익명",
+      "danger_level": 2,
+      "description": "아프리카 콩고 지역의 부두교와 흑마법에 관한 서적",
+      "specialty": "아프리카 마법과 저주술"
+    },
+    {
+      "id": "r_lyeh_text",
+      "name": "라이에흐 문서",
+      "name_en": "R'lyeh Text",
+      "author": "알려지지 않음",
+      "danger_level": 4,
+      "description": "크툴루와 라이에흐에 특화된 고대 문서들의 모음",
+      "specialty": "크툴루 숭배와 수중 의식"
+    }
+  ],
+  "mundane_books": [
+    {
+      "id": "golden_bough",
+      "name": "황금 가지",
+      "name_en": "The Golden Bough",
+      "author": "제임스 조지 프레이저",
+      "danger_level": 1,
+      "description": "비교 신화학과 민속학의 고전적 연구서",
+      "knowledge_gained": "세계 각지의 신화와 종교 의식에 대한 학술적 지식"
+    },
+    {
+      "id": "witch_cult",
+      "name": "서유럽의 마녀 교단",
+      "name_en": "The Witch-Cult in Western Europe",
+      "author": "마가렛 머레이",
+      "danger_level": 1,
+      "description": "중세 유럽 마녀재판에 대한 학술 연구",
+      "knowledge_gained": "유럽 마법사와 마녀들의 역사적 배경"
+    }
+  ],
+  "modern_occult_books": [
+    {
+      "id": "occult_philosophy",
+      "name": "오컬트 철학",
+      "name_en": "Three Books of Occult Philosophy",
+      "author": "하인리히 코르넬리우스 아그리파",
+      "written": "1531년",
+      "danger_level": 2,
+      "description": "르네상스 시대의 종합적인 오컬트 매뉴얼",
+      "contents": ["천연 마법", "천체 마법", "의식 마법"]
+    }
+  ],
+  "acquisition_methods": [
+    {
+      "method": "도서관",
+      "difficulty": "매우 어려움",
+      "requirements": [
+        "학술적 자격",
+        "추천서",
+        "감독하에 열람"
+      ],
+      "examples": ["미스카토닉 대학", "대영박물관", "국립도서관들"]
+    },
+    {
+      "method": "개인 컬렉터",
+      "difficulty": "어려움",
+      "requirements": [
+        "신뢰 관계 구축",
+        "높은 가격",
+        "비밀 유지 약속"
+      ],
+      "risks": ["사기", "위조본", "교단의 감시"]
+    },
+    {
+      "method": "고서점",
+      "difficulty": "보통",
+      "availability": "주로 덜 위험한 책들",
+      "locations": ["런던", "파리", "뉴욕", "보스턴"]
+    },
+    {
+      "method": "경매",
+      "difficulty": "어려움",
+      "characteristics": [
+        "매우 높은 가격",
+        "진품 확인 어려움",
+        "공개적 노출"
+      ]
+    }
+  ],
+  "reading_considerations": [
+    {
+      "aspect": "언어 장벽",
+      "challenge": "많은 책들이 고대 언어나 외국어로 쓰여짐",
+      "solutions": [
+        "번역본 찾기",
+        "언어학자 협력",
+        "부분적 이해"
+      ]
+    },
+    {
+      "aspect": "시간 소요",
+      "challenge": "완전 독파에 수개월 소요",
+      "strategies": [
+        "필요한 부분만 선택적 독서",
+        "여러 명이 분담",
+        "요약본 활용"
+      ]
+    },
+    {
+      "aspect": "정신적 위험",
+      "challenge": "읽는 과정에서 광기 위험",
+      "precautions": [
+        "단계적 독서",
+        "정신적 지원",
+        "중단 용기"
+      ]
+    },
+    {
+      "aspect": "물리적 위험",
+      "challenge": "일부 책들이 물리적 위험 요소 포함",
+      "examples": [
+        "독성 잉크",
+        "저주받은 재료",
+        "트랩 장치"
+      ]
+    }
+  ],
+  "storage_and_security": [
+    {
+      "security_level": "기본",
+      "methods": ["잠긴 서재", "금고", "비밀 장소"],
+      "suitable_for": "위험도 1-2의 책들"
+    },
+    {
+      "security_level": "강화",
+      "methods": ["은행 금고", "지하 볼트", "복수 잠금장치"],
+      "suitable_for": "위험도 3-4의 책들"
+    },
+    {
+      "security_level": "극도",
+      "methods": ["특수 시설", "마법적 보호", "격리 보관"],
+      "suitable_for": "위험도 5의 책들",
+      "additional": "24시간 감시, 제한적 접근"
+    }
+  ],
+  "book_conditions": [
+    {
+      "condition": "완벽함",
+      "description": "모든 페이지가 온전하고 읽기 쉬움",
+      "rarity": "매우 드묾",
+      "value_multiplier": "x3-5"
+    },
+    {
+      "condition": "양호함",
+      "description": "대부분 온전하나 일부 손상",
+      "availability": "희귀",
+      "value_multiplier": "x1.5-2"
+    },
+    {
+      "condition": "손상됨",
+      "description": "상당 부분이 손상되거나 판독 불가",
+      "challenges": ["불완전한 정보", "해석의 어려움"],
+      "value_multiplier": "x0.5-1"
+    },
+    {
+      "condition": "단편들",
+      "description": "몇 페이지나 장만 남아있음",
+      "availability": "가끔 발견됨",
+      "value": "제한적이지만 여전히 위험"
+    }
+  ],
+  "ai_usage_hints": {
+    "pacing_tool": "책 읽기는 시간이 걸리므로 시나리오 페이싱 조절에 활용",
+    "knowledge_gating": "정보를 점진적으로 공개하는 장치로 사용",
+    "risk_reward": "강력한 지식의 대가로 정신적 피해 균형 맞추기",
+    "plot_driver": "책에서 얻은 지식이 다음 단서나 목표로 이어지도록",
+    "atmosphere_builder": "금지된 지식의 무게감과 위험성 강조",
+    "character_development": "책을 읽는 선택이 캐릭터의 변화를 이끌도록"
+  }
+}

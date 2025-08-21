@@ -1,0 +1,22 @@
+[
+  {
+    "save_name": "Advanced Dunwich Investigation",
+    "slot_number": 1,
+    "creation_time": "2025-08-20T07:28:10.596453",
+    "last_modified": "2025-08-20T07:28:10.596453",
+    "game_version": "1.0.0",
+    "character_name": "Dr. Henry Armitage",
+    "character_level": 8,
+    "current_scenario": "The Dunwich Horror",
+    "current_location": "Miskatonic University Library",
+    "play_time": 1.0,
+    "turn_number": 15,
+    "sanity_status": "Stable",
+    "file_size": 1756,
+    "file_hash": "5a6fc877bd1136d9f5b7174d1a844dd4e13fb9bebc0ddf9a84a98e2922f2a7c0",
+    "is_autosave": false,
+    "is_quicksave": false,
+    "screenshot_text": "Character: Dr. Henry Armitage\nHealth: 12/12\nSanity: 65/80\nScenario: The Dunwich Horror\nLocation: Miskatonic University Library\nTurn: 15\nRecent Events:\n  • Successfully translated Latin passage...\n  • Sanity loss from disturbing revelation...\n  • Found reference to dimensional barrier...",
+    "notes": null
+  }
+]

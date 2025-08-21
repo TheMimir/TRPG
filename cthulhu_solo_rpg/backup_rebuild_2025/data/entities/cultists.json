@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "category": "cultists",
+    "description": "미토스를 숭배하는 광신도들과 비밀 조직",
+    "power_level": "인간급~초인간급",
+    "ai_hints": {
+      "usage_context": "Human antagonists, social infiltration, ritual threats",
+      "encounter_frequency": "common",
+      "social_aspect": "high infiltration potential",
+      "escalation_potential": "from individuals to organizations"
+    }
+  },
+  "organizations": [
+    {
+      "id": "cthulhu_cult",
+      "name": "크툴루 교단",
+      "name_en": "Cult of Cthulhu",
+      "primary_deity": "크툴루",
+      "influence_level": "국제적",
+      "founding": "고대부터 존재",
+      "structure": {
+        "hierarchy": [
+          {
+            "rank": "하이 프리스트",
+            "description": "최고 지도자, 크툴루와 직접 소통",
+            "requirements": "수십 년의 헌신, 극도의 광기",
+            "abilities": ["강력한 의식 마법", "정신 지배", "미토스 지식"]
+          },
+          {
+            "rank": "프리스트",
+            "description": "지역 교단 지도자",
+            "requirements": "오랜 신앙, 의식 지식",
+            "abilities": ["기본 의식", "교단원 지도", "소환술"]
+          },
+          {
+            "rank": "어콜라이트",
+            "description": "헌신적인 추종자",
+            "requirements": "완전한 신앙, 광기 수용",
+            "abilities": ["의식 보조", "전투 기술", "비밀 유지"]
+          },
+          {
+            "rank": "이니셰이트",
+            "description": "신입 신도",
+            "requirements": "기본적 믿음, 입회 의식",
+            "abilities": ["기초 지식", "단순 임무", "정보 수집"]
+          }
+        ],
+        "cells": [
+          {
+            "type": "의식 집단",
+            "purpose": "종교 의식 수행",
+            "size": "5-15명",
+            "activities": ["정기 예배", "제물 의식", "소환 시도"]
+          },
+          {
+            "type": "침투 조직",
+            "purpose": "사회 기관 침투",
+            "size": "3-8명",
+            "activities": ["정보 수집", "영향력 확대", "방해 공작"]
+          },
+          {
+            "type": "수집 단체",
+            "purpose": "유물과 지식 수집",
+            "size": "2-6명",
+            "activities": ["고서 탐색", "유적 발굴", "학술 연구"]
+          }
+        ]
+      },
+      "beliefs": [
+        "크툴루의 필연적 부활",
+        "인간 문명의 일시적 특성",
+        "미토스 존재들의 우월성",
+        "광기를 통한 해방",
+        "라이에흐의 부상 예언"
+      ],
+      "practices": [
+        {
+          "name": "크툴루 예배",
+          "description": "크툴루에게 바치는 정기적 의식",
+          "frequency": "매월 보름달",
+          "requirements": ["제물", "성수(바닷물)", "고대 주문"]
+        },
+        {
+          "name": "꿈 공유",
+          "description": "집단적으로 크툴루의 꿈 체험",
+          "frequency": "특별한 밤들",
+          "effects": ["집단 광기", "예언적 환상", "정신적 연결"]
+        },
+        {
+          "name": "피의 서약",
+          "description": "혈액을 이용한 맹세 의식",
+          "purpose": "충성 확보, 비밀 유지",
+          "consequences": "배신 시 초자연적 처벌"
+        }
+      ],
+      "resources": [
+        "고대 문헌과 지식",
+        "전 세계 재산과 자산",
+        "정부와 기업 내부 인맥",
+        "미토스 유물들",
+        "딥 원과의 연결"
+      ],
+      "weaknesses": [
+        {
+          "type": "내부 분열",
+          "description": "광기로 인한 파벌 갈등",
+          "exploitation": "파벌간 대립 조장"
+        },
+        {
+          "type": "정신적 불안정",
+          "description": "높은 광기 수준",
+          "exploitation": "심리적 압박으로 붕괴 유도"
+        }
+      ]
+    },
+    {
+      "id": "yellow_sign",
+      "name": "황의 징표 교단",
+      "name_en": "Brotherhood of the Yellow Sign",
+      "primary_deity": "하스터",
+      "influence_level": "도시별 집중",
+      "founding": "19세기 말 파리에서 시작",
+      "structure": {
+        "hierarchy": [
+          {
+            "rank": "황의 왕의 대리인",
+            "description": "하스터의 직접적 대변인",
+            "requirements": "완전한 광기, 예술적 천재성",
+            "abilities": ["현실 왜곡", "예술적 창조", "집단 광기 유발"]
+          },
+          {
+            "rank": "황색 사제",
+            "description": "지역 교단 운영자",
+            "requirements": "예술적 재능, 광기적 헌신",
+            "abilities": ["예술 창작", "광기 전파", "의식 주관"]
+          },
+          {
+            "rank": "징표 보유자",
+            "description": "황의 징표를 받은 자",
+            "requirements": "예술 작품 접촉, 정신적 변화",
+            "abilities": ["창작 욕구", "광기 저항", "징표 인식"]
+          }
+        ]
+      },
+      "beliefs": [
+        "예술을 통한 진리 계시",
+        "아름다움과 광기의 일체성",
+        "카르코사의 실존",
+        "기존 현실의 허상성",
+        "황의 왕의 도래"
+      ],
+      "practices": [
+        {
+          "name": "황의 왕 연극",
+          "description": "금지된 연극 상연",
+          "effects": ["관객 광기", "현실 침식", "하스터 소환"]
+        },
+        {
+          "name": "황색 예술 창작",
+          "description": "황의 징표가 담긴 작품 제작",
+          "medium": ["회화", "조각", "문학", "음악"]
+        },
+        {
+          "name": "카르코사 명상",
+          "description": "하스터의 도시 환상 체험",
+          "effects": ["시공간 인식 변화", "예언적 통찰"]
+        }
+      ],
+      "infiltration_methods": [
+        "예술계 침투",
+        "갤러리와 극장 장악",
+        "예술가들의 후원",
+        "비평계 영향력",
+        "컬렉터들과 연결"
+      ]
+    },
+    {
+      "id": "esoteric_order",
+      "name": "에스더릴 교단",
+      "name_en": "Esoteric Order of Dagon",
+      "primary_deity": "다곤",
+      "influence_level": "해안 지역 집중",
+      "founding": "18세기 인스머스",
+      "structure": {
+        "hierarchy": [
+          {
+            "rank": "대제사장",
+            "description": "다곤과 직접 소통하는 자",
+            "requirements": "딥 원 혈통, 완전한 변화",
+            "abilities": ["바다 생물 소환", "날씨 조작", "수중 호흡"]
+          },
+          {
+            "rank": "해양 사제",
+            "description": "바다의 의식 집행자",
+            "requirements": "부분적 변화, 수십년 신앙",
+            "abilities": ["수중 활동", "딥 원과 소통", "해양 의식"]
+          },
+          {
+            "rank": "조수자",
+            "description": "변화를 시작한 신도",
+            "requirements": "혈통 각성, 의식 참여",
+            "abilities": ["향상된 수영", "바다 감각", "기초 의식"]
+          }
+        ]
+      },
+      "beliefs": [
+        "바다의 우선권",
+        "딥 원과의 혼혈 숭배",
+        "육지 문명의 일시성",
+        "다곤의 영원한 지배",
+        "바다로의 회귀"
+      ],
+      "practices": [
+        {
+          "name": "조수 의식",
+          "description": "조수에 맞춘 예배",
+          "timing": "만조와 간조 시간",
+          "location": "해안가 또는 수중"
+        },
+        {
+          "name": "혼혈 의식",
+          "description": "딥 원과의 교배 촉진",
+          "purpose": "종족 개량, 해양 적응",
+          "results": "반인반어 후손 탄생"
+        },
+        {
+          "name": "바다 제물",
+          "description": "바다에 제물 헌납",
+          "offerings": ["황금", "보석", "인간 희생"]
+        }
+      ]
+    }
+  ],
+  "individual_cultist_types": [
+    {
+      "id": "academic_cultist",
+      "name": "학자 광신도",
+      "background": "대학 교수나 연구자",
+      "motivation": "금지된 지식에 대한 갈망",
+      "abilities": [
+        "광범위한 학술 지식",
+        "연구 자료 접근권",
+        "학생들에 대한 영향력",
+        "국제적 학술 네트워크"
+      ],
+      "typical_activities": [
+        "위험한 연구 수행",
+        "학생들을 교단에 유입",
+        "고대 문헌 번역과 해석",
+        "학회를 통한 지식 전파"
+      ],
+      "cover_identity": "존경받는 학자",
+      "signs_of_corruption": [
+        "연구 주제의 급격한 변화",
+        "밤늦은 연구실 활동",
+        "이상한 서적 주문",
+        "학생들의 정신적 변화"
+      ]
+    },
+    {
+      "id": "artist_cultist",
+      "name": "예술가 광신도",
+      "background": "화가, 조각가, 작가, 음악가",
+      "motivation": "초월적 영감과 창작 충동",
+      "abilities": [
+        "예술을 통한 영향력",
+        "창작물에 저주나 마법 부여",
+        "예술계 네트워크 활용",
+        "대중의 정서 조작"
+      ],
+      "typical_activities": [
+        "저주받은 작품 창작",
+        "미토스 테마 작품 전시",
+        "다른 예술가들 유혹",
+        "작품을 통한 광기 전파"
+      ],
+      "cover_identity": "전위적 예술가",
+      "signs_of_corruption": [
+        "작품 스타일의 급격한 변화",
+        "기이한 소재와 주제 선택",
+        "작품을 본 이들의 불안 반응",
+        "혼자만의 작업 시간 증가"
+      ]
+    },
+    {
+      "id": "business_cultist",
+      "name": "사업가 광신도",
+      "background": "기업인, 은행가, 무역상",
+      "motivation": "권력과 부를 통한 영향력 확대",
+      "abilities": [
+        "경제적 자원 동원",
+        "정치적 영향력 행사",
+        "국제적 연결망 활용",
+        "합법적 커버 제공"
+      ],
+      "typical_activities": [
+        "교단 자금 지원",
+        "유물 거래와 수집",
+        "정치인들과 협력",
+        "사업을 통한 교단 확산"
+      ],
+      "cover_identity": "성공한 기업가",
+      "signs_of_corruption": [
+        "사업 방향의 이상한 변화",
+        "기이한 투자 결정",
+        "은밀한 거래 증가",
+        "직원들의 이상한 변화"
+      ]
+    },
+    {
+      "id": "occult_scholar",
+      "name": "오컬트 학자",
+      "background": "독립 연구자, 신비주의자",
+      "motivation": "궁극적 진리와 힘의 추구",
+      "abilities": [
+        "광범위한 오컬트 지식",
+        "의식과 마법 수행",
+        "고대 언어 해독",
+        "초자연적 현상 조사"
+      ],
+      "typical_activities": [
+        "금지된 의식 수행",
+        "고대 서적 연구",
+        "유물과 성물 수집",
+        "다른 연구자들과 지식 교환"
+      ],
+      "cover_identity": "신비주의 연구자",
+      "signs_of_corruption": [
+        "연구실의 기이한 냄새",
+        "이상한 기호와 그림들",
+        "밤중의 의식적 활동",
+        "점점 더 극단적인 실험"
+      ]
+    }
+  ],
+  "cult_activities": [
+    {
+      "category": "의식과 예배",
+      "activities": [
+        {
+          "name": "월례 집회",
+          "description": "정기적인 교단 모임",
+          "frequency": "매월",
+          "participants": "지역 교단원 전체",
+          "activities": ["예배", "의식", "새 맹세", "정보 공유"]
+        },
+        {
+          "name": "특별 의식",
+          "description": "중요한 날짜의 의식",
+          "frequency": "연 4-6회",
+          "occasions": ["천체 배열", "종교적 기념일", "중요 사건"],
+          "scale": "대규모 참여"
+        },
+        {
+          "name": "입회 의식",
+          "description": "새 신도 받아들임",
+          "process": ["시험", "맹세", "징표 받기", "비밀 전수"],
+          "effects": "정신적 변화 시작"
+        }
+      ]
+    },
+    {
+      "category": "침투와 영향력",
+      "activities": [
+        {
+          "name": "사회 기관 침투",
+          "description": "정부, 기업, 학계 내부 진입",
+          "methods": ["취업", "승진", "인맥 구축", "뇌물과 협박"],
+          "goals": "정보 수집, 영향력 확대, 방해 공작"
+        },
+        {
+          "name": "미디어 조작",
+          "description": "언론과 출판을 통한 여론 조작",
+          "methods": ["기사 조작", "서적 출간", "예술 작품", "인터넷 활동"],
+          "effects": "인식 변화, 관심 유도"
+        }
+      ]
+    },
+    {
+      "category": "자원 수집",
+      "activities": [
+        {
+          "name": "유물 수집",
+          "description": "미토스 관련 유물 확보",
+          "methods": ["구매", "도난", "발굴", "제작"],
+          "targets": ["고대 서적", "의식 도구", "조각상", "보석"]
+        },
+        {
+          "name": "자금 조달",
+          "description": "교단 활동 자금 확보",
+          "methods": ["기부", "사업 수익", "불법 거래", "투자"],
+          "usage": "의식 비용, 부동산, 장비 구입"
+        }
+      ]
+    }
+  ],
+  "encounter_scenarios": [
+    {
+      "scenario": "학술 모임에서의 만남",
+      "setup": "대학이나 연구소에서 열리는 학술 발표",
+      "cultist_role": "발표자 또는 참석자",
+      "initial_contact": "학문적 토론을 통한 접근",
+      "escalation": ["개인적 만남 제안", "특별 자료 공유", "비밀 연구 초대"],
+      "warning_signs": ["금기된 주제", "이상한 열정", "비밀스러운 태도"]
+    },
+    {
+      "scenario": "예술 갤러리 전시",
+      "setup": "기이한 예술 작품들의 전시회",
+      "cultist_role": "작가, 큐레이터, 또는 컬렉터",
+      "initial_contact": "작품에 대한 관심 표현",
+      "escalation": ["사적 컬렉션 구경", "예술가 소개", "창작 과정 참여"],
+      "warning_signs": ["관객들의 이상 반응", "작품의 불안한 분위기", "밤늦은 전시 관람"]
+    },
+    {
+      "scenario": "사업적 제안",
+      "setup": "수익성 있는 사업 기회 제시",
+      "cultist_role": "사업 파트너 또는 투자자",
+      "initial_contact": "합법적인 사업 제안",
+      "escalation": ["특별한 조건", "비밀 계약", "이상한 요구사항"],
+      "warning_signs": ["과도한 수익성", "설명되지 않는 자금원", "기이한 사업 방식"]
+    }
+  ],
+  "ai_usage_hints": {
+    "social_integration": "일상적 사회 활동에 자연스럽게 스며든 위협",
+    "gradual_revelation": "처음에는 정상으로 보이다가 점차 기이함 드러남",
+    "network_effects": "개인이 아닌 조직적 위협으로 활용",
+    "modern_relevance": "현대 사회의 구조와 약점 활용한 침투",
+    "psychological_manipulation": "물리적 위협보다는 정신적, 사회적 압박"
+  }
+}

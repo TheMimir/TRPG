@@ -1,0 +1,519 @@
+{
+  "metadata": {
+    "category": "miskatonic_university",
+    "description": "미스카토닉 대학의 상세한 시설과 인물들",
+    "setting": "1920년대 아컴 시티",
+    "ai_hints": {
+      "usage_context": "Academic investigations, knowledge gathering, scholarly NPCs",
+      "atmosphere": "Scholarly excellence hiding dangerous secrets",
+      "social_dynamics": "Academic hierarchy, intellectual competition",
+      "key_themes": "Knowledge vs. wisdom, curiosity vs. safety"
+    }
+  },
+  "university_overview": {
+    "name": "미스카토닉 대학교",
+    "name_en": "Miskatonic University",
+    "founded": "1690년",
+    "motto": "Ex ignorantia ad scientiam (무지에서 지식으로)",
+    "student_body": "약 3,000명",
+    "faculty": "약 200명",
+    "reputation": "뉴잉글랜드 지역 최고의 연구 중심 대학",
+    "specializations": [
+      "고고학 및 인류학",
+      "고대 언어학",
+      "의학 및 정신의학",
+      "천문학",
+      "지질학"
+    ],
+    "campus_size": "약 120에이커",
+    "architecture": "주로 조지아 콜로니얼과 고딕 리바이벌 양식"
+  },
+  "academic_buildings": [
+    {
+      "id": "orne_library",
+      "name": "오른 도서관",
+      "name_en": "Orne Library",
+      "type": "도서관",
+      "built": "1878년",
+      "architecture": "고딕 리바이벌 양식, 붉은 벽돌",
+      "description": "대학의 중심 도서관이자 가장 중요한 연구 시설",
+      "floors": 4,
+      "collection_size": "약 500,000권 (1920년 기준)",
+      "special_features": [
+        "특별 컬렉션 금고",
+        "희귀본 열람실",
+        "지하 서고",
+        "사서 연구실들",
+        "학생 열람 공간"
+      ],
+      "floors_detail": [
+        {
+          "floor": "지하",
+          "areas": [
+            {
+              "name": "일반 서고",
+              "description": "오래되고 사용 빈도가 낮은 서적들",
+              "access": "도서관 직원과 허가받은 연구자만"
+            },
+            {
+              "name": "특별 보관소",
+              "description": "극히 위험하거나 금지된 서적들",
+              "access": "관장과 특정 교수진만",
+              "security": "이중 잠금, 24시간 감시"
+            }
+          ]
+        },
+        {
+          "floor": "1층",
+          "areas": [
+            {
+              "name": "메인 홀",
+              "description": "웅장한 입구 홀, 대리석 기둥과 스테인드글라스"
+            },
+            {
+              "name": "일반 열람실",
+              "description": "학생들을 위한 주요 학습 공간"
+            },
+            {
+              "name": "참고 자료실",
+              "description": "백과사전, 사전, 참고서들"
+            }
+          ]
+        },
+        {
+          "floor": "2층",
+          "areas": [
+            {
+              "name": "인문학 자료실",
+              "description": "문학, 역사, 철학 분야 서적들"
+            },
+            {
+              "name": "언어학 자료실",
+              "description": "고대 언어와 현대 언어 자료들"
+            },
+            {
+              "name": "희귀본 열람실",
+              "description": "귀중한 고서들을 열람하는 특별 공간"
+            }
+          ]
+        },
+        {
+          "floor": "3층",
+          "areas": [
+            {
+              "name": "과학 자료실",
+              "description": "수학, 물리학, 화학, 생물학 서적들"
+            },
+            {
+              "name": "의학 자료실",
+              "description": "의학 및 정신의학 전문 자료"
+            },
+            {
+              "name": "관장실",
+              "description": "헨리 아미티지 박사의 개인 사무실"
+            }
+          ]
+        }
+      ],
+      "special_collections": [
+        {
+          "name": "네크로노미콘",
+          "description": "압둘 알하즈레드의 원본",
+          "language": "아랍어",
+          "condition": "매우 위험, 극도로 제한적 접근",
+          "location": "지하 특별 보관소",
+          "restrictions": "관장 직접 승인 필요"
+        },
+        {
+          "name": "컬테스 데 구울",
+          "description": "프랑스어로 된 구울에 관한 서적",
+          "language": "프랑스어",
+          "access_level": "교수진만"
+        },
+        {
+          "name": "언어학 컬렉션",
+          "description": "전 세계 고대 언어 문헌들",
+          "specialties": ["이집트 상형문자", "수메르 설형문자", "고대 그리스어", "라틴어"]
+        }
+      ],
+      "staff": [
+        {
+          "name": "헨리 아미티지 박사",
+          "position": "관장",
+          "expertise": ["고대 언어", "오컬트 문헌", "도서관학"],
+          "personality": "신중하고 보수적, 위험한 지식에 대해 경계",
+          "office": "3층 관장실"
+        },
+        {
+          "name": "앨리스 헤이워드",
+          "position": "수석 사서",
+          "expertise": ["목록학", "참고 서비스", "특별 컬렉션"],
+          "personality": "꼼꼼하고 도움이 되지만 규정을 엄격히 따름"
+        }
+      ]
+    },
+    {
+      "id": "science_building",
+      "name": "과학관",
+      "name_en": "Science Building",
+      "built": "1895년",
+      "departments": ["물리학", "화학", "생물학", "지질학"],
+      "facilities": [
+        {
+          "name": "물리학 실험실",
+          "equipment": "최신 전기 및 광학 장비"
+        },
+        {
+          "name": "화학 실험실",
+          "safety": "환기 시설과 안전 장비 구비"
+        },
+        {
+          "name": "생물학 표본실",
+          "collection": "지역 동식물 표본들"
+        },
+        {
+          "name": "지질학 박물관",
+          "displays": "광물, 화석, 암석 표본들"
+        }
+      ]
+    },
+    {
+      "id": "archaeology_building",
+      "name": "고고학관",
+      "name_en": "Archaeology Building",
+      "built": "1910년",
+      "description": "대학의 자랑인 고고학과가 위치한 건물",
+      "facilities": [
+        {
+          "name": "유물 전시실",
+          "description": "전 세계에서 수집된 고대 유물들",
+          "highlights": [
+            "이집트 석관과 미라",
+            "그리스 도자기",
+            "로마 조각상들",
+            "아메리카 인디언 유물들",
+            "신원불명의 고대 유물들"
+          ],
+          "access": "일반 공개, 특별 전시는 허가 필요"
+        },
+        {
+          "name": "복원 작업실",
+          "description": "발굴된 유물들을 복원하는 시설",
+          "equipment": ["현미경", "화학 약품", "복원 도구들"]
+        },
+        {
+          "name": "교수 연구실들",
+          "description": "각 교수들의 개인 연구 공간"
+        }
+      ],
+      "faculty": [
+        {
+          "name": "윌리엄 레이크 교수",
+          "specialty": "고전 고고학",
+          "current_project": "그리스 도시국가 발굴"
+        },
+        {
+          "name": "페어몬트 모르간 박사",
+          "specialty": "이집트학",
+          "current_project": "파라오 무덤 연구"
+        }
+      ]
+    },
+    {
+      "id": "medical_building",
+      "name": "의과대학",
+      "name_en": "Medical School",
+      "built": "1888년",
+      "programs": ["의학", "정신의학", "해부학"],
+      "facilities": [
+        {
+          "name": "해부학 실습실",
+          "description": "의학도들의 시신 해부 실습",
+          "atmosphere": "엄숙하지만 때로는 불안한"
+        },
+        {
+          "name": "정신의학 연구실",
+          "description": "정신 질환 연구 시설",
+          "connection": "아컴 정신병원과 협력 관계"
+        },
+        {
+          "name": "의학 도서관",
+          "description": "의학 전문 서적들",
+          "special_collection": "이상한 질병과 증상에 관한 사례들"
+        }
+      ]
+    }
+  ],
+  "administrative_buildings": [
+    {
+      "id": "administration_building",
+      "name": "본관",
+      "name_en": "Administration Building",
+      "built": "1692년 (개축 1856년)",
+      "description": "대학의 행정 중심지",
+      "offices": [
+        {
+          "name": "총장실",
+          "occupant": "헨리 윈게이트 총장",
+          "description": "대학 최고 의사결정권자"
+        },
+        {
+          "name": "학사과",
+          "services": ["학생 등록", "성적 관리", "졸업 관련 업무"]
+        },
+        {
+          "name": "재정과",
+          "services": ["등록금", "장학금", "대학 예산"]
+        }
+      ]
+    }
+  ],
+  "residential_facilities": [
+    {
+      "id": "student_dormitories",
+      "name": "학생 기숙사",
+      "buildings": [
+        {
+          "name": "커크 기숙사",
+          "capacity": "200명",
+          "type": "남학생 전용"
+        },
+        {
+          "name": "엘리엇 기숙사",
+          "capacity": "150명",
+          "type": "여학생 전용"
+        }
+      ]
+    },
+    {
+      "id": "faculty_housing",
+      "name": "교수진 주택",
+      "description": "캠퍼스 내 교수진을 위한 주택들",
+      "types": ["단독 주택", "타운하우스", "아파트"]
+    }
+  ],
+  "student_facilities": [
+    {
+      "id": "student_union",
+      "name": "학생회관",
+      "facilities": [
+        "식당",
+        "라운지",
+        "게임룸",
+        "학생회 사무실",
+        "클럽 활동실"
+      ]
+    },
+    {
+      "id": "gymnasium",
+      "name": "체육관",
+      "sports": ["농구", "체조", "펜싱", "수영"]
+    }
+  ],
+  "academic_departments": [
+    {
+      "name": "고고학과",
+      "name_en": "Department of Archaeology",
+      "head": "윌리엄 레이크 교수",
+      "reputation": "세계적 수준",
+      "specializations": [
+        "고전 고고학",
+        "이집트학",
+        "아메리카 선사학",
+        "해양 고고학"
+      ],
+      "current_projects": [
+        "남극 탐사대 파견",
+        "중동 발굴 프로젝트",
+        "아메리카 인디언 유적 조사"
+      ],
+      "faculty": [
+        {
+          "name": "윌리엄 레이크",
+          "rank": "교수 (학과장)",
+          "expertise": "고전 고고학, 그리스 로마 문명"
+        },
+        {
+          "name": "페어몬트 모르간",
+          "rank": "부교수",
+          "expertise": "이집트학, 상형문자"
+        }
+      ]
+    },
+    {
+      "name": "언어학과",
+      "name_en": "Department of Languages",
+      "specializations": [
+        "고대 언어 (그리스어, 라틴어, 히브리어)",
+        "현대 유럽 언어",
+        "동양 언어",
+        "비교 언어학"
+      ],
+      "faculty": [
+        {
+          "name": "프랜시스 모르건",
+          "expertise": "고대 그리스어, 비교 언어학"
+        },
+        {
+          "name": "아서 윌마스",
+          "expertise": "셈족 언어, 고대 히브리어"
+        }
+      ]
+    },
+    {
+      "name": "의학과",
+      "name_en": "Department of Medicine",
+      "programs": [
+        "일반 의학",
+        "정신의학",
+        "신경학",
+        "해부학"
+      ],
+      "clinical_partnerships": [
+        "아컴 종합병원",
+        "아컴 정신병원"
+      ]
+    }
+  ],
+  "student_organizations": [
+    {
+      "name": "고고학 클럽",
+      "activities": ["발굴 참여", "유물 연구", "학회 발표"]
+    },
+    {
+      "name": "오컬트 연구회",
+      "description": "비공식적인 학생 모임",
+      "activities": ["금지된 지식 연구", "비밀 토론"],
+      "membership": "소수의 호기심 많은 학생들",
+      "advisor": "없음 (비공식)"
+    },
+    {
+      "name": "토론 클럽",
+      "activities": ["철학적 토론", "시사 토론", "공개 연설"]
+    }
+  ],
+  "campus_locations": [
+    {
+      "name": "메인 쿼드",
+      "description": "캠퍼스 중심의 잔디밭과 산책로",
+      "atmosphere": "평화롭고 학구적인 분위기",
+      "features": ["벤치들", "나무들", "중앙 분수"]
+    },
+    {
+      "name": "미스카토닉 강변",
+      "description": "캠퍼스를 가로지르는 강",
+      "activities": ["산책", "독서", "낚시"],
+      "mood": "로맨틱하지만 때로는 음산함"
+    },
+    {
+      "name": "교수진 클럽",
+      "description": "교수들의 비공식적 모임 장소",
+      "atmosphere": "배타적이고 지적인",
+      "activities": ["식사", "토론", "비밀 회의"]
+    }
+  ],
+  "secrets_and_mysteries": [
+    {
+      "category": "금지된 지식",
+      "details": [
+        "도서관 지하의 봉인된 서적들",
+        "일부 교수들의 위험한 연구",
+        "학생들 사이의 비밀 오컬트 모임",
+        "과거 실종된 연구자들의 기록"
+      ]
+    },
+    {
+      "category": "과거의 사건들",
+      "details": [
+        "1908년 남극 탐사대 사건",
+        "1915년 의학과 실험 사고",
+        "1919년 도서관 화재의 진실",
+        "정기적으로 발생하는 학생 실종"
+      ]
+    },
+    {
+      "category": "현재의 위협",
+      "details": [
+        "캠퍼스 내 교단 활동",
+        "위험한 연구 프로젝트들",
+        "외부 조직의 침투",
+        "초자연적 현상들"
+      ]
+    }
+  ],
+  "notable_alumni": [
+    {
+      "name": "리처드 유니스 픽먼",
+      "graduation": "1896년",
+      "field": "예술학",
+      "current_status": "실종 (1926년)",
+      "reputation": "재능 있는 화가였으나 기이한 작품으로 논란"
+    },
+    {
+      "name": "존 로우든 스미스",
+      "graduation": "1902년",
+      "field": "고고학",
+      "achievement": "남미 고대 문명 연구의 권위자",
+      "current_work": "브라질 아마존 탐사"
+    }
+  ],
+  "seasonal_campus_life": [
+    {
+      "season": "가을",
+      "atmosphere": "새 학기의 활기와 단풍의 아름다움",
+      "events": ["신입생 환영회", "교수 강연회", "추수감사절 행사"]
+    },
+    {
+      "season": "겨울",
+      "atmosphere": "고요하고 학구적인 분위기",
+      "events": ["겨울 방학", "도서관 이용 증가", "실내 활동 중심"]
+    },
+    {
+      "season": "봄",
+      "atmosphere": "새로운 시작과 희망의 계절",
+      "events": ["발굴 시즌 준비", "졸업식", "캠퍼스 정원 가꾸기"]
+    },
+    {
+      "season": "여름",
+      "atmosphere": "조용하지만 연구 활동 활발",
+      "events": ["여름 학기", "발굴 프로젝트", "연구 집중 기간"]
+    }
+  ],
+  "investigation_opportunities": [
+    {
+      "location": "도서관",
+      "methods": [
+        "희귀본 열람 신청",
+        "사서와의 면담",
+        "밤시간 무단 침입",
+        "특별 컬렉션 조사"
+      ]
+    },
+    {
+      "location": "고고학과",
+      "methods": [
+        "교수진과의 인터뷰",
+        "유물 전시실 견학",
+        "발굴 보고서 열람",
+        "학생들과의 대화"
+      ]
+    },
+    {
+      "location": "의과대학",
+      "methods": [
+        "의학 기록 조사",
+        "정신병원과의 연결 추적",
+        "해부학 실습 참관",
+        "이상한 사례 연구"
+      ]
+    }
+  ],
+  "ai_usage_hints": {
+    "academic_setting": "지식 추구와 연구 중심의 환경 활용",
+    "information_hub": "다양한 전문가들과 자료에 접근 가능한 중심지",
+    "social_hierarchy": "교수-학생 관계, 학과간 경쟁 등 복잡한 사회 구조",
+    "knowledge_vs_safety": "호기심과 위험 사이의 긴장감 조성",
+    "institutional_secrets": "겉으로는 권위 있는 기관이지만 숨겨진 어둠",
+    "recurring_location": "여러 시나리오에서 계속 등장할 수 있는 중요한 거점"
+  }
+}

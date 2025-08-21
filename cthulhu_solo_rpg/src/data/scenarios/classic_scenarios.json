@@ -1,0 +1,310 @@
+{
+  "metadata": {
+    "category": "classic_scenarios",
+    "description": "고전적인 크툴루 호러 시나리오들",
+    "difficulty_range": "3-6",
+    "average_duration": "4-8 hours",
+    "ai_hints": {
+      "usage_context": "Experienced players, classic Lovecraftian themes",
+      "complexity": "medium-high",
+      "sanity_loss": "high",
+      "combat_frequency": "medium"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "cl_001",
+      "title": "인스머스의 그림자",
+      "title_en": "The Shadow over Innsmouth",
+      "difficulty": 4,
+      "duration": "6-8 hours",
+      "description": "쇠락한 어항 도시 인스머스에서 벌어지는 끔찍한 비밀을 파헤치는 조사.",
+      "background": {
+        "setting": "1920년대 매사추세츠 인스머스",
+        "hook": "가족사를 조사하던 중 인스머스와의 연관성을 발견하게 된다. 이 음침한 어항 도시에는 끔찍한 비밀이 숨겨져 있다.",
+        "initial_mystery": "조상 중 한 명이 인스머스 출신이라는 사실을 알게 된다."
+      },
+      "key_npcs": [
+        {
+          "name": "자독 앨런",
+          "name_en": "Zadok Allen",
+          "role": "광기어린 노인",
+          "description": "술에 취해있는 늙은 어부. 마을의 비밀을 알고 있지만 대부분 헛소리로 취급받는다.",
+          "knowledge": ["딥 원과의 협정", "다곤 에스더릴 교단", "마을의 진실"],
+          "disposition": "편집증적이지만 진실을 말함",
+          "secrets": "마을 사람들이 모두 딥 원의 후손이 되어가고 있다."
+        },
+        {
+          "name": "로버트 마쉬",
+          "name_en": "Robert Marsh",
+          "role": "마을의 지도자",
+          "description": "마쉬 제련소의 소유주이자 마을의 실질적 지배자. 냉정하고 계산적이다.",
+          "knowledge": ["가족사의 진실", "교단의 계획", "딥 원과의 관계"],
+          "disposition": "적대적, 경계심",
+          "secrets": "딥 원과의 협정을 주도했으며, 자신도 이미 변화했다."
+        }
+      ],
+      "locations": [
+        {
+          "name": "인스머스 마을",
+          "description": "쇠락하고 음침한 어항 도시. 건물들이 낡고 주민들이 기이하다.",
+          "areas": [
+            "마쉬 제련소",
+            "에스더릴 교회",
+            "길먼 호텔",
+            "항구",
+            "연방 가 (연방 거리)"
+          ],
+          "atmosphere": "침울하고 썩어가는 분위기, 바다 비린내와 불안감",
+          "hidden_elements": ["지하 터널", "비밀 의식장", "딥 원의 흔적들"]
+        },
+        {
+          "name": "악마 산호초",
+          "description": "인스머스 연안의 기이한 산호초. 딥 원들의 거주지.",
+          "key_features": ["수중 도시", "고대 신전", "산호 구조물"],
+          "atmosphere": "물 아래 숨겨진 공포, 초자연적 위압감"
+        }
+      ],
+      "investigation_chain": [
+        {
+          "stage": 1,
+          "objective": "가족사 조사",
+          "clues": [
+            "조상의 인스머스 연결",
+            "마을 기록 조사",
+            "현지인들과의 만남"
+          ],
+          "skill_checks": ["역사학", "설득", "추리"],
+          "revelations": ["조상이 마쉬 가문과 관련", "마을에 이상한 분위기", "주민들이 기피하는 태도"]
+        },
+        {
+          "stage": 2,
+          "objective": "마을의 비밀 파악",
+          "clues": [
+            "자독 앨런의 증언",
+            "에스더릴 교단 조사",
+            "주민들의 기이한 특징"
+          ],
+          "skill_checks": ["설득", "오컬트", "관찰"],
+          "revelations": ["딥 원과의 협정", "주민들의 변화", "바다에서 온 존재들"]
+        },
+        {
+          "stage": 3,
+          "objective": "진실과 대면",
+          "clues": [
+            "자신의 혈통의 진실",
+            "변화의 시작",
+            "도피 계획"
+          ],
+          "skill_checks": ["의지력", "생물학", "운전"],
+          "revelations": ["자신도 딥 원의 피", "변화가 시작되었다", "마을에서 탈출해야 한다"]
+        }
+      ],
+      "climax_events": [
+        {
+          "trigger": "진실 발견",
+          "event": "자신이 딥 원의 피를 이어받았다는 사실을 깨닫는다.",
+          "mechanics": {
+            "sanity_loss": "1d20",
+            "permanent_effect": "혈통 각성",
+            "physical_changes": "수영 능력 향상, 물에 대한 친화성",
+            "mental_changes": "바다에 대한 강한 이끌림"
+          }
+        },
+        {
+          "trigger": "마을 탈출",
+          "event": "마을 사람들이 추격하기 시작한다. 필사적인 탈출이 시작된다.",
+          "mechanics": {
+            "chase_sequence": true,
+            "skill_checks": ["운전", "숨기", "격투"],
+            "time_pressure": true,
+            "multiple_routes": true
+          }
+        }
+      ],
+      "possible_endings": [
+        {
+          "condition": "성공적 탈출",
+          "outcome": "마을에서 탈출하지만 진실을 알게 된 충격이 남는다.",
+          "consequences": ["자유 획득", "정체성 위기", "지속적인 변화 위험"],
+          "sanity_recovery": "불가능",
+          "long_term_effects": "주기적 변화 체크 필요"
+        },
+        {
+          "condition": "포획",
+          "outcome": "마을 사람들에게 붙잡혀 '진실'을 받아들이게 된다.",
+          "consequences": ["인간성 상실", "딥 원 사회 편입", "NPC로 전환"],
+          "sanity_loss": "전체",
+          "character_fate": "딥 원으로 완전 변화"
+        },
+        {
+          "condition": "저항",
+          "outcome": "마을에 맞서 싸우지만 결국 패배한다.",
+          "consequences": ["영웅적 죽음", "진실 은폐", "타인의 안전"],
+          "sanity_loss": "해당없음",
+          "character_fate": "사망하지만 다른 이들을 구함"
+        }
+      ],
+      "rewards": {
+        "experience": "15-25점",
+        "knowledge_gained": ["딥 원의 존재", "인간과 바다 존재의 혼혈", "고대 협정의 실체"],
+        "permanent_changes": ["혈통 각성", "바다에 대한 이해", "초자연적 감각"],
+        "cursed_knowledge": ["자신의 정체성", "피할 수 없는 운명", "종족의 비밀"]
+      },
+      "ai_hints": {
+        "pacing": "느린 불안감 축적, 중반 폭로, 절망적인 클라이맥스",
+        "atmosphere_focus": "쇠락과 썩음, 바다의 공포, 혈통의 저주",
+        "key_emotions": ["불안", "혐오", "절망", "정체성 혼란"],
+        "difficulty_scaling": "발견 속도와 대응에 따라 추격 강도 조절",
+        "cosmic_horror": "인간의 무력함과 피할 수 없는 운명 강조"
+      }
+    },
+    {
+      "id": "cl_002",
+      "title": "던위치 공포",
+      "title_en": "The Dunwich Horror",
+      "difficulty": 5,
+      "duration": "6-10 hours",
+      "description": "던위치에서 태어난 괴물적 존재가 세상을 위협하는 고전적 시나리오.",
+      "background": {
+        "setting": "1920년대 매사추세츠 던위치",
+        "hook": "던위치의 황폐한 시골에서 기이한 사건들이 연쇄적으로 발생하고 있다. 웨이틀리 가문과 관련된 무언가 끔찍한 일이 벌어지고 있다.",
+        "initial_mystery": "지역에서 가축들이 사라지고 이상한 소리가 들린다는 보고가 늘어나고 있다."
+      },
+      "key_npcs": [
+        {
+          "name": "윌버 웨이틀리",
+          "name_en": "Wilbur Whateley",
+          "role": "이상한 청년",
+          "description": "비정상적으로 빠르게 성장한 기이한 청년. 고대 지식에 심취해 있다.",
+          "knowledge": ["네크로노미콘", "요그 소토스 숭배", "차원 열기 의식"],
+          "disposition": "겉으로는 학구적이지만 위험함",
+          "secrets": "인간이 아닌 혼혈 존재이며 세상을 멸망시키려 한다."
+        },
+        {
+          "name": "헨리 아미티지 박사",
+          "name_en": "Dr. Henry Armitage",
+          "role": "미스카토닉 대학 도서관장",
+          "description": "오컬트 지식이 깊은 학자. 웨이틀리의 위험성을 깨닫고 있다.",
+          "knowledge": ["고대 언어", "미토스 존재들", "보호 의식"],
+          "disposition": "조심스럽게 협조적",
+          "secrets": "이미 비슷한 사건들을 겪었으며 대응 계획을 갖고 있다."
+        }
+      ],
+      "locations": [
+        {
+          "name": "던위치 마을",
+          "description": "쇠락한 시골 마을. 미신과 두려움이 지배하는 곳.",
+          "areas": [
+            "웨이틀리 농장",
+            "센티넬 힐",
+            "마을 중심가",
+            "오스본 일반상점",
+            "던위치 교회"
+          ],
+          "atmosphere": "황량하고 음산한 분위기, 고대의 공포가 스며있음",
+          "hidden_elements": ["고대 석환", "의식 장소", "차원의 균열"]
+        },
+        {
+          "name": "미스카토닉 대학",
+          "description": "아미티지 박사와 동료들이 대응을 준비하는 곳.",
+          "key_features": ["도서관 특별 컬렉션", "연구실", "고대 문헌"],
+          "atmosphere": "학문적 안전함 속에 숨은 긴장감"
+        }
+      ],
+      "investigation_chain": [
+        {
+          "stage": 1,
+          "objective": "이상 사건 조사",
+          "clues": [
+            "가축 실종 사건들",
+            "이상한 소리와 냄새",
+            "웨이틀리 가문의 평판"
+          ],
+          "skill_checks": ["추적", "자연사", "설득"],
+          "revelations": ["웨이틀리 농장 주변이 진원지", "초자연적 원인", "주민들의 두려움"]
+        },
+        {
+          "stage": 2,
+          "objective": "웨이틀리 가문 조사",
+          "clues": [
+            "윌버의 비정상적 성장",
+            "라반야의 기이한 행동",
+            "농장의 숨겨진 비밀"
+          ],
+          "skill_checks": ["관찰", "오컬트", "의학"],
+          "revelations": ["윌버가 인간이 아님", "농장에 무언가 숨겨져 있음", "고대 존재와의 연관"]
+        },
+        {
+          "stage": 3,
+          "objective": "진실과 위협 파악",
+          "clues": [
+            "네크로노미콘 도난 사건",
+            "윌버의 진짜 목적",
+            "임박한 재앙의 징후"
+          ],
+          "skill_checks": ["추리", "오컬트", "도서관학"],
+          "revelations": ["차원 열기 의식", "요그 소토스의 후손", "세계 종말 계획"]
+        }
+      ],
+      "climax_events": [
+        {
+          "trigger": "윌버의 죽음",
+          "event": "미스카토닉 대학에서 윌버가 죽으면서 그의 진짜 모습이 드러난다.",
+          "mechanics": {
+            "sanity_loss": "1d10",
+            "revelation": "윌버의 비인간적 형태",
+            "time_pressure": "동생이 곧 나타날 것",
+            "preparation_time": "제한적"
+          }
+        },
+        {
+          "trigger": "보이지 않는 괴물",
+          "event": "윌버의 거대한 동생이 던위치를 파괴하며 나타난다.",
+          "mechanics": {
+            "invisible_enemy": true,
+            "mass_destruction": true,
+            "skill_checks": ["오컬트", "협력", "용기"],
+            "group_effort": "아미티지 박사와 동료들과 협력"
+          }
+        }
+      ],
+      "possible_endings": [
+        {
+          "condition": "괴물 퇴치 성공",
+          "outcome": "고대 의식으로 괴물을 다른 차원으로 보내버린다.",
+          "consequences": ["세계 구원", "던위치 복구", "영웅적 평판"],
+          "sanity_recovery": "1d10",
+          "knowledge_gained": "차원 간 존재들의 위험성"
+        },
+        {
+          "condition": "부분적 성공",
+          "outcome": "괴물을 막지만 큰 피해가 발생한다.",
+          "consequences": ["부분적 승리", "지역 피해", "트라우마 잔존"],
+          "sanity_recovery": "1d6",
+          "lasting_effects": "던위치 지역에 흉터 남음"
+        },
+        {
+          "condition": "실패",
+          "outcome": "괴물이 계속 활동하며 더 큰 재앙을 준비한다.",
+          "consequences": ["재앙 확산", "세계적 위기", "절망"],
+          "sanity_loss": "1d20",
+          "campaign_impact": "세계 종말 시나리오로 발전"
+        }
+      ],
+      "rewards": {
+        "experience": "20-30점",
+        "potential_allies": ["아미티지 박사", "미스카토닉 대학 연구진"],
+        "knowledge_gained": ["요그 소토스 신앙", "차원 간 존재", "고대 보호 의식"],
+        "items": ["보호된 오컬트 서적", "의식용 도구", "미스카토닉의 지원"]
+      },
+      "ai_hints": {
+        "pacing": "서서히 축적되는 공포, 폭발적인 클라이맥스",
+        "atmosphere_focus": "시골의 원시적 공포, 우주적 규모의 위협",
+        "key_emotions": ["불안", "공포", "경외감", "책임감"],
+        "difficulty_scaling": "준비 시간과 협력 정도에 따라 조절",
+        "cosmic_horror": "인간 문명에 대한 위협, 차원을 넘나드는 공포"
+      }
+    }
+  ]
+}

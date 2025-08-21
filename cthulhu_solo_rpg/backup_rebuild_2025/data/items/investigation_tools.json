@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "category": "investigation_tools",
+    "description": "조사자들이 사용하는 각종 도구와 장비",
+    "era": "1920년대",
+    "ai_hints": {
+      "usage_context": "Mystery solving, evidence gathering, survival",
+      "availability": "Period-appropriate technology and tools",
+      "reliability": "Tools may fail at dramatic moments",
+      "narrative_role": "Enable investigation but don't solve mysteries automatically"
+    }
+  },
+  "categories": [
+    {
+      "category": "photography",
+      "name": "사진 촬영 장비",
+      "items": [
+        {
+          "id": "kodak_camera",
+          "name": "코닥 브라우니 카메라",
+          "name_en": "Kodak Brownie Camera",
+          "type": "사진기",
+          "era": "1900-1930년대",
+          "price": "$2-5",
+          "description": "대중적인 박스형 카메라, 간단하고 사용하기 쉬움",
+          "specifications": {
+            "film_type": "120 롤필름",
+            "photos_per_roll": "8-12장",
+            "operation": "고정 초점, 단일 셔터 속도"
+          },
+          "game_mechanics": {
+            "skill_required": "사진술 (기본)",
+            "reliability": "높음",
+            "advantages": ["휴대성", "간편함", "저렴함"],
+            "disadvantages": ["화질 제한", "저조도 불가", "접사 불가"]
+          },
+          "investigation_uses": [
+            "범죄 현장 기록",
+            "증거 보존",
+            "인물 사진",
+            "건물이나 장소 기록",
+            "비교 분석용 사진"
+          ],
+          "supernatural_interactions": [
+            "유령이나 이상한 존재가 찍힐 수 있음",
+            "사진에 예상치 못한 것들이 나타남",
+            "특정 장소에서 카메라 오작동",
+            "현상된 사진에서 이상한 현상 발견"
+          ]
+        },
+        {
+          "id": "professional_camera",
+          "name": "전문가용 대형 카메라",
+          "name_en": "Professional Large Format Camera",
+          "type": "대형 사진기",
+          "price": "$50-200",
+          "description": "사진 스튜디오나 전문 사진가가 사용하는 고급 카메라",
+          "specifications": {
+            "film_size": "4x5 인치 또는 8x10 인치 플레이트",
+            "lens_options": "교환 가능한 렌즈들",
+            "tripod_required": "필수"
+          },
+          "advantages": ["최고 화질", "정밀 제어", "전문적 결과"],
+          "disadvantages": ["무겁고 큼", "설치 시간 필요", "비싸고 복잡"],
+          "investigation_uses": [
+            "정밀한 증거 사진",
+            "문서나 책 페이지 복사",
+            "미세한 디테일 기록",
+            "법정 증거용 사진"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "optical",
+      "name": "광학 장비",
+      "items": [
+        {
+          "id": "magnifying_glass",
+          "name": "돋보기",
+          "name_en": "Magnifying Glass",
+          "type": "광학기구",
+          "price": "$1-10",
+          "description": "조사자의 기본 도구 중 하나",
+          "specifications": {
+            "magnification": "2x-10x",
+            "lens_diameter": "2-6인치"
+          },
+          "investigation_uses": [
+            "작은 글씨 해독",
+            "지문이나 흔적 관찰",
+            "보석이나 동전 감정",
+            "문서의 위조 여부 확인",
+            "미세한 증거 발견"
+          ],
+          "game_mechanics": {
+            "skill_bonus": "발견 +1, 도서관학 +1",
+            "reliability": "매우 높음",
+            "durability": "깨지기 쉬움"
+          }
+        },
+        {
+          "id": "binoculars",
+          "name": "쌍안경",
+          "name_en": "Binoculars",
+          "type": "망원경",
+          "price": "$10-50",
+          "description": "원거리 관찰용 광학 장비",
+          "specifications": {
+            "magnification": "6x-12x",
+            "field_of_view": "넓거나 좁음 선택"
+          },
+          "investigation_uses": [
+            "먼 거리 감시",
+            "건물 내부 관찰",
+            "자연 지역 탐사",
+            "사람이나 차량 추적",
+            "위험한 장소 원거리 조사"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "measurement",
+      "name": "측정 도구",
+      "items": [
+        {
+          "id": "tape_measure",
+          "name": "줄자",
+          "name_en": "Measuring Tape",
+          "type": "측정도구",
+          "price": "$1-3",
+          "lengths": ["6피트", "25피트", "100피트"],
+          "investigation_uses": [
+            "범죄 현장 측정",
+            "방이나 건물 치수 확인",
+            "거리 계산",
+            "지도 제작",
+            "증거 위치 기록"
+          ]
+        },
+        {
+          "id": "ruler",
+          "name": "자",
+          "name_en": "Ruler/Scale",
+          "type": "측정도구",
+          "price": "$0.50-2",
+          "investigation_uses": [
+            "정밀 측정",
+            "사진 스케일 제공",
+            "문서 분석",
+            "작은 증거물 측정"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "lighting",
+      "name": "조명 장비",
+      "items": [
+        {
+          "id": "flashlight",
+          "name": "손전등",
+          "name_en": "Electric Flashlight",
+          "type": "조명",
+          "era": "1920년대 (초기 모델)",
+          "price": "$3-10",
+          "description": "배터리로 작동하는 휴대용 전등",
+          "specifications": {
+            "battery_type": "건전지 (수명 제한적)",
+            "brightness": "현재 기준으로는 어두움",
+            "runtime": "2-6시간"
+          },
+          "advantages": ["휴대성", "즉시 사용", "안전함"],
+          "disadvantages": ["밝기 제한", "배터리 소모", "고장 위험"],
+          "investigation_uses": [
+            "어두운 장소 탐사",
+            "지하실이나 다락방 조사",
+            "밤중 감시",
+            "세부사항 조명",
+            "신호용"
+          ],
+          "game_mechanics": {
+            "battery_life": "사용 시간에 따라 점차 약해짐",
+            "failure_chance": "중요한 순간에 고장날 수 있음",
+            "light_radius": "제한적 조명 범위"
+          }
+        },
+        {
+          "id": "lantern",
+          "name": "등잔",
+          "name_en": "Kerosene Lantern",
+          "type": "조명",
+          "fuel": "등유",
+          "price": "$2-8",
+          "description": "전통적인 연료 등잔",
+          "advantages": ["밝음", "긴 사용시간", "신뢰성"],
+          "disadvantages": ["화재 위험", "연료 필요", "바람에 약함"],
+          "investigation_uses": [
+            "캠핑이나 야외 조사",
+            "전기 없는 건물 탐사",
+            "장시간 조명 필요시",
+            "넓은 지역 조명"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "recording",
+      "name": "기록 도구",
+      "items": [
+        {
+          "id": "notebook",
+          "name": "수첩",
+          "name_en": "Notebook",
+          "type": "기록도구",
+          "price": "$0.25-2",
+          "sizes": ["포켓 사이즈", "표준 사이즈", "대형"],
+          "investigation_uses": [
+            "증언 기록",
+            "관찰 사항 메모",
+            "단서 정리",
+            "스케치 그리기",
+            "일정 관리"
+          ],
+          "game_mechanics": {
+            "memory_aid": "기록된 정보는 잊혀지지 않음",
+            "sharing": "다른 조사자와 정보 공유 가능",
+            "evidence": "법정이나 공식 보고서에 사용 가능"
+          }
+        },
+        {
+          "id": "fountain_pen",
+          "name": "만년필",
+          "name_en": "Fountain Pen",
+          "type": "필기구",
+          "price": "$1-25",
+          "description": "1920년대의 주요 필기구",
+          "maintenance": "잉크 충전과 닦기 필요",
+          "advantages": ["고급스러움", "부드러운 필기", "오래 사용"],
+          "disadvantages": ["잉크 누출 위험", "관리 필요", "추위에 약함"]
+        },
+        {
+          "id": "typewriter",
+          "name": "타자기",
+          "name_en": "Typewriter",
+          "type": "문서작성기",
+          "price": "$50-200",
+          "description": "사무실이나 집에서 사용하는 문서 작성 도구",
+          "investigation_uses": [
+            "정식 보고서 작성",
+            "편지 작성",
+            "문서 복사",
+            "신문이나 기사 작성"
+          ],
+          "forensic_value": "각 타자기마다 고유한 타자 특성"
+        }
+      ]
+    },
+    {
+      "category": "communication",
+      "name": "통신 장비",
+      "items": [
+        {
+          "id": "telephone",
+          "name": "전화기",
+          "name_en": "Telephone",
+          "type": "통신기",
+          "era": "1920년대 (교환원 경유)",
+          "availability": "도시 지역만",
+          "description": "원거리 음성 통신 수단",
+          "limitations": [
+            "교환원을 통한 연결",
+            "장거리 통화 비용",
+            "도청 가능성",
+            "연결 품질 불안정"
+          ],
+          "investigation_uses": [
+            "증인이나 전문가와 연락",
+            "긴급상황 신고",
+            "정보 확인",
+            "다른 도시와 연락"
+          ]
+        },
+        {
+          "id": "telegraph",
+          "name": "전신기",
+          "name_en": "Telegraph",
+          "type": "통신기",
+          "description": "문자 메시지 전송 시스템",
+          "cost": "단어 수에 따라 과금",
+          "speed": "빠른 장거리 통신",
+          "investigation_uses": [
+            "긴급 메시지 전송",
+            "다른 도시 경찰서와 연락",
+            "신문사에 기사 송고",
+            "해외와 연락"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "forensic",
+      "name": "법과학 도구",
+      "items": [
+        {
+          "id": "fingerprint_kit",
+          "name": "지문 채취 도구",
+          "name_en": "Fingerprint Kit",
+          "type": "감식도구",
+          "price": "$10-25",
+          "contents": [
+            "지문 분말 (검은색, 흰색)",
+            "붓 (여러 크기)",
+            "지문 카드",
+            "잉크 패드",
+            "돋보기"
+          ],
+          "investigation_uses": [
+            "범죄 현장 지문 채취",
+            "용의자 지문 확인",
+            "신원 확인",
+            "증거 연결"
+          ],
+          "limitations": [
+            "표면 상태에 따라 성공률 다름",
+            "데이터베이스 제한적",
+            "전문 기술 필요",
+            "시간 소요"
+          ]
+        },
+        {
+          "id": "evidence_bags",
+          "name": "증거 봉투",
+          "name_en": "Evidence Envelopes",
+          "type": "보관용구",
+          "price": "$2-5 (50개들이)",
+          "description": "증거물을 안전하게 보관하고 라벨링하는 봉투",
+          "investigation_uses": [
+            "물리적 증거 보관",
+            "체인 오브 커스터디 유지",
+            "증거 분류",
+            "법정 제출용 준비"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "survival",
+      "name": "생존 도구",
+      "items": [
+        {
+          "id": "first_aid_kit",
+          "name": "구급상자",
+          "name_en": "First Aid Kit",
+          "type": "의료도구",
+          "price": "$5-15",
+          "contents": [
+            "붕대와 거즈",
+            "소독약 (요오드팅크)",
+            "진통제 (아스피린)",
+            "가위와 핀셋",
+            "체온계"
+          ],
+          "investigation_uses": [
+            "부상 치료",
+            "증거 채취 (혈액, 털 등)",
+            "의학적 검사",
+            "응급상황 대응"
+          ]
+        },
+        {
+          "id": "rope",
+          "name": "밧줄",
+          "name_en": "Rope",
+          "type": "범용도구",
+          "price": "$2-10",
+          "lengths": ["25피트", "50피트", "100피트"],
+          "investigation_uses": [
+            "높은 곳 접근",
+            "하강이나 등반",
+            "물체 고정",
+            "측정 보조",
+            "구조 작업"
+          ]
+        }
+      ]
+    }
+  ],
+  "tool_combinations": [
+    {
+      "name": "기본 조사 키트",
+      "items": ["돋보기", "수첩", "만년필", "손전등", "줄자"],
+      "total_cost": "$15-30",
+      "weight": "경량",
+      "purpose": "일반적인 조사 활동"
+    },
+    {
+      "name": "사진 조사 키트",
+      "items": ["코닥 카메라", "여분 필름", "삼각대", "노출계"],
+      "total_cost": "$25-50",
+      "weight": "중간",
+      "purpose": "증거 기록과 문서화"
+    },
+    {
+      "name": "야외 조사 키트",
+      "items": ["등잔", "밧줄", "나침반", "구급상자", "방수 가방"],
+      "total_cost": "$30-60",
+      "weight": "무거움",
+      "purpose": "야외나 위험 지역 조사"
+    }
+  ],
+  "period_limitations": [
+    {
+      "technology": "전자 장비",
+      "limitation": "매우 제한적이고 비쌈",
+      "alternatives": "기계적이고 광학적 도구 사용"
+    },
+    {
+      "technology": "통신",
+      "limitation": "전화와 전신에 의존",
+      "challenges": "즉시성 부족, 비용 문제"
+    },
+    {
+      "technology": "조명",
+      "limitation": "배터리 기술 초기 단계",
+      "solutions": "연료 기반 조명과 병용"
+    },
+    {
+      "technology": "교통",
+      "limitation": "자동차 보급 초기",
+      "impact": "이동성과 장비 운반 제한"
+    }
+  ],
+  "procurement_sources": [
+    {
+      "source": "일반 상점",
+      "availability": "기본적인 도구들",
+      "examples": ["문구점", "잡화점", "금물점"]
+    },
+    {
+      "source": "전문점",
+      "availability": "특수 장비",
+      "examples": ["카메라 가게", "의료기기점", "과학기구점"]
+    },
+    {
+      "source": "경찰서",
+      "availability": "법과학 도구",
+      "access": "공식적 협력이나 연줄 필요"
+    },
+    {
+      "source": "대학",
+      "availability": "연구 장비",
+      "access": "학술적 명분이나 교수 추천 필요"
+    }
+  ],
+  "usage_guidelines": [
+    {
+      "principle": "시대적 한계",
+      "description": "1920년대 기술 수준에 맞는 도구만 사용",
+      "impact": "현대적 해결책 불가, 창의적 접근 필요"
+    },
+    {
+      "principle": "신뢰성 문제",
+      "description": "도구들이 항상 완벽하게 작동하지 않음",
+      "impact": "백업 계획과 대안 필요"
+    },
+    {
+      "principle": "사회적 제약",
+      "description": "일부 도구는 전문가나 권위자만 접근 가능",
+      "impact": "사회적 관계와 협상 중요"
+    },
+    {
+      "principle": "비용 고려",
+      "description": "장비 구입과 유지에 비용 소요",
+      "impact": "경제적 제약과 우선순위 설정"
+    }
+  ],
+  "ai_usage_hints": {
+    "narrative_integration": "도구 사용을 스토리텔링에 자연스럽게 통합",
+    "failure_opportunities": "중요한 순간의 도구 고장으로 긴장감 조성",
+    "period_authenticity": "시대적 분위기 연출을 위한 도구 묘사",
+    "problem_solving": "도구의 한계가 창의적 해결책을 유도",
+    "character_development": "도구 선택과 사용이 캐릭터 특성을 반영",
+    "resource_management": "제한된 자원으로 인한 선택의 중요성"
+  }
+}

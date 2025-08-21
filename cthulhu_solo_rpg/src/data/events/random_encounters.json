@@ -1,0 +1,632 @@
+{
+  "metadata": {
+    "category": "random_encounters",
+    "description": "다양한 상황에서 발생할 수 있는 랜덤 만남과 사건들",
+    "usage": "조사 중이나 이동 중 예상치 못한 상황 연출",
+    "ai_hints": {
+      "usage_context": "Fill gaps in narrative, add unpredictability, introduce complications",
+      "frequency": "Use sparingly to maintain impact",
+      "adaptation": "Modify encounters to fit current scenario context",
+      "escalation": "Can lead to bigger plot developments"
+    }
+  },
+  "encounter_categories": [
+    {
+      "category": "social",
+      "name": "사회적 만남",
+      "description": "다른 사람들과의 만남이나 상호작용"
+    },
+    {
+      "category": "investigative",
+      "name": "조사적 발견",
+      "description": "새로운 단서나 정보의 발견"
+    },
+    {
+      "category": "supernatural",
+      "name": "초자연적 사건",
+      "description": "이상하거나 설명할 수 없는 현상들"
+    },
+    {
+      "category": "mundane",
+      "name": "일상적 사건",
+      "description": "평범하지만 상황에 영향을 주는 사건들"
+    },
+    {
+      "category": "threatening",
+      "name": "위험한 상황",
+      "description": "즉각적인 위험이나 위협"
+    }
+  ],
+  "urban_encounters": [
+    {
+      "id": "suspicious_follower",
+      "name": "수상한 미행자",
+      "category": "threatening",
+      "trigger": "거리를 걷거나 대중교통 이용 중",
+      "description": "누군가가 당신을 따라오고 있는 것 같다.",
+      "initial_signs": [
+        "같은 사람이 여러 장소에서 목격됨",
+        "갑자기 시선을 피하는 행동",
+        "이상하게 같은 방향으로 계속 이동",
+        "당신이 멈추면 그도 멈춤"
+      ],
+      "possible_identities": [
+        {
+          "identity": "교단원",
+          "motivation": "조사 활동 감시",
+          "danger_level": "높음",
+          "tactics": "은밀한 감시, 필요시 제거"
+        },
+        {
+          "identity": "사설탐정",
+          "motivation": "의뢰인의 요청으로 미행",
+          "danger_level": "낮음",
+          "revelation": "대화를 통해 해결 가능"
+        },
+        {
+          "identity": "경찰 형사",
+          "motivation": "용의자로 의심",
+          "danger_level": "중간",
+          "consequences": "법적 문제 가능성"
+        },
+        {
+          "identity": "미치광이",
+          "motivation": "무작위적 집착",
+          "danger_level": "예측불가",
+          "behavior": "비논리적, 위험할 수 있음"
+        }
+      ],
+      "detection_methods": [
+        "갑작스러운 방향 전환",
+        "상점에 들어가서 관찰",
+        "대중교통 이용",
+        "도움 요청"
+      ],
+      "escalation_options": [
+        "직접 대면",
+        "경찰 신고",
+        "미행자 역미행",
+        "안전한 장소로 피신"
+      ],
+      "outcomes": [
+        {
+          "condition": "성공적 회피",
+          "result": "일시적 안전 확보",
+          "consequences": "경계심 증가"
+        },
+        {
+          "condition": "대면 성공",
+          "result": "미행자 정체 파악",
+          "info_gained": "의뢰인이나 조직에 대한 정보"
+        },
+        {
+          "condition": "발각",
+          "result": "미행자가 적극적 행동",
+          "danger": "직접적 위협 증가"
+        }
+      ]
+    },
+    {
+      "id": "helpful_stranger",
+      "name": "도움을 주는 낯선 이",
+      "category": "social",
+      "trigger": "길을 잃거나 정보가 필요할 때",
+      "description": "친근한 낯선 사람이 도움을 제안한다.",
+      "approaches": [
+        "길 안내 제안",
+        "지역 정보 제공",
+        "교통편 도움",
+        "식사나 휴식 장소 추천"
+      ],
+      "character_types": [
+        {
+          "type": "선량한 시민",
+          "motivation": "순수한 친절",
+          "reliability": "높음",
+          "info_quality": "기본적이지만 정확"
+        },
+        {
+          "type": "지역 주민",
+          "motivation": "지역에 대한 자부심",
+          "reliability": "높음",
+          "special_knowledge": "지역 역사, 소문, 숨겨진 장소"
+        },
+        {
+          "type": "수다쟁이",
+          "motivation": "대화하고 싶어함",
+          "reliability": "중간",
+          "info_type": "많지만 잡다한 정보"
+        },
+        {
+          "type": "의도가 있는 자",
+          "motivation": "개인적 이익이나 호기심",
+          "reliability": "낮음",
+          "hidden_agenda": "정보 수집, 사기, 유혹"
+        }
+      ],
+      "information_types": [
+        "지역 명소와 중요 건물",
+        "최근 일어난 사건들",
+        "유명한 인물들에 대한 소문",
+        "위험한 지역이나 시간대",
+        "교통편과 숙박 정보"
+      ],
+      "potential_complications": [
+        "너무 많은 관심과 질문",
+        "잘못된 정보 제공",
+        "은밀한 정보 요구",
+        "지속적인 접촉 시도"
+      ]
+    },
+    {
+      "id": "overheard_conversation",
+      "name": "우연히 들은 대화",
+      "category": "investigative",
+      "trigger": "카페, 레스토랑, 대중교통에서",
+      "description": "근처 테이블이나 좌석에서 들려오는 흥미로운 대화를 엿듣는다.",
+      "conversation_types": [
+        {
+          "type": "사업 대화",
+          "participants": "사업가들",
+          "content": [
+            "투자나 거래 정보",
+            "정치적 연결",
+            "재정적 어려움",
+            "비밀 계약"
+          ]
+        },
+        {
+          "type": "가십",
+          "participants": "일반 시민들",
+          "content": [
+            "유명인의 스캔들",
+            "지역 소문",
+            "최근 사건들",
+            "이상한 목격담"
+          ]
+        },
+        {
+          "type": "전문가 대화",
+          "participants": "의사, 교수, 기술자들",
+          "content": [
+            "전문 지식",
+            "연구 결과",
+            "학계 동향",
+            "기술적 발견"
+          ]
+        },
+        {
+          "type": "수상한 대화",
+          "participants": "정체불명의 인물들",
+          "content": [
+            "암호나 은어 사용",
+            "시간과 장소 약속",
+            "위험한 계획",
+            "비밀 조직 활동"
+          ]
+        }
+      ],
+      "listening_challenges": [
+        {
+          "difficulty": "쉬움",
+          "conditions": "조용한 환경, 가까운 거리",
+          "success": "완전한 대화 내용 파악"
+        },
+        {
+          "difficulty": "보통",
+          "conditions": "적당한 소음, 중간 거리",
+          "success": "핵심 내용만 파악"
+        },
+        {
+          "difficulty": "어려움",
+          "conditions": "시끄러운 환경, 먼 거리",
+          "success": "단편적인 정보만"
+        }
+      ],
+      "discovery_risks": [
+        "대화자들이 눈치챔",
+        "노골적인 엿듣기로 의심받음",
+        "민감한 정보 노출로 위험",
+        "법적 문제 가능성"
+      ]
+    }
+  ],
+  "rural_encounters": [
+    {
+      "id": "lost_traveler",
+      "name": "길을 잃은 여행자",
+      "category": "social",
+      "trigger": "시골길이나 외진 지역에서",
+      "description": "길을 잃고 헤매는 다른 여행자를 만난다.",
+      "traveler_types": [
+        {
+          "type": "도시 관광객",
+          "problem": "지도 읽기 실패",
+          "needs": "올바른 방향 안내",
+          "reward": "감사 표현, 작은 선물"
+        },
+        {
+          "type": "상인",
+          "problem": "운송 수단 고장",
+          "needs": "수리 도움이나 대체 교통편",
+          "reward": "상품 할인, 정보 교환"
+        },
+        {
+          "type": "연구자",
+          "problem": "연구 지역 찾기 실패",
+          "needs": "전문적 안내",
+          "reward": "학술적 정보, 전문 지식"
+        },
+        {
+          "type": "수상한 인물",
+          "problem": "의도적으로 숨어있음",
+          "apparent_need": "도움 요청",
+          "reality": "함정이나 위험한 의도"
+        }
+      ],
+      "assistance_options": [
+        "정확한 길 안내 제공",
+        "함께 이동하며 안내",
+        "지역 주민 소개",
+        "물리적 도움 (수리 등)"
+      ],
+      "potential_complications": [
+        "잘못된 정보로 더 큰 문제 야기",
+        "위험한 지역으로 안내",
+        "도움받은 자가 악의적 의도",
+        "시간 지연으로 일정 차질"
+      ]
+    },
+    {
+      "id": "abandoned_vehicle",
+      "name": "버려진 차량",
+      "category": "investigative",
+      "trigger": "외진 도로나 숲길에서",
+      "description": "길가에 방치된 자동차나 마차를 발견한다.",
+      "vehicle_conditions": [
+        {
+          "condition": "엔진 고장",
+          "evidence": "연기, 이상한 소음",
+          "likely_cause": "기계적 문제"
+        },
+        {
+          "condition": "연료 부족",
+          "evidence": "정상적 외관",
+          "owner_fate": "걸어서 도움 구하러 감"
+        },
+        {
+          "condition": "사고 흔적",
+          "evidence": "손상, 충돌 자국",
+          "concerns": "부상자 가능성"
+        },
+        {
+          "condition": "의도적 방치",
+          "evidence": "깨끗하게 정리됨",
+          "implications": "범죄 관련 가능성"
+        }
+      ],
+      "search_discoveries": [
+        {
+          "location": "차량 내부",
+          "findings": [
+            "개인 소지품",
+            "지도나 여행 계획서",
+            "편지나 문서",
+            "음식이나 물품"
+          ]
+        },
+        {
+          "location": "주변 지역",
+          "findings": [
+            "발자국이나 흔적",
+            "버려진 물건들",
+            "투쟁의 흔적",
+            "숨겨진 단서들"
+          ]
+        }
+      ],
+      "possible_stories": [
+        "무해한 고장으로 소유자가 도움 구하러 감",
+        "강도나 공격으로 소유자 실종",
+        "초자연적 사건으로 급히 도망",
+        "의도적으로 증거 은폐를 위해 방치"
+      ]
+    }
+  ],
+  "academic_encounters": [
+    {
+      "id": "fellow_researcher",
+      "name": "동료 연구자",
+      "category": "social",
+      "trigger": "도서관, 대학, 연구소에서",
+      "description": "비슷한 관심사를 가진 다른 연구자와 마주친다.",
+      "researcher_types": [
+        {
+          "type": "선배 학자",
+          "attitude": "조금 거만하지만 지식 풍부",
+          "knowledge": "깊이 있는 전문 정보",
+          "sharing_willingness": "조건부 협력"
+        },
+        {
+          "type": "동료 연구자",
+          "attitude": "경쟁적이지만 우호적",
+          "knowledge": "비슷한 수준의 정보",
+          "collaboration": "상호 도움 가능"
+        },
+        {
+          "type": "신진 연구자",
+          "attitude": "열정적이고 도움 요청",
+          "knowledge": "새로운 관점과 접근법",
+          "advantage": "최신 동향 파악"
+        },
+        {
+          "type": "은밀한 연구자",
+          "attitude": "비밀스럽고 신중함",
+          "knowledge": "금지된 지식",
+          "risk": "위험한 연구 분야"
+        }
+      ],
+      "interaction_outcomes": [
+        {
+          "type": "정보 교환",
+          "benefit": "새로운 연구 자료 획득",
+          "cost": "자신의 정보 일부 공개"
+        },
+        {
+          "type": "협력 관계",
+          "benefit": "지속적 정보 공유",
+          "commitment": "상호 의무와 책임"
+        },
+        {
+          "type": "경쟁 관계",
+          "challenge": "연구 속도 증가 압박",
+          "risk": "정보 유출이나 방해 공작"
+        },
+        {
+          "type": "멘토-제자 관계",
+          "benefit": "깊이 있는 지도",
+          "expectation": "충성심과 감사"
+        }
+      ]
+    }
+  ],
+  "supernatural_encounters": [
+    {
+      "id": "strange_weather",
+      "name": "이상한 날씨",
+      "category": "supernatural",
+      "trigger": "야외 활동 중",
+      "description": "계절이나 지역에 맞지 않는 기이한 기상 현상을 경험한다.",
+      "phenomena": [
+        {
+          "type": "갑작스러운 안개",
+          "characteristics": [
+            "몇 분 만에 시야 제로",
+            "이상한 냄새나 온도",
+            "방향감각 상실",
+            "안개 속에서 들리는 소리들"
+          ],
+          "dangers": [
+            "길을 잃음",
+            "사고 위험 증가",
+            "숨겨진 존재들의 접근",
+            "시간 감각 왜곡"
+          ]
+        },
+        {
+          "type": "국지적 폭풍",
+          "characteristics": [
+            "매우 작은 지역에만 발생",
+            "주변과 완전히 다른 날씨",
+            "기이한 색깔의 번개",
+            "자연스럽지 않은 소음"
+          ],
+          "effects": [
+            "전자 장비 오작동",
+            "동물들의 기피 반응",
+            "일시적 청각 손실",
+            "정신적 불안감"
+          ]
+        },
+        {
+          "type": "온도 이상",
+          "characteristics": [
+            "급격한 온도 변화",
+            "주변과 다른 온도 구역",
+            "설명할 수 없는 추위나 더위",
+            "의복으로 해결되지 않음"
+          ],
+          "implications": [
+            "초자연적 존재의 근접",
+            "차원간 활동",
+            "고대 유적의 활성화",
+            "저주나 마법의 영향"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "animal_behavior",
+      "name": "동물들의 이상 행동",
+      "category": "supernatural",
+      "trigger": "동물들이 있는 지역에서",
+      "description": "주변 동물들이 평소와 다른 기이한 행동을 보인다.",
+      "behaviors": [
+        {
+          "type": "집단 도주",
+          "animals": "새, 설치류, 곤충들",
+          "behavior": "한 방향으로 일제히 도망",
+          "meaning": "큰 위험이나 재앙의 전조"
+        },
+        {
+          "type": "공격성 증가",
+          "animals": "개, 고양이, 가축들",
+          "behavior": "평소 순한 동물들이 공격적으로 변함",
+          "cause": "초자연적 영향이나 감염"
+        },
+        {
+          "type": "비정상적 침묵",
+          "animals": "모든 동물들",
+          "behavior": "완전히 조용해짐",
+          "atmosphere": "매우 불길하고 위협적"
+        },
+        {
+          "type": "이상한 울음소리",
+          "animals": "야생동물들",
+          "behavior": "평소와 다른 소리나 인간 언어 모방",
+          "implication": "초자연적 존재의 영향"
+        }
+      ],
+      "investigation_clues": [
+        "동물 행동 패턴 관찰",
+        "지역 주민들의 증언",
+        "수의사나 동물 전문가 상담",
+        "환경 변화 요인 조사"
+      ]
+    }
+  ],
+  "complication_encounters": [
+    {
+      "id": "vehicle_breakdown",
+      "name": "교통수단 고장",
+      "category": "mundane",
+      "trigger": "이동 중",
+      "description": "사용 중인 교통수단이 갑자기 고장 난다.",
+      "breakdown_types": [
+        {
+          "vehicle": "자동차",
+          "problems": [
+            "엔진 과열",
+            "타이어 펑크",
+            "연료 부족",
+            "브레이크 고장"
+          ],
+          "repair_options": [
+            "자체 수리 (기술 필요)",
+            "전문가 도움 요청",
+            "부품 조달",
+            "대체 교통편 이용"
+          ]
+        },
+        {
+          "vehicle": "기차",
+          "problems": [
+            "기관 고장",
+            "선로 문제",
+            "날씨로 인한 지연",
+            "파업"
+          ],
+          "consequences": [
+            "장시간 대기",
+            "일정 변경 필요",
+            "추가 비용 발생",
+            "숙박 문제"
+          ]
+        }
+      ],
+      "story_opportunities": [
+        "지연 중 새로운 정보 획득",
+        "다른 승객들과 교류",
+        "예상치 못한 장소 방문",
+        "위급상황에서 도움 요청"
+      ]
+    },
+    {
+      "id": "mistaken_identity",
+      "name": "인물 오해",
+      "category": "social",
+      "trigger": "공공장소에서",
+      "description": "다른 사람으로 오해받는 상황이 발생한다.",
+      "mistaken_for": [
+        {
+          "identity": "유명인사",
+          "reaction": "관심과 부탁",
+          "complications": "기대치 관리, 사생활 침해"
+        },
+        {
+          "identity": "범죄자",
+          "reaction": "두려움이나 신고",
+          "consequences": "경찰 출동, 법적 문제"
+        },
+        {
+          "identity": "잃어버린 친구/가족",
+          "reaction": "감격과 재회 시도",
+          "emotional_burden": "기대 배신, 실망감"
+        },
+        {
+          "identity": "비즈니스 파트너",
+          "reaction": "거래 제안이나 책임 추궁",
+          "confusion": "복잡한 상황 해명"
+        }
+      ],
+      "resolution_strategies": [
+        "정중한 해명과 신분 증명",
+        "상황 이용한 정보 획득",
+        "빠른 도주와 회피",
+        "역할 연기를 통한 활용"
+      ]
+    }
+  ],
+  "escalation_mechanics": [
+    {
+      "trigger": "player_actions",
+      "description": "플레이어의 행동에 따른 상황 발전",
+      "examples": [
+        "공격적 대응 → 적대적 상황으로 발전",
+        "도움 제공 → 감사와 보상, 새로운 연결",
+        "무시하거나 회피 → 기회 상실, 다른 결과",
+        "적극적 조사 → 더 깊은 정보 획득, 위험 증가"
+      ]
+    },
+    {
+      "trigger": "random_chance",
+      "description": "예측할 수 없는 추가 요소",
+      "mechanics": [
+        "주사위 굴려서 추가 복잡성 결정",
+        "시간 제한 추가",
+        "제3자 개입",
+        "환경 변화"
+      ]
+    },
+    {
+      "trigger": "narrative_needs",
+      "description": "스토리 진행을 위한 조정",
+      "adaptations": [
+        "현재 시나리오와 연결",
+        "캐릭터 배경과 연관",
+        "미래 플롯 설정",
+        "긴장감 조절"
+      ]
+    }
+  ],
+  "usage_guidelines": [
+    {
+      "principle": "적절한 빈도",
+      "recommendation": "너무 자주 사용하면 효과 감소",
+      "optimal_use": "세션당 1-2회, 중요한 순간에"
+    },
+    {
+      "principle": "맥락 적합성",
+      "recommendation": "현재 상황과 분위기에 맞는 encounter 선택",
+      "consideration": "장소, 시간, 캐릭터 상태"
+    },
+    {
+      "principle": "플레이어 선택권",
+      "recommendation": "강제적이지 않고 플레이어가 대응 방식 선택",
+      "balance": "결과는 있지만 실패로 끝나지 않도록"
+    },
+    {
+      "principle": "확장성",
+      "recommendation": "단순한 encounter를 더 큰 스토리로 발전 가능",
+      "potential": "새로운 NPC, 장소, 플롯 훅 창조"
+    }
+  ],
+  "ai_usage_hints": {
+    "dynamic_selection": "현재 상황과 캐릭터 상태에 맞는 encounter 선택",
+    "narrative_flow": "메인 스토리를 방해하지 않으면서도 풍성하게 만들기",
+    "character_development": "encounter를 통한 캐릭터 성장 기회 제공",
+    "world_building": "작은 사건들을 통해 세계관의 깊이 더하기",
+    "tension_management": "긴장과 완화의 적절한 조절",
+    "player_agency": "플레이어의 선택이 의미 있는 결과로 이어지도록"
+  }
+}
