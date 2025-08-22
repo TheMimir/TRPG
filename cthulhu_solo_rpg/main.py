@@ -24,6 +24,12 @@ async def main():
     parser.add_argument("--test", action="store_true", help="Run system tests")
     parser.add_argument("--scenario", default="miskatonic_university_library", 
                        help="Scenario to load (default: miskatonic_university_library)")
+    parser.add_argument("--ai-provider", choices=["auto", "ollama", "openai"], default="auto",
+                       help="AI service provider (default: auto - detect available)")
+    parser.add_argument("--ai-model", help="AI model to use (e.g., gpt-3.5-turbo, gpt-oss:120b)")
+    parser.add_argument("--openai-api-key", help="OpenAI API key (or set OPENAI_API_KEY env var)")
+    parser.add_argument("--ollama-url", default="http://localhost:11434", 
+                       help="Ollama service URL (default: http://localhost:11434)")
     
     args = parser.parse_args()
     
@@ -51,16 +57,32 @@ async def main():
     
     try:
         # Import game components
-        from core.game_manager import GameManager
+        from core.game_manager import GameManager, GameManagerConfig
         from core.gameplay_controller import GameplayController
         from ui.gameplay_interface import GameplayInterface
         from utils.localization import LocalizationManager
+        import os
         
         print("🎮 크툴루 솔로 TRPG 시작!")
         print("=" * 50)
         
+        # Set OpenAI API key if provided
+        if args.openai_api_key:
+            os.environ["OPENAI_API_KEY"] = args.openai_api_key
+        
+        # Create GameManager configuration with AI settings
+        config = GameManagerConfig(
+            ai_provider=args.ai_provider,
+            ai_model=args.ai_model,
+            ollama_url=args.ollama_url
+        )
+        
+        print(f"🤖 AI 제공자: {args.ai_provider}")
+        if args.ai_model:
+            print(f"🧠 AI 모델: {args.ai_model}")
+        
         # Initialize systems
-        game_manager = GameManager()
+        game_manager = GameManager(config)
         await game_manager.initialize()
         
         # Create default character for demo

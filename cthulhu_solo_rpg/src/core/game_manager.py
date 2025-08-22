@@ -22,8 +22,9 @@ from pathlib import Path
 from core.models import GameState, NarrativeContext, TensionLevel
 from core.game_engine import GameEngine, Character
 from agents.base_agent import AgentManager, BaseAgent
-from ai.ollama_client import OllamaClient, OllamaConfig, test_ollama_connection
+from ai import AIClientFactory, BaseAIClient, AIProvider, get_ai_config_from_env
 from data.scenarios.miskatonic_university_library import create_miskatonic_library_scenario
+from objectives import objective_manager, achievement_manager, ai_coordinator
 
 
 logger = logging.getLogger(__name__)
@@ -46,9 +47,13 @@ class GameStatus(Enum):
 class GameManagerConfig:
     """Configuration for the Game Manager"""
     # AI Configuration
+    ai_provider: str = "auto"  # auto, ollama, openai
+    ai_model: Optional[str] = None  # Model name (will use provider defaults if not specified)
     ollama_url: str = "http://localhost:11434"
-    ollama_model: str = "gpt-oss:120b"
+    ollama_model: str = "gpt-oss:120b"  # Default Ollama model
     ollama_timeout: float = 300.0
+    openai_model: str = "gpt-4o-mini"  # Default OpenAI model (변경됨)
+    openai_api_key: Optional[str] = None  # Will use env var if not provided
     
     # Save System
     save_directory: str = "saves"
@@ -89,8 +94,13 @@ class GameManager:
         # Core systems
         self.game_engine: Optional[GameEngine] = None
         self.agent_manager: Optional[AgentManager] = None
-        self.ollama_client: Optional[OllamaClient] = None
+        self.ai_client: Optional[BaseAIClient] = None
         self.current_scenario = None
+        
+        # Objective and achievement systems
+        self.objective_manager = objective_manager  # Global singleton
+        self.achievement_manager = achievement_manager  # Global singleton
+        self.ai_coordinator = ai_coordinator  # Global singleton
         
         # Game state
         self.current_save_file: Optional[str] = None
@@ -117,8 +127,8 @@ class GameManager:
             
             logger.info("Initializing GameManager...")
             
-            # 1. Test Ollama connection
-            await self._initialize_ollama()
+            # 1. Initialize AI client
+            await self._initialize_ai_client()
             
             # 2. Initialize game engine
             await self._initialize_game_engine()
@@ -129,10 +139,13 @@ class GameManager:
             # 4. Setup save system
             await self._initialize_save_system()
             
-            # 5. Register agents (placeholder - will be implemented with specific agents)
+            # 5. Initialize objective system
+            await self._initialize_objective_system()
+            
+            # 6. Register agents (placeholder - will be implemented with specific agents)
             await self._register_core_agents()
             
-            # 6. System health check
+            # 7. System health check
             await self._perform_system_health_check()
             
             self.status = GameStatus.READY
@@ -147,38 +160,63 @@ class GameManager:
             await self._cleanup_on_error()
             return False
     
-    async def _initialize_ollama(self):
-        """Initialize Ollama client with connection testing"""
-        logger.info("Initializing Ollama client...")
+    async def _initialize_ai_client(self):
+        """Initialize AI client using factory pattern"""
+        logger.info(f"Initializing AI client with provider: {self.config.ai_provider}")
         
-        # Test connection first
-        is_connected = await test_ollama_connection(self.config.ollama_url)
-        
-        if not is_connected:
-            logger.warning("Ollama service not available - will use fallback mode")
+        try:
+            # Determine AI provider
+            if self.config.ai_provider == "auto":
+                provider = AIProvider.AUTO
+            else:
+                provider = AIProvider(self.config.ai_provider.lower())
+            
+            # Create configuration based on provider and config
+            config_kwargs = {
+                "timeout": self.config.ollama_timeout,
+                "max_retries": self.config.max_retries,
+            }
+            
+            # Add model configuration
+            if self.config.ai_model:
+                config_kwargs["model"] = self.config.ai_model
+            elif provider == AIProvider.OLLAMA or (provider == AIProvider.AUTO and not os.getenv("OPENAI_API_KEY")):
+                config_kwargs["model"] = self.config.ollama_model
+                config_kwargs["base_url"] = self.config.ollama_url
+            elif provider == AIProvider.OPENAI:
+                config_kwargs["model"] = self.config.openai_model
+                if self.config.openai_api_key:
+                    config_kwargs["api_key"] = self.config.openai_api_key
+            
+            # Create AI client using factory
+            self.ai_client = AIClientFactory.create_client(provider, **config_kwargs)
+            
+            # Connect and test
+            await self.ai_client.connect()
+            test_result = await self.ai_client.test_connection()
+            
+            self.system_health["ai_client"] = {
+                "status": "healthy" if test_result["success"] else "degraded",
+                "response_time": test_result["response_time"],
+                "last_check": time.time(),
+                "provider": self.ai_client.provider.value,
+                "model": self.ai_client.config.model
+            }
+            
+            logger.info(f"AI client initialized - Provider: {self.ai_client.provider.value}, Model: {self.ai_client.config.model}, Status: {self.system_health['ai_client']['status']}")
+            
+        except Exception as e:
+            logger.error(f"Failed to initialize AI client: {e}")
             if not self.config.enable_fallback:
-                raise ConnectionError("Ollama not available and fallback disabled")
-        
-        # Create Ollama client
-        ollama_config = OllamaConfig(
-            base_url=self.config.ollama_url,
-            model=self.config.ollama_model,
-            timeout=self.config.ollama_timeout,
-            max_retries=self.config.max_retries
-        )
-        
-        self.ollama_client = OllamaClient(ollama_config)
-        await self.ollama_client.connect()
-        
-        # Test with simple query
-        test_result = await self.ollama_client.test_connection()
-        self.system_health["ollama"] = {
-            "status": "healthy" if test_result["success"] else "degraded",
-            "response_time": test_result["response_time"],
-            "last_check": time.time()
-        }
-        
-        logger.info(f"Ollama client initialized - Status: {self.system_health['ollama']['status']}")
+                raise ConnectionError(f"AI client initialization failed and fallback disabled: {e}")
+            
+            # Set degraded status for fallback mode
+            self.system_health["ai_client"] = {
+                "status": "degraded",
+                "error": str(e),
+                "last_check": time.time()
+            }
+            logger.warning("AI client will operate in degraded mode")
     
     async def _initialize_game_engine(self):
         """Initialize the game engine"""
@@ -197,7 +235,7 @@ class GameManager:
         """Initialize the agent manager"""
         logger.info("Initializing agent manager...")
         
-        self.agent_manager = AgentManager(self.ollama_client)
+        self.agent_manager = AgentManager(self.ai_client)
         await self.agent_manager.initialize()
         
         self.system_health["agent_manager"] = {
@@ -227,6 +265,40 @@ class GameManager:
         
         logger.info(f"Save system initialized at: {save_path.absolute()}")
     
+    async def _initialize_objective_system(self):
+        """Initialize the objective and achievement systems"""
+        logger.info("Initializing objective system...")
+        
+        try:
+            # Initialize AI coordinator with our AI client
+            if self.ai_client:
+                self.ai_coordinator.set_ai_client(self.ai_client)
+            
+            # Load achievement progress if it exists
+            achievement_save_path = Path(self.config.save_directory) / "achievements.json"
+            if achievement_save_path.exists():
+                self.achievement_manager.load_from_file(str(achievement_save_path))
+                logger.info("Achievement progress loaded from previous session")
+            
+            self.system_health["objective_system"] = {
+                "status": "healthy",
+                "objectives_count": len(self.objective_manager.objectives),
+                "achievements_count": len(self.achievement_manager.achievements),
+                "unlocked_achievements": len(self.achievement_manager.unlocked_achievements),
+                "last_check": time.time()
+            }
+            
+            logger.info(f"Objective system initialized - {len(self.objective_manager.objectives)} objectives, {len(self.achievement_manager.achievements)} achievements")
+            
+        except Exception as e:
+            logger.error(f"Failed to initialize objective system: {e}")
+            self.system_health["objective_system"] = {
+                "status": "error",
+                "error": str(e),
+                "last_check": time.time()
+            }
+            raise
+    
     async def _register_core_agents(self):
         """Register core AI agents for the game system"""
         logger.info("Registering core agents...")
@@ -246,7 +318,7 @@ class GameManager:
                 context_window_size=4000
             )
             
-            story_agent = StoryAgent(self.ollama_client, agent_config)
+            story_agent = StoryAgent(self.ai_client, agent_config)
             self.agent_manager.register_agent(story_agent)
             registered_count += 1
             logger.info("✅ StoryAgent registered successfully")
@@ -315,9 +387,9 @@ class GameManager:
             except Exception as e:
                 logger.error(f"Error shutting down agent manager: {e}")
         
-        if self.ollama_client:
+        if self.ai_client:
             try:
-                await self.ollama_client.close()
+                await self.ai_client.close()
             except Exception as e:
                 logger.error(f"Error closing Ollama client: {e}")
     
@@ -386,6 +458,9 @@ class GameManager:
                 self.game_engine.game_flags["scenario"] = scenario_name
                 self.game_engine.game_flags["scenario_title"] = self.current_scenario.title
             
+            # Initialize objectives for new game
+            await self._initialize_game_objectives(character, scenario_name)
+            
             # Reset auto-save counter
             self.last_auto_save = 0
             
@@ -399,6 +474,87 @@ class GameManager:
             logger.error(f"Failed to start new game: {e}")
             self.status = GameStatus.ERROR
             return False
+    
+    async def _initialize_game_objectives(self, character, scenario_name: str):
+        """Initialize objectives for a new game"""
+        try:
+            logger.info("Initializing game objectives...")
+            
+            # Clear any existing objectives
+            self.objective_manager.clear_all_objectives()
+            
+            # Create initial objectives based on scenario
+            from objectives import (
+                create_investigation_objective, 
+                create_social_objective, 
+                create_exploration_objective,
+                create_forbidden_knowledge_objective
+            )
+            
+            if scenario_name == "miskatonic_university_library":
+                # Create library-specific objectives
+                initial_obj = create_investigation_objective(
+                    objective_id="library_initial_investigation",
+                    title="Investigate the Miskatonic Library",
+                    location="library_entrance",
+                    required_discoveries=["library_layout", "librarian_contact", "restricted_section"],
+                    time_limit_minutes=20
+                )
+                
+                # Add exploration objective
+                exploration_obj = create_exploration_objective(
+                    objective_id="library_exploration",
+                    title="Explore the Library",
+                    areas_to_explore=["main_hall", "reading_room", "stacks", "restricted_section"]
+                )
+                
+                # Add social objective
+                social_obj = create_social_objective(
+                    objective_id="meet_librarian",
+                    title="Speak with the Librarian",
+                    npc_name="Head Librarian",
+                    conversation_goals=["ask_about_access", "inquire_recent_visitors", "request_assistance"]
+                )
+                
+                # Add forbidden knowledge objective
+                knowledge_obj = create_forbidden_knowledge_objective(
+                    objective_id="seek_forbidden_knowledge",
+                    title="Uncover Hidden Secrets",
+                    knowledge_type="ancient_texts",
+                    insight_levels=[
+                        {"name": "surface", "description": "Basic knowledge", "san_cost": 1},
+                        {"name": "deeper", "description": "Profound insights", "san_cost": 2}
+                    ]
+                )
+                
+                # Add objectives to manager
+                self.objective_manager.add_objective(initial_obj)
+                self.objective_manager.add_objective(exploration_obj)
+                self.objective_manager.add_objective(social_obj)
+                self.objective_manager.add_objective(knowledge_obj)
+                
+                logger.info(f"Created {len([initial_obj, exploration_obj, social_obj, knowledge_obj])} initial objectives for library scenario")
+            
+            # Use AI coordinator to suggest additional objectives
+            if self.ai_coordinator:
+                game_context = {
+                    'scenario': scenario_name,
+                    'character_name': character.name,
+                    'starting_location': self.game_engine.current_scene,
+                    'character_stats': character.to_dict()
+                }
+                
+                suggested_objectives = await self.ai_coordinator.suggest_objectives(game_context)
+                for suggestion in suggested_objectives[:2]:  # Limit to 2 AI suggestions initially
+                    if suggestion.objective:
+                        self.objective_manager.add_objective(suggestion.objective)
+                        logger.info(f"Added AI-suggested objective: {suggestion.objective.title}")
+            
+            logger.info(f"Game objectives initialized - Total active: {len(self.objective_manager.get_active_objectives())}")
+            
+        except Exception as e:
+            logger.error(f"Failed to initialize game objectives: {e}")
+            # Don't fail the entire game start, just log the error
     
     async def load_game(self, save_file: str) -> bool:
         """
@@ -532,6 +688,9 @@ class GameManager:
             
             logger.info(f"Processing turn {current_turn}: {player_action[:50]}...")
             
+            # Process objectives and achievements
+            objective_updates = await self._process_turn_objectives(player_action, current_turn)
+            
             # This will be expanded when we implement agents and controllers
             # For now, return a basic structure
             
@@ -550,6 +709,7 @@ class GameManager:
                     "scene_id": self.game_engine.current_scene,
                     "turn_number": current_turn
                 },
+                "objective_updates": objective_updates,
                 "processing_time": time.time() - turn_start_time
             }
             
@@ -575,6 +735,84 @@ class GameManager:
                 "processing_time": time.time() - turn_start_time if 'turn_start_time' in locals() else 0
             }
     
+    async def _process_turn_objectives(self, player_action: str, turn_number: int) -> Dict[str, Any]:
+        """Process objectives and achievements for the current turn"""
+        try:
+            # Prepare game data for objective checking
+            game_data = {
+                'turn_number': turn_number,
+                'player_action': player_action,
+                'current_scene': self.game_engine.current_scene,
+                'character_name': self.game_engine.character.name if self.game_engine.character else "Unknown",
+                'game_flags': getattr(self.game_engine, 'game_flags', {}),
+                'completed_objectives': [obj.to_dict() for obj in self.objective_manager.get_completed_objectives()],
+                'events': getattr(self.game_engine, 'events', []),
+                'unlocked_achievements': self.achievement_manager.unlocked_achievements
+            }
+            
+            # Get player stats for achievement checking
+            player_stats = {}
+            if self.game_engine.character:
+                char_dict = self.game_engine.character.to_dict()
+                player_stats = {
+                    'sanity': char_dict.get('stats', {}).get('sanity', 50),
+                    'cosmic_knowledge_count': char_dict.get('stats', {}).get('cosmic_knowledge_count', 0),
+                    'known_entities_count': char_dict.get('stats', {}).get('known_entities_count', 0),
+                    'total_playtime_hours': char_dict.get('stats', {}).get('total_playtime_hours', 0),
+                    'completed_campaigns': char_dict.get('stats', {}).get('completed_campaigns', 0),
+                    'cosmic_encounters': char_dict.get('stats', {}).get('cosmic_encounters', 0),
+                    'session_min_sanity': char_dict.get('stats', {}).get('session_min_sanity', 50)
+                }
+            
+            # Create action data for objective updates
+            action_data = {
+                'action_text': player_action,
+                'turn_number': turn_number,
+                'location': self.game_engine.current_scene,
+                'character_data': player_stats
+            }
+            
+            # Update all objectives
+            completed_objectives = self.objective_manager.update_all_objectives(game_data, action_data)
+            
+            # Check for new achievements
+            newly_unlocked = self.achievement_manager.check_all_achievements(game_data, player_stats)
+            
+            # Save achievement progress if any were unlocked
+            if newly_unlocked:
+                achievement_save_path = Path(self.config.save_directory) / "achievements.json"
+                self.achievement_manager.save_to_file(str(achievement_save_path))
+            
+            # Use AI coordinator to suggest new objectives if needed
+            new_suggestions = []
+            if self.ai_coordinator and (completed_objectives or newly_unlocked):
+                try:
+                    suggestions = await self.ai_coordinator.suggest_objectives(game_data, limit=1)
+                    for suggestion in suggestions:
+                        if suggestion.objective:
+                            self.objective_manager.add_objective(suggestion.objective)
+                            new_suggestions.append(suggestion.objective.title)
+                except Exception as e:
+                    logger.warning(f"Failed to get AI objective suggestions: {e}")
+            
+            return {
+                'completed_objectives': [obj.title for obj in completed_objectives],
+                'active_objectives': [obj.title for obj in self.objective_manager.get_active_objectives()],
+                'newly_unlocked_achievements': [ach.title for ach in newly_unlocked],
+                'new_ai_suggestions': new_suggestions,
+                'objective_progress': self.get_objective_progress_summary()
+            }
+            
+        except Exception as e:
+            logger.error(f"Error processing turn objectives: {e}")
+            return {
+                'error': str(e),
+                'completed_objectives': [],
+                'active_objectives': [],
+                'newly_unlocked_achievements': [],
+                'new_ai_suggestions': []
+            }
+    
     async def shutdown(self):
         """Shutdown the game manager and all subsystems"""
         logger.info("Shutting down GameManager...")
@@ -592,13 +830,13 @@ class GameManager:
             if self.agent_manager:
                 await self.agent_manager.shutdown()
             
-            if self.ollama_client:
-                await self.ollama_client.close()
+            if self.ai_client:
+                await self.ai_client.close()
             
             # Clear references
             self.game_engine = None
             self.agent_manager = None
-            self.ollama_client = None
+            self.ai_client = None
             
             shutdown_time = time.time() - self.start_time
             logger.info(f"GameManager shutdown complete (ran for {shutdown_time:.1f}s)")
@@ -638,8 +876,8 @@ class GameManager:
         if self.agent_manager:
             stats["systems"]["agents"] = self.agent_manager.get_all_performance_stats()
         
-        if self.ollama_client:
-            stats["systems"]["ollama"] = self.ollama_client.get_statistics()
+        if self.ai_client:
+            stats["systems"]["ai_client"] = self.ai_client.get_statistics()
         
         return stats
     
@@ -723,6 +961,84 @@ class GameManager:
                 
         except Exception as e:
             logger.error(f"Error cleaning up old saves: {e}")
+    
+    def get_objective_progress_summary(self) -> Dict[str, Any]:
+        """Get a summary of objective progress"""
+        try:
+            active_objectives = self.objective_manager.get_active_objectives()
+            completed_objectives = self.objective_manager.get_completed_objectives()
+            failed_objectives = self.objective_manager.get_failed_objectives()
+            
+            return {
+                'active_count': len(active_objectives),
+                'completed_count': len(completed_objectives),
+                'failed_count': len(failed_objectives),
+                'total_count': len(active_objectives) + len(completed_objectives) + len(failed_objectives),
+                'active_objectives': [
+                    {
+                        'id': obj.objective_id,
+                        'title': obj.title,
+                        'priority': obj.priority.value,
+                        'progress': obj.get_progress_percentage()
+                    } for obj in active_objectives
+                ],
+                'recent_completions': [
+                    {
+                        'id': obj.objective_id,
+                        'title': obj.title,
+                        'completion_turn': obj.completion_turn
+                    } for obj in completed_objectives[-3:]  # Last 3 completed
+                ]
+            }
+        except Exception as e:
+            logger.error(f"Error getting objective progress summary: {e}")
+            return {'error': str(e)}
+    
+    def get_achievement_summary(self) -> Dict[str, Any]:
+        """Get a summary of achievement progress"""
+        try:
+            stats = self.achievement_manager.get_achievement_statistics()
+            unlocked = self.achievement_manager.get_unlocked_achievements()
+            
+            return {
+                'total_achievements': stats['total_achievements'],
+                'unlocked_count': stats['unlocked_count'],
+                'unlock_rate': stats['overall_unlock_rate'],
+                'recent_unlocks': [
+                    {
+                        'title': ach.title,
+                        'rarity': ach.rarity.value,
+                        'category': ach.category.value
+                    } for ach in unlocked[-3:]  # Last 3 unlocked
+                ],
+                'rarest_unlocked': stats['rarest_unlocked'],
+                'completion_percentage': stats['completion_percentage']
+            }
+        except Exception as e:
+            logger.error(f"Error getting achievement summary: {e}")
+            return {'error': str(e)}
+    
+    def get_objective_details(self, objective_id: str) -> Optional[Dict[str, Any]]:
+        """Get detailed information about a specific objective"""
+        try:
+            objective = self.objective_manager.get_objective(objective_id)
+            if objective:
+                return objective.to_dict()
+            return None
+        except Exception as e:
+            logger.error(f"Error getting objective details for {objective_id}: {e}")
+            return None
+    
+    def get_achievement_details(self, achievement_id: str) -> Optional[Dict[str, Any]]:
+        """Get detailed information about a specific achievement"""
+        try:
+            if achievement_id in self.achievement_manager.achievements:
+                achievement = self.achievement_manager.achievements[achievement_id]
+                return achievement.to_dict()
+            return None
+        except Exception as e:
+            logger.error(f"Error getting achievement details for {achievement_id}: {e}")
+            return None
 
 
 # Convenience functions for external use

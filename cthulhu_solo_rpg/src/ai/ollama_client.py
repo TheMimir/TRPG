@@ -19,46 +19,23 @@ from dataclasses import dataclass, field
 from enum import Enum
 import hashlib
 
+# Import base classes
+from ai.base_ai_client import BaseAIClient, AIConfig, AIResponse, ResponseStatus, AIProvider
+
 
 logger = logging.getLogger(__name__)
 
 
-class ResponseStatus(Enum):
-    """Status of an AI response"""
-    SUCCESS = "success"
-    TIMEOUT = "timeout"
-    CONNECTION_ERROR = "connection_error"
-    RATE_LIMITED = "rate_limited"
-    INVALID_RESPONSE = "invalid_response"
-    SERVER_ERROR = "server_error"
-    UNKNOWN_ERROR = "unknown_error"
+# Legacy aliases for backward compatibility
+class OllamaResponse(AIResponse):
+    """Legacy alias for AIResponse - maintained for backward compatibility"""
+    pass
 
 
 @dataclass
-class OllamaResponse:
-    """Response from Ollama API with metadata"""
-    content: str
-    status: ResponseStatus
-    response_time: float = 0.0
-    model_used: str = ""
-    token_count: int = 0
-    error_message: str = ""
-    metadata: Dict[str, Any] = field(default_factory=dict)
-    
-    @property
-    def is_success(self) -> bool:
-        """Check if the response was successful"""
-        return self.status == ResponseStatus.SUCCESS and bool(self.content.strip())
-    
-    def __str__(self) -> str:
-        if self.is_success:
-            return f"OllamaResponse(content='{self.content[:50]}...', time={self.response_time:.2f}s)"
-        return f"OllamaResponse(status={self.status.value}, error='{self.error_message}')"
-
-
-@dataclass
-class OllamaConfig:
+class OllamaConfig(AIConfig):
     """Configuration for Ollama client"""
+    provider: AIProvider = AIProvider.OLLAMA
     base_url: str = "http://localhost:11434"
     model: str = "gpt-oss:120b"
     timeout: float = 300.0  # 5 minutes default
@@ -67,6 +44,8 @@ class OllamaConfig:
     max_tokens: int = 4000
     temperature: float = 0.7
     top_p: float = 0.9
+    
+    # Ollama-specific parameters
     top_k: int = 40
     repeat_penalty: float = 1.1
     seed: Optional[int] = None
@@ -86,7 +65,7 @@ class OllamaConfig:
         }
 
 
-class OllamaClient:
+class OllamaClient(BaseAIClient):
     """
     Robust Ollama client with comprehensive error handling.
     
@@ -100,15 +79,21 @@ class OllamaClient:
     
     def __init__(self, config: Optional[OllamaConfig] = None):
         """Initialize the Ollama client"""
-        self.config = config or OllamaConfig()
+        # Use OllamaConfig if not provided
+        if config is None:
+            config = OllamaConfig()
+        elif not isinstance(config, OllamaConfig):
+            # Convert base config to Ollama config
+            ollama_config = OllamaConfig()
+            for key, value in config.__dict__.items():
+                if hasattr(ollama_config, key):
+                    setattr(ollama_config, key, value)
+            config = ollama_config
+        
+        super().__init__(config)
+        self.config: OllamaConfig = config
         self.session: Optional[aiohttp.ClientSession] = None
-        self.response_cache: Dict[str, OllamaResponse] = {}
-        self.cache_ttl: Dict[str, float] = {}
-        self.request_count = 0
-        self.total_response_time = 0.0
-        self.error_count = 0
         self.last_error_time = 0.0
-        self.health_status = True
         
         # Rate limiting
         self.last_request_time = 0.0
@@ -116,28 +101,24 @@ class OllamaClient:
         
         logger.info(f"OllamaClient initialized with model: {self.config.model}")
     
-    async def __aenter__(self):
-        """Async context manager entry"""
-        await self.connect()
-        return self
-    
-    async def __aexit__(self, exc_type, exc_val, exc_tb):
-        """Async context manager exit"""
-        await self.close()
-    
-    async def connect(self):
+    async def connect(self) -> bool:
         """Establish connection to Ollama service"""
-        if self.session is None:
-            timeout = aiohttp.ClientTimeout(total=self.config.timeout)
-            self.session = aiohttp.ClientSession(timeout=timeout)
+        try:
+            if self.session is None:
+                timeout = aiohttp.ClientTimeout(total=self.config.timeout)
+                self.session = aiohttp.ClientSession(timeout=timeout)
             
             # Test connection
-            try:
-                await self.health_check()
+            success = await self.health_check()
+            if success:
                 logger.info("Successfully connected to Ollama service")
-            except Exception as e:
-                logger.warning(f"Initial health check failed: {e}")
-                self.health_status = False
+            else:
+                logger.warning("Initial Ollama health check failed")
+            
+            return success
+        except Exception as e:
+            logger.error(f"Failed to connect to Ollama: {e}")
+            return False
     
     async def close(self):
         """Close the connection"""
